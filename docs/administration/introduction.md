@@ -25,6 +25,15 @@ The Settings Console allows for configuration of various aspects of the system.
 
 ![Platform Messages](./assets/platform_message_examples.png?raw=true "Platform Messages")
 
+## Platform Banner Messages
+This capability will allow OpenCTI deployments to have a custom banner message (top and bottom) and colored background for the message of Green, Red, or Yellow. You can use this to add a disclaimer or system purpose that will be displayed at the top and bottom of the OpenCTI instances pages.
+
+This capabilities has two configuration parameters:
+- Platform Banner Level - (Default: OFF) Options available for the banner background are Green, Red, and Yellow.
+- Platform Banner Text - (Default: Blank) If you turn on the banners, you should add a message to this area to be displayed within the banner. In the example below, we have configured it to state that the system is a testing system and all data is subject to loss.
+
+![Platform Banner](./assets/platform_banner.png?raw=true "Platform Banner")
+
 ## Dark Theme Color Scheme
 Various aspects of the Dark Theme can be dynamically configured in this section.
 
