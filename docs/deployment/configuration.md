@@ -43,6 +43,9 @@ Here are the configuration keys, for both containers (environment variables) and
 | app:admin:email             | APP__ADMIN__EMAIL                               | admin@opencti.io              | Default login email of the admin user                                           |
 | app:admin:password          | APP__ADMIN__PASSWORD                            | ChangeMe                      | Default password of the admin user                                              |
 | app:admin:token             | APP__ADMIN__TOKEN                               | ChangeMe                      | Default token (must be a valid UUIDv4)                                          |
+| app:account_inactive_message| APP__ACCOUNT__INACTIVE__MESSAGE                 | Your account is inactive      | Account message to display to inactive users at login attempt                   |
+| app:account_locked_message  | APP__ACCOUNT__LOCKED__MESSAGE                   | Your account is locked        | Account message to display to locked users at login attempt                     |
+| app:account_locked_ <br />missing_training_message| APP__ACCOUNT__LOCKED__ <br />MISSING__TRAINING__MESSAGE | Your account is missing trainings| Account message to display to users missing training at login attempt|
 
 #### SSL / TLS
 
