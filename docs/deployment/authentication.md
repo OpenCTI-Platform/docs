@@ -179,6 +179,18 @@ This strategy allows to use [Auth0 Service](https://auth0.com) to handle the aut
 }
 ```
 
+Here is an example of Auth0 configuration using environment variables:
+
+```yaml
+- PROVIDERS__AUTHZERO__STRATEGY=Auth0Strategy
+- PROVIDERS__AUTHZERO__CONFIG__CLIENT_ID=${AUTH0_CLIENT_ID}
+- PROVIDERS__AUTHZERO__CONFIG__BASEURL=${AUTH0_BASE_URL}
+- PROVIDERS__AUTHZERO__CONFIG__CLIENT_SECRET=${AUTH0_CLIENT_SECRET}
+- PROVIDERS__AUTHZERO__CONFIG__CALLBACK_URL=${AUTH0_CALLBACK_URL}
+- PROVIDERS__AUTHZERO__CONFIG__DOMAIN=${AUTH0_DOMAIN}
+- PROVIDERS__AUTHZERO__CONFIG__SCOPE="openid email profile"
+```
+
 ### OpenID Connect (button)
 
 This strategy allows to use the [OpenID Connect Protocol](https://openid.net/connect) to handle the authentication and is based on [Node OpenID Client](https://github.com/panva/node-openid-client) that is more powerful than the passport one.
@@ -321,6 +333,27 @@ And then add the `ClientCertStrategy`:
 ```
 
 Then when accessing for the first time OCTI, the browser will ask for the certificate you want to use.
+
+## Automatically create group on SSO
+
+The variable **auto_create_group** can be added in the options of some strategies (LDAP, SAML and OpenID). If this variable is true, the groups of a user that logins will automatically be created if they don’t exist.
+
+More precisely, if the user that tries to authenticate has groups that don’t exist in OpenCTI but exist in the SSO configuration, there are two cases:
+
+- if *auto_create_group= true* in the SSO configuration: the groups are created at the platform initialization and the user will be mapped on them.
+- else: an error is raised.
+
+### Example
+
+We assum that *Group1* exists in the platform, and *newGroup* doesn’t exist. The user that tries to log in has the group *newGroup*. If *auto_create_group = true* in the SSO configuration, the group named *newGroup* will be created at the platform initialization and the user will be mapped on it. If *auto_create_group = false* or is undefined, the user can’t login and an error is raised.
+
+```json
+"groups_management": {
+  "group_attribute": "cn",
+  "groups_mapping": ["SSO_GROUP_NAME1:group1", "SSO_GROUP_NAME_2:newGroup", ...]
+},
+"auto_create_group": true
+```
 
 ## Examples
 
