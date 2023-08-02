@@ -157,7 +157,9 @@ nav:
       - Merge objects: usage/merging.md
     - Act on knowledge:    
       - Case management: usage/case-management.md
-      - Notifications and alerting: usage/notifications.md
+      - Notifications:
+        - Notifications and alerting: usage/notifications.md
+        - Sample notifiers: usage/notifiers.md
       - Custom dashboards: usage/dashboards.md
       - Workflows and assignation: usage/workflows.md
     - Sharing and exports:
