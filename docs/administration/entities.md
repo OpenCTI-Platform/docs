@@ -12,7 +12,7 @@ This configuration hides a specific entity type across the entire platform. It i
 
 You can define which Entities to hide platform-wide from « Settings » --> « Customization », and also from « Settings » --> « Parameters » giving you a list of hidden entities.
 
-You can also define hidden entities for specific users Roles, from « Settings » --> « Security » --> « Roles » and editing a Role.
+You can also define hidden entities for specific users Groups and users Organizations, from « Settings » --> « Security » --> « Groups/Organizations » and editing a Group/Organization.
 
 An overview is available in Parameters > Hidden entity types.
 
@@ -37,8 +37,16 @@ Then, a workflow can be defined by ordering a sequence of status template.
 ## Attributes
 
 In an Entity, each attribute offers some customization options :
+
 - Become mandatory if not already defined as such in the stix standard
 - Have a default value to facilitate the creation of an entity via the creation forms
 - Define the different thresholds and corresponding label for scalable attribute
 
 ![Mandatory attributes and default values](./assets/mandatory_and_default_attributes.png)
+
+### Confidence scale configuration
+
+Confidence scale can be customized for each entity type by selecting another scale template or by editing directly the scale values.
+Once you have customized your scale, click on "Update" to save your configuration.
+
+![Mandatory attributes and default values](./assets/confidence_scale_configuration.png)
