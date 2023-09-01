@@ -34,23 +34,13 @@ At the end of your Case, you will certainly want to report on what have been don
 
 Also, we are currently working a more meaningfull Timeline view that will be possible to export too.
 
-## Use case: A phishing campaign targets the company. How to qualify and react quickly?
-- [Will be implemented in 2023] An employee reports a phishing email via the outlook button. It automaticaly create an Incident Response case containing the email and related observable like email adress, url and attachment 
-- To fuel your investigation, you can quickly see of those elements are already present in the platform and what is their context. You can also have a first assessment of the malicioussness of the attachement by running an malware analysis with, for example, the Hybrid-analysis connector. You discover that that the attachement is malicious and that a link in the email lead to a webpage impersonating your company, aiming to harvest credentials.
-- You add a screenshot of the webpage to your Incident response case. Your case contains now all is needed to know for understanding the situation. You assign it your team leader for review.
-- Your manager add some Tasks in your Case to be performed: requesting a takedown and searching for trace of the file through your EDR. You are assigned to the request for takedown.
-- You create a Request for Takedown case and add it all relevant information. 
-- [Not implemented yet] You now need to send the request to the relevant partners or teams. Fortunetly you have design an outcome when one of your Request for Takedown have specific labels. Here, you've added the label "google" because the email address that has sent the phishing is a gmail address. An email is then send to a predefined contact at google with the content of you request for takedown.
-
-## Use case: A suspicious observable is sighted by a defense system. Is it important?
+## Use case example: A suspicious observable is sighted by a defense system. Is it important?
 - Daily, your SIEM and EDR are feeded Indicators of Compromise from your OpenCTI instance. 
 - Today, your SIEM have sighted the domain name "bad.com" matching one of them. Its alert has been transfered to OpenCTI and have created a `Sighting` relationship between your System "SIEM permiter A" and the Observable "bad.com". 
 - You are alerted immediatly, because you have activated the inference rule creating a corresponding `Incident` in this situation, and you have created an alert based on new Incident that send you email `notification` and Teams message (webhook).
 - In OpenCTI, you can clearly see the link between the alerting System, the sighted Observable and the corresponding Indicator. Better, you can also see all the context of the Indicator. It is linked to a notorious and recent phishing `campaign` targeting your activity `sector`. "bad.com" is clearly something to investigate ASAP.
 - You quickly select all the context you have found, and add it to a new `Incident response`case. You position the priority to High, regarding the context, and the severity to Low, as you don't know yet if someone really interact with "bad.com"
 - You also assign the case to one of your collegue, on duty for investigative work. To guide him, you also create a `Task` in your case for verifying if an actual interaction happened with "bad.com".
-
-## Use case: A important incident happen, you need to bring context to the incident response team and the management
 
 
 
