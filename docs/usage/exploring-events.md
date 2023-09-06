@@ -49,7 +49,7 @@ When clicking on the Sightings tab at the top left, you access the list of all t
 
 ### Visualizing Knowledge associated with a Sighting
 
-When clicking on a `Sightings` in the list, you land on its Overview tab. As other relationships in the platform, Sighting's overview displays common related metadata, containers, external references, notes and entities linked by the relationship. 
+When clicking on a `Sighting` in the list, you land on its Overview tab. As other relationships in the platform, Sighting's overview displays common related metadata, containers, external references, notes and entities linked by the relationship. 
 
 In addition, this overview displays:
 - Qualification : if the Sighting is a True Positive or a False Positive

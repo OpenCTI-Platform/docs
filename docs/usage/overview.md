@@ -63,6 +63,7 @@ In this part will only be detailed a general outline of a "typical" OpenCTI page
   ![Top menu of an entity](assets/top-menu.png)
 </figure>
 
+<a id="overview-section"></a>
 ### Overview
 
 In the `Overview` tab on the entity, you will find all properties of the entity as well as the recent activities.
@@ -87,6 +88,7 @@ Below these two sections, you will find latest modifications in the Knowledge ba
 
 Last, all Notes written by users of the platform about this Entity are displayed in order to access unstructured analysis comments.
 
+<a id="knowledge-section"></a>
 ### Knowledge
 
 In the `Knowledge` tab, which is the central part of the entity, you will find all the Knowledge related to the current entity. The `Knowledge` tab is different for Analysis (`Report`, `Groupings`) and Cases (`Incident response`, `Request for Information`, `Request for Takedown`) entities than for all the other entity types.
@@ -105,6 +107,7 @@ The `Indicators` and `Observables` section offers 3 display modes:
 
 ![The Knowledge Focus on Indicators and Observables views](assets/knowledge_focus_indicators_observable_views.png)
 
+<a id="analysis-section"></a>
 ### Analysis
 
 The `Analysis` tab contains the list of all Analysis (`Report`, `Groupings`) and Cases (`Incident response`, `Request for Information`, `Request for Takedown`) in which the entity has been identified.
@@ -116,6 +119,7 @@ By default, this tab display the list, but you can also display the content of a
 ![Graph view of all the Knowledge contained in the listed analyses](assets/analyses-graphview.png)
 
 
+<a id="data-section"></a>
 ### Data
 
 The Data tab contains documents that are associated to the object and were either :
@@ -127,6 +131,7 @@ The Data tab contains documents that are associated to the object and were eithe
 [Analyst Workbench](workbench.md) can also be created from here. They will contain the entity by default.
 ![The Data tab of a Threat Actor](assets/entity-data-tab.png)
 
+<a id="history-section"></a>
 ### History
 
 The `History` tab display the history of change of the Entity, update of attributes, creation of relations, ...
