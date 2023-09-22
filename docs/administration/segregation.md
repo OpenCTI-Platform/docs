@@ -1,7 +1,8 @@
 # Data segregation
 
-!!! tip "Under construction"
+## Introduction
 
-    We are doing our best to complete this page. 
-    If you want to participae, dont hesitate to join the [Filigran Community on Slack](https://community.filigran.io) 
-    or submit your pull request on the [Github doc repository](https://github.com/OpenCTI-Platform/docs).
+Data segregation in the context of Cyber Threat Intelligence refers to the practice of categorizing and separating different types of data or information related to cybersecurity threats based on specific criteria.
+
+This separation helps organizations manage and analyze threat intelligence more effectively and securely and the goal of data segregation is to ensure that only those individuals who are authorized to view a particular set of data have access to that set of data.
+
