@@ -464,7 +464,7 @@ $ black .
 All done! ✨ 🍰 ✨
 1 file left unchanged.
 # Verify import sorting
-$ isort .
+$ isort --profile black .
 Fixing /path/to/connector/file.py
 # Push you feature/fix on Github
 $ git add [file(s)]
