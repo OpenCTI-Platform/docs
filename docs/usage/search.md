@@ -24,22 +24,30 @@ Also, using the `Advanced search` button, it is possible to directly put filters
 
 ![Advanced search](assets/advanced-search.png)
 
-### Extended search to uploaded files (Enterprise edition)
+### Extended search to uploaded files content
 
 !!! tip "Enterprise edition"
 
-    Activity unified interface and logging are available under the "Filigran entreprise edition" license.
+    Extended search to files content is available under the "Filigran entreprise edition" license.
 
-    [Please read the dedicated page to have all information](../enterprise.md)
+    [Please read the dedicated page to have all information](../administration/enterprise.md)
 
-It's possible to extend the search to documents uploaded to the platform via the Data import tab, or directly linked to an entity via its Data tab.
-
-Supported mime types : `text/plain`, `text/csv`, `application/pdf`, `application/vnd.ms-excel`, `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet` (excel sheets).
-
-Index files manager can be disabled in config file.
+It's possible to extend the global search by keywords to the content of documents uploaded to the platform via the Data import tab, or directly linked to an entity via its Data tab.
 
 ![Extended search](assets/extended-search-open.png)
 
+#### Extended search requirements
+
+**Files indexation requires to have one of these database configurations :**
+
+* Elasticsearch >= 8.4
+* Elasticsearch < 8.4 with [ingest-attachment plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/8.3/ingest-attachment.html)
+* OpenSearch with [ingest-attachment plugin](https://opensearch.org/docs/2.9/install-and-configure/plugins/)
+
+Indexation of files is enabled by default and can be disabled in configuration file (`file_index_manager`).
+It runs every 5 minutes to index last uploaded files.
+
+Currently supported mime types : `text/plain`, `text/csv`, `application/pdf`, `application/vnd.ms-excel`, `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet` (excel sheets).
 
 ## Bulk search
 
