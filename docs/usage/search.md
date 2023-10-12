@@ -24,6 +24,23 @@ Also, using the `Advanced search` button, it is possible to directly put filters
 
 ![Advanced search](assets/advanced-search.png)
 
+### Extended search to uploaded files (Enterprise edition)
+
+!!! tip "Enterprise edition"
+
+    Activity unified interface and logging are available under the "Filigran entreprise edition" license.
+
+    [Please read the dedicated page to have all information](../enterprise.md)
+
+It's possible to extend the search to documents uploaded to the platform via the Data import tab, or directly linked to an entity via its Data tab.
+
+Supported mime types : `text/plain`, `text/csv`, `application/pdf`, `application/vnd.ms-excel`, `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet` (excel sheets).
+
+Index files manager can be disabled in config file.
+
+![Extended search](assets/extended-search-open.png)
+
+
 ## Bulk search
 
 The bulk search capabilities in available in the top bar of the platform and allow you to copy paste a list of keyword or objects (ie. list of domains, list of IP addresses, list of vulnerabilities, etc.) to search in the platform:
