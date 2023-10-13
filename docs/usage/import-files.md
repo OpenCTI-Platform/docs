@@ -9,9 +9,9 @@ It is also possible to import files from the Data Import page, accessible from t
 
 By default, the parsed content of the imported file will be added to a new Analyst Workbench to be reviewed.
 
-Finally, you can also import files in the `Content` tab of [Analyses](exploring-analysis) or [Cases](exploring-cases.md). In this case, the file will be directly added as an attachment and won't use a import connector.
+Finally, you can also import files in the `Content` tab of [Analyses](exploring-analysis) or [Cases](exploring-cases.md). In this case, the file will be directly added as an attachment and won't use an import connector.
 
-To be able to import file, a user must have the [capability](../administration/users.md) "Upload knowledge files".
+To be able to import a file, a user must have the [capability](../administration/users.md) "Upload knowledge files".
 
 !!! warning Deprecation warning
 

@@ -1,7 +1,7 @@
 # CSV Mappers
 
-In OpenCTI, CSV Mappers allow to parse CSV files in a STIX 2.1 Objects. The mappers are created and configured by users with Manage CSV mappers capability and
-then made available to users who import CSV files, for instance inside a report or in global import view, and want to extract information inside these files.
+In OpenCTI, CSV Mappers allow to parse CSV files in a STIX 2.1 Objects. The mappers are created and configured by users with the Manage CSV mappers capability and
+then made available to users who import CSV files, for instance inside a report or in the global import view, and want to extract information inside these files.
 
 ## Principles
 
@@ -11,7 +11,7 @@ and every specific CSV structure you might need to ingest in the platform.
 
 ## Create a new CSV Mapper
 
-In menu _Data_, select the submenu _Ingestion_, and on the right menu select _CSV Mappers_. You are presented with a list of all mappers set in the platform.
+In menu _Data_, select the submenu _Ingestion_, and on the right menu select _CSV Mappers_. You are presented with a list of all the mappers set in the platform.
 Note that you can delete or update any mapper from the context menu via the burger button beside each mapper.
 
 Click on the button __+__ in the bottom-right corner to add a new Mapper.
@@ -19,7 +19,7 @@ Click on the button __+__ in the bottom-right corner to add a new Mapper.
 Enter a name for your mapper and some basic information about your CSV files: 
 
 * The line separator used (defaults to the standard comma character)
-* The presence of a header on first line
+* The presence of a header on the first line
 
 !!! info
     Note that the parser will not extract any information from the CSV header if any ; it will just skip
@@ -30,10 +30,10 @@ Enter a name for your mapper and some basic information about your CSV files:
 Then, you need to create every representation, one per entity and relationship type represented in the CSV file.
 Click on the __+__ button to add an empty representation in the list, and click on the chevron to expand the section and configure the representation.
 
-Depending on the entity type, the form will show you the fields that are either required (input outlined in red) or optional.
-For each field, set the corresponding column mapping (the letter-based index of the column in the CSV table, as presented in common spreadsheet tools). 
+Depending on the entity type, the form contains the fields that are either required (input outlined in red) or optional.
+For each field, set the corresponding columns mapping (the letter-based index of the column in the CSV table, as presented in common spreadsheet tools). 
 
-References to other entities should be picked from the list of all other representations already defined earlier in the mapper.
+References to other entities should be picked from the list of all the other representations already defined earlier in the mapper.
 
 You can do the same for all the relationships between entities that might be defined in this particular CSV file structure.
 
@@ -61,9 +61,9 @@ Mapper validity is visible in the list of CSV Mappers as shown below.
 
 In the creation or edition form, hit the button __Test__ to open a dialog. Select a sample CSV file and hit the __Test__ button.
 
-In the code block, you will be presented with the raw result of the parsing attempt, in form of a STIX 2.1 bundle in JSON format.
+The code block contains the raw result of the parsing attempt, in form of a STIX 2.1 bundle in JSON format.
 
-You can then check the extracted values if they match the expected entities and relationships.
+You can then check if the extracted values match the expected entities and relationships.
 
 ![Test a CSV Mapper](assets/csv-mappers-test.png)
 
