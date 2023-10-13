@@ -6,7 +6,7 @@ then made available to users who import CSV files, for instance inside a report 
 ## Principles
 
 The mapper contains __representations__ of STIX 2.1 entities and relationships, in order for the parser to properly extract them.   
-One mapper is dedicated to parsing a specific CSV file structure, and thus dedicated mappers shall be created for each 
+One mapper is dedicated to parsing a specific CSV file structure, and thus dedicated mappers should be created for each 
 and every specific CSV structure you might need to ingest in the platform.
 
 ## Create a new CSV Mapper
@@ -28,12 +28,12 @@ Enter a name for your mapper and some basic information about your CSV files:
 ![Creating a new CSV Mapper](assets/csv-mappers-create.png)
 
 Then, you need to create every representation, one per entity and relationship type represented in the CSV file.
-Click the __+__ button to add an empty representation in the list, and click on the chevron to expand the section and configure the representation.
+Click on the __+__ button to add an empty representation in the list, and click on the chevron to expand the section and configure the representation.
 
 Depending on the entity type, the form will show you the fields that are either required (input outlined in red) or optional.
 For each field, set the corresponding column mapping (the letter-based index of the column in the CSV table, as presented in common spreadsheet tools). 
 
-References to other entities shall be picked from the list of all other representations already defined earlier in the mapper.
+References to other entities should be picked from the list of all other representations already defined earlier in the mapper.
 
 You can do the same for all the relationships between entities that might be defined in this particular CSV file structure.
 
