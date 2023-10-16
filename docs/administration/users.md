@@ -101,3 +101,18 @@ When managing a group, you can define the members and all above configurations.
 ## Organizations
 
 Users can belong to organizations, which is an additional layer of [data segregation](segregation.md) and customization.
+
+## Organization administration
+
+Plateform administrators can promote members of an organization as "Organization administrator" which gives them the capability to create, edit and delete users from the corresponding Organization.
+To facilitate this, an administrator can define a list of groups which the organizations admins can grant to the newly created members.
+
+![Organization admin Settings view](assets/organization_admin_view.png)
+
+The plateform administrator can promote/demote an organization admin via its user edition form:
+
+![Organization admin promoting/demoting](assets/define_organization_admin.png)
+
+This "Organization admin" has a restricted access Settings with the ability to manage only the members of the organizations they have been promoted as "admins" for.
+
+
