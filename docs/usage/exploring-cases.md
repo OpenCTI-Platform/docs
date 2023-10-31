@@ -1,4 +1,4 @@
-# Exploring "Cases"
+# Cases
 
 When you click on "Cases" in the left-side bar, you access all the "Cases" tabs, visible on the top bar on the left. By default, the user directly access the "Incident Responses" tab, but can navigate to the other tabs as well.
 

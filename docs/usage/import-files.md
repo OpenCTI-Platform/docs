@@ -16,5 +16,5 @@ To be able to import a file, a user must have the [capability](../administration
 !!! warning Deprecation warning
 
     Using the `ImportDocument` connector to parse CSV file will be disallowed in the next version of OpenCTI as it produces inconsistent results.
-    Please configure and use CSV mappers dedicated to your specific CSV content for a reliable parsing.
-    CSV mappers can be created and configured in the [administration interface](../administration/csv-mappers.md).   
+    Please configure and use [CSV mappers](../administration/csv-mappers.md) dedicated to your specific CSV content for a reliable parsing.
+    CSV mappers can be created and configured in the administration interface.   

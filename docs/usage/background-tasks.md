@@ -1,6 +1,7 @@
 # Background tasks
 
 Three types of tasks are done in the background:
+
 - rule tasks,
 - knowledge tasks,
 - user tasks.
