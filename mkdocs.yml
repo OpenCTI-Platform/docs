@@ -136,6 +136,7 @@ nav:
     - Explore knowledge:
       - Overview: usage/overview.md
       - Search for knowledge: usage/search.md
+      - Filter knowledge: usage/filters.md
       - Explore by entity types:
         - Analysis: usage/exploring-analysis.md
         - Cases: usage/exploring-cases.md
