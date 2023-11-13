@@ -22,7 +22,7 @@ To create an entity:
 
 Before delving into the creation of relationships between objects in OpenCTI, it's crucial to grasp some foundational concepts. Here are key points to understand:
 
-- On several aspects, including relationships, two categories of objects must be differentiated: containers (e.g., Reports, Groupings, and Cases) and others. **Containers aren't related to but contains objects**.
+- On several aspects, including relationships, two categories of objects must be differentiated: [containers](containers.md) (e.g., Reports, Groupings, and Cases) and others. **Containers aren't related to but contains objects**.
 - Relationships, like all other entities, are objects. They possess fields, can be linked, and share characteristics identical to other entities.
 - Relationships are inherently directional, comprising a "from" entity and a "to" entity. Understanding this directionality is essential for accurate relationship creation.
 - OpenCTI supports various relationship types, and their usage depends on the entity types being linked. For example, a "target" relationship might link malware to an organization, while linking malware to an intrusion set might involve a different relationship type.
