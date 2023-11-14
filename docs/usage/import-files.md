@@ -13,7 +13,7 @@ Finally, you can also import files in the `Content` tab of [Analyses](exploring-
 
 To be able to import a file, a user must have the [capability](../administration/users.md) "Upload knowledge files".
 
-!!! warning Deprecation warning
+!!! warning "Deprecation warning"
 
     Using the `ImportDocument` connector to parse CSV file will be disallowed in the next version of OpenCTI as it produces inconsistent results.
     Please configure and use [CSV mappers](../administration/csv-mappers.md) dedicated to your specific CSV content for a reliable parsing.
