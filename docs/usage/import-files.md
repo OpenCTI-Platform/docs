@@ -20,7 +20,7 @@ The CSV mapper is a tailored functionality to facilitate the import of data stor
 
 ### Locations
 
-Both mechanisms can be employed wherever file uploads are possible. This includes the "Data" tabs of all entities and the dedicated panel named "Data import and analyst workbenches" located in the top right-hand corner (database logo with a small gear).
+Both mechanisms can be employed wherever file uploads are possible. This includes the "Data" tabs of all entities and the dedicated panel named "Data import and analyst workbenches" located in the top right-hand corner (database logo with a small gear). Importing files from these two locations is not entirely equal; refer to the "Relationship handling from entity's Data tab" section below for details on this matter.
 
 ### Entity identification process
 
@@ -41,7 +41,11 @@ It's essential to note that CSV mappers operate differently from other import me
 
 #### Relationship handling from entity's "Data" tab
 
-When importing a document directly from an entity's "Data" tab, `related to` relationships between the objects identified by connectors and the entity under consideration are seamlessly incorporated into the workbench. This streamlined process ensures that all relevant relationships are readily available for analyst review within the workbench.
+When importing a document directly from an entity's "Data" tab, there can be an automatic addition of relationships between the objects identified by connectors and the entity in focus. The process differs depending on the type of entity in which the import occurs:
+
+- If the entity is a container (e.g., Report, Grouping, and Cases), the identified objects in the imported file will be linked to the entity (upon workbench validation). In the context of a container, the object is said to be "contained".
+- For entities that are not containers, a distinct behavior unfolds. In this scenario, the identified objects are not linked to the entity, except for Observables. `Related to` relationships between the Observables and the entity are automatically added to the workbench and created after validation of this one.
+
 
 #### File import in Content tab
 
