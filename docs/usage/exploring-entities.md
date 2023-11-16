@@ -52,7 +52,7 @@ When clicking on the Events tab at the top left, you see the list of all the Eve
 When clicking on an `Event` in the list, you land on its Overview tab. For an Event, the following tabs are accessible:
 
 - Overview: as described [here](overview.md#overview-section).
-- Knowledge: a complex tab that regroups all the structured Knowledge linked to the Event. Different thematic views are proposed to easily see the related entities, the threats, the locations, etc. linked to the Sector. As described [here](overview.md#knowledge-section).
+- Knowledge: a complex tab that regroups all the structured Knowledge linked to the Event. Different thematic views are proposed to easily see the related entities, the threats, the locations, etc. linked to the Event. As described [here](overview.md#knowledge-section).
 - Analyses: as described [here](overview.md#analyses-section).
 - Sightings: a table containing all `Sightings` relationships corresponding to events in which an `Indicator` (IP, domain name, url, etc.) is sighted during an attack against the Event.
 - Data: as described [here](overview.md#data-section).
