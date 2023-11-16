@@ -40,7 +40,7 @@ The rules engine comprises a set of predefined rules (named inference rules) tha
 
 | Conditions                                 | Creations                                                  |
 |:-------------------------------------------|:-----------------------------------------------------------|
-| An observable is _related to_ two Entities | Create a _relate to_ relationship between the two Entities |
+| An observable is _related to_ two Entities | Create a _related to_ relationship between the two Entities |
 
 ![Observable_related_to_entities](assets/observable_related_to_entities.png)
 
