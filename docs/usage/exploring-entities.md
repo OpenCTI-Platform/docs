@@ -138,7 +138,7 @@ When clicking on an `Individual` in the list, you land on its Overview tab. For 
 - Data: as described [here](overview.md#data-section).
 - History: as described [here](overview.md#history-section).
 
-Furthermore, an Individual can be observed from an "Author" perspective . It is possible to change this viewpoint to the right of the entity name, using the "Display as" drop-down menu (see screenshot below). This different perspective is accessible in the Overview, Knowledge and Analyses tabs. When switched to "Author" mode, the observed data pertains to the entity's description as an author within the platform:
+Furthermore, an Individual can be observed from an "Author" perspective. It is possible to change this viewpoint to the right of the entity name, using the "Display as" drop-down menu (see screenshot below). This different perspective is accessible in the Overview, Knowledge and Analyses tabs. When switched to "Author" mode, the observed data pertains to the entity's description as an author within the platform:
 
 - Overview: The "Latest created relationships" and "Latest containers about the object" panels are replaced by the "Latest containers authored by this entity" panel.
 - Knowledge: A tab that presents an overview of the data authored by the Individual (i.e. counters and a graph).
