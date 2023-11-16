@@ -74,7 +74,7 @@ When clicking on the Organizations tab at the top left, you see the list of all 
 When clicking on an `Organization` in the list, you land on its Overview tab. For an Organization, the following tabs are accessible:
 
 - Overview: as described [here](overview.md#overview-section).
-- Knowledge: a complex tab that regroups all the structured Knowledge linked to the Organization. Different thematic views are proposed to easily see the related entities, the threats, the locations, etc. linked to the Sector. As described [here](overview.md#knowledge-section).
+- Knowledge: a complex tab that regroups all the structured Knowledge linked to the Organization. Different thematic views are proposed to easily see the related entities, the threats, the locations, etc. linked to the Organization. As described [here](overview.md#knowledge-section).
 - Analyses: as described [here](overview.md#analyses-section).
 - Sightings: a table containing all `Sightings` relationships corresponding to events in which an `Indicator` (IP, domain name, url, etc.) is sighted in the Organization.
 - Data: as described [here](overview.md#data-section).
