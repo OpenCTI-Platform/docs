@@ -24,7 +24,9 @@ Both mechanisms can be employed wherever file uploads are possible. This include
 
 ### Entity identification process
 
-For connectors, the identification process involves searching for existing entities in the platform and scanning the document for relevant information. In additions, connectors use regular expressions (regex) to detect IP addresses and domains within the document.
+For `ImportDocument` connector, the identification process involves searching for existing entities in the platform and scanning the document for relevant information. In additions, the connector use regular expressions (regex) to detect IP addresses and domains within the document.
+
+As for the `ImportFileStix` connector and the CSV mappers, there is no identification mechanism. The imported data will be, respectively, the data defined in the STIX bundle or according to the configuration of the CSV mapper used.
 
 ### Workflow overview
 
