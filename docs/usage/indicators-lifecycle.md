@@ -27,7 +27,7 @@ If a data source does not provide validity dates, OpenCTI applies specific rules
 | URL                                   | Others                           |      180       |
 | Others (e.g. Domain-Name, File, YARA) | All                              |      365       |
 
-### Understanding time-to-Live (TTL)
+### Understanding Time-To-Live (TTL)
 
 The TTL represents the duration for which an indicator is considered valid - i.e. here, the number of days between `valid_from` and `valid_until`. After this period, the indicator is marked as revoked.
 
