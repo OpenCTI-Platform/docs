@@ -2,6 +2,7 @@
 
 Automated imports in OpenCTI streamline the process of data ingestion, allowing users to effortlessly bring in valuable intelligence from diverse sources. This page focuses on the automated methods of importing data, which serve as bridges between OpenCTI and diverse external systems, formatting it into a STIX bundle, and importing it into the OpenCTI platform.
 
+
 ## Connectors
 
 Connectors in OpenCTI serve as dynamic gateways, facilitating the import of data from a wide array of sources and systems. Every connector is designed to handle specific data types and structures of the source, allowing OpenCTI to efficiently ingest the data.

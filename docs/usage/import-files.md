@@ -1,5 +1,6 @@
 # Import from files
 
+
 ## Import mechanisms
 
 The platform provides a seamless process for automatically parsing data from various file formats. This capability is facilitated by two distinct mechanisms:

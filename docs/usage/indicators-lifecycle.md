@@ -1,5 +1,6 @@
 # Indicators Lifecycle Management
 
+
 ## Introduction
 
 OpenCTI enforces strict rules to determine the period during which an indicator is effective for detection. This period is defined by the `valid_from` and `valid_until` dates. In the future, all along this life, the indicator `score` will decrease according to a customizable algorithm.

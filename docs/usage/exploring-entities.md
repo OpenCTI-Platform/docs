@@ -52,7 +52,7 @@ When clicking on the Events tab at the top left, you see the list of all the Eve
 When clicking on an `Event` in the list, you land on its Overview tab. For an Event, the following tabs are accessible:
 
 - Overview: as described [here](overview.md#overview-section).
-- Knowledge: a complex tab that regroups all the structured Knowledge linked to the Event. Different thematic views are proposed to easily see the related entities, the threats, the locations, etc. linked to the Sector. As described [here](overview.md#knowledge-section).
+- Knowledge: a complex tab that regroups all the structured Knowledge linked to the Event. Different thematic views are proposed to easily see the related entities, the threats, the locations, etc. linked to the Event. As described [here](overview.md#knowledge-section).
 - Analyses: as described [here](overview.md#analyses-section).
 - Sightings: a table containing all `Sightings` relationships corresponding to events in which an `Indicator` (IP, domain name, url, etc.) is sighted during an attack against the Event.
 - Data: as described [here](overview.md#data-section).
@@ -74,16 +74,16 @@ When clicking on the Organizations tab at the top left, you see the list of all 
 When clicking on an `Organization` in the list, you land on its Overview tab. For an Organization, the following tabs are accessible:
 
 - Overview: as described [here](overview.md#overview-section).
-- Knowledge: a complex tab that regroups all the structured Knowledge linked to the Organization. Different thematic views are proposed to easily see the related entities, the threats, the locations, etc. linked to the Sector. As described [here](overview.md#knowledge-section).
+- Knowledge: a complex tab that regroups all the structured Knowledge linked to the Organization. Different thematic views are proposed to easily see the related entities, the threats, the locations, etc. linked to the Organization. As described [here](overview.md#knowledge-section).
 - Analyses: as described [here](overview.md#analyses-section).
 - Sightings: a table containing all `Sightings` relationships corresponding to events in which an `Indicator` (IP, domain name, url, etc.) is sighted in the Organization.
 - Data: as described [here](overview.md#data-section).
 - History: as described [here](overview.md#history-section).
 
-Furthermore, an Organisation can be observed from an "Author" perspective . It is possible to change this viewpoint to the right of the entity name, using the "Display as" drop-down menu (see screenshot below). This different perspective is accessible in the Overview, Knowledge and Analyses tabs. When switched to "Author" mode, the observed data pertains to the entity's description as an author within the platform:
+Furthermore, an Organization can be observed from an "Author" perspective. It is possible to change this viewpoint to the right of the entity name, using the "Display as" drop-down menu (see screenshot below). This different perspective is accessible in the Overview, Knowledge and Analyses tabs. When switched to "Author" mode, the observed data pertains to the entity's description as an author within the platform:
 
 - Overview: The "Latest created relationships" and "Latest containers about the object" panels are replaced by the "Latest containers authored by this entity" panel.
-- Knowledge: A tab that presents an overview of the data authored by the Organisation (i.e. counters and a graph).
+- Knowledge: A tab that presents an overview of the data authored by the Organization (i.e. counters and a graph).
 - Analyses: The list of all Analyses (`Report`, `Groupings`) and Cases (`Incident response`, `Request for Information`, `Request for Takedown`) for which the Organization is the author.
 
 ![Organization author view](assets/organization_author_view.png)
@@ -104,13 +104,13 @@ When clicking on the Systems tab at the top left, you see the list of all the Sy
 When clicking on a `System` in the list, you land on its Overview tab. For a System, the following tabs are accessible:
 
 - Overview: as described [here](overview.md#overview-section).
-- Knowledge: a complex tab that regroups all the structured Knowledge linked to the System. Different thematic views are proposed to easily see the related entities, the threats, the incidents, etc. linked to the Sector. As described [here](overview.md#knowledge-section).
+- Knowledge: a complex tab that regroups all the structured Knowledge linked to the System. Different thematic views are proposed to easily see the related entities, the threats, the incidents, etc. linked to the System. As described [here](overview.md#knowledge-section).
 - Analyses: as described [here](overview.md#analyses-section).
 - Sightings: a table containing all `Sightings` relationships corresponding to events in which an `Indicator` (IP, domain name, url, etc.) is sighted in the System.
 - Data: as described [here](overview.md#data-section).
 - History: as described [here](overview.md#history-section).
 
-Furthermore, a System can be observed from an "Author" perspective . It is possible to change this viewpoint to the right of the entity name, using the "Display as" drop-down menu (see screenshot below). This different perspective is accessible in the Overview, Knowledge and Analyses tabs. When switched to "Author" mode, the observed data pertains to the entity's description as an author within the platform:
+Furthermore, a System can be observed from an "Author" perspective. It is possible to change this viewpoint to the right of the entity name, using the "Display as" drop-down menu (see screenshot below). This different perspective is accessible in the Overview, Knowledge and Analyses tabs. When switched to "Author" mode, the observed data pertains to the entity's description as an author within the platform:
 
 - Overview: The "Latest created relationships" and "Latest containers about the object" panels are replaced by the "Latest containers authored by this entity" panel.
 - Knowledge: A tab that presents an overview of the data authored by the System (i.e. counters and a graph).
@@ -132,13 +132,13 @@ When clicking on the Individuals tab at the top left, you see the list of all th
 When clicking on an `Individual` in the list, you land on its Overview tab. For an Individual, the following tabs are accessible:
 
 - Overview: as described [here](overview.md#overview-section).
-- Knowledge: a complex tab that regroups all the structured Knowledge linked to the Individual. Different thematic views are proposed to easily see the related entities, the threats, the locations, etc. linked to the Sector. As described [here](overview.md#knowledge-section).
+- Knowledge: a complex tab that regroups all the structured Knowledge linked to the Individual. Different thematic views are proposed to easily see the related entities, the threats, the locations, etc. linked to the Individual. As described [here](overview.md#knowledge-section).
 - Analyses: as described [here](overview.md#analyses-section).
 - Sightings: a table containing all `Sightings` relationships corresponding to events in which an `Indicator` (IP, domain name, url, etc.) is sighted in the Individual.
 - Data: as described [here](overview.md#data-section).
 - History: as described [here](overview.md#history-section).
 
-Furthermore, an Individual can be observed from an "Author" perspective . It is possible to change this viewpoint to the right of the entity name, using the "Display as" drop-down menu (see screenshot below). This different perspective is accessible in the Overview, Knowledge and Analyses tabs. When switched to "Author" mode, the observed data pertains to the entity's description as an author within the platform:
+Furthermore, an Individual can be observed from an "Author" perspective. It is possible to change this viewpoint to the right of the entity name, using the "Display as" drop-down menu (see screenshot below). This different perspective is accessible in the Overview, Knowledge and Analyses tabs. When switched to "Author" mode, the observed data pertains to the entity's description as an author within the platform:
 
 - Overview: The "Latest created relationships" and "Latest containers about the object" panels are replaced by the "Latest containers authored by this entity" panel.
 - Knowledge: A tab that presents an overview of the data authored by the Individual (i.e. counters and a graph).

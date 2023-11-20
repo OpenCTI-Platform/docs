@@ -2,7 +2,6 @@
 
 Manual data creation in OpenCTI is an intuitive process that occurs throughout the platform. This page provides guidance on two key aspects of manual creation: Entity creation and Relationship creation.
 
-
 ## Entity creation
 
 To create an entity:
