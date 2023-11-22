@@ -35,6 +35,10 @@ As for the `ImportFileStix` connector and the CSV mappers, there is no identific
 2. Entity identification: For a CSV file, select the connector and CSV mapper to be used by clicking on the icon with an upward arrow in a circle. If it's not a CSV file, the connector will launch automatically. Then, the file import connectors or CSV mappers will identify entities within the uploaded document.
 3. Workbench review and validation: Entities identified by connectors are not immediately integrated into the platform's knowledge base. Instead, they are thoughtfully placed in a workbench, awaiting review and validation by an analyst. Workbenches function as draft spaces, ensuring that no data is officially entered into the platform until the workbench has undergone the necessary validation process. For more information on workbenches, refer to the [Analyst workbench](workbench.md) documentation page.
 
+!!! warning "Review workbenches"
+
+    Import connectors may introduce errors in identifying object types or add "unknown" entities. Workbenches were established with the intent of reviewing the output of connectors before validation. Therefore, it is crucial to be vigilant when examining the workbench to prevent the import of incorrect data into the platform.
+
 
 ## Additional information
 
