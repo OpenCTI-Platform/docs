@@ -47,8 +47,9 @@ It's possible to extend the global search by keywords to the content of document
 #### Extended search configuration
 
 File indexing can be configured via the ``File indexing`` tab in the ``Settings`` menu.
-The configuration and impact panel shows all the file types that can be indexed, as well as the volume of data involved.
+The configuration and impact panel shows all the file types that can be indexed, as well as the volume of storage used.
 It is also possible to include or exclude uploaded files at global level, and to restrict file indexing to certain entities.
+Finally, it is possible to set a maximum file size for indexing.
 
 Currently supported mime types : `text/plain`, `text/csv`, `application/pdf`, `application/vnd.ms-excel`, `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet` (excel sheets).
 
