@@ -44,14 +44,21 @@ It's possible to extend the global search by keywords to the content of document
 * Elasticsearch < 8.4 with [ingest-attachment plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/8.3/ingest-attachment.html)
 * OpenSearch with [ingest-attachment plugin](https://opensearch.org/docs/2.9/install-and-configure/plugins/)
 
-Indexation of files is enabled by default and can be disabled in configuration file (`file_index_manager`).
-It runs every 5 minutes to index last uploaded files.
+#### Extended search configuration
+
+File indexing can be configured via the ``File indexing`` tab in the ``Settings`` menu.
+The configuration and impact panel shows all the file types that can be indexed, as well as the volume of data involved.
+It is also possible to include or exclude uploaded files at global level, and to restrict file indexing to certain entities.
 
 Currently supported mime types : `text/plain`, `text/csv`, `application/pdf`, `application/vnd.ms-excel`, `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet` (excel sheets).
 
+Once indexing has been launched by pressing the ``Start`` button, you can view its progress or ``Pause`` it. You can also use the ``Reset`` button to delete all indexed files from the database.
+It runs every 5 minutes to index last uploaded files.
+
+
 ## Bulk search
 
-The bulk search capabilities in available in the top bar of the platform and allow you to copy paste a list of keyword or objects (ie. list of domains, list of IP addresses, list of vulnerabilities, etc.) to search in the platform:
+The bulk search capabilities is available in the top bar of the platform and allows you to copy paste a list of keyword or objects (ie. list of domains, list of IP addresses, list of vulnerabilities, etc.) to search in the platform:
 
 ![Bulk search](assets/bulk-search.png)
 
