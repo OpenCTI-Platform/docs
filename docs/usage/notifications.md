@@ -4,8 +4,6 @@ In the evolving landscape of cybersecurity, timely awareness is crucial. OpenCTI
 
 From individual users tailoring their alert preferences to administrators orchestrating collaborative triggers for Groups or Organizations, OpenCTI's notification system is a versatile tool for keeping cybersecurity stakeholders in the loop.
 
-Explore the following sections to understand how to set up, manage, and benefit from triggers tailored to your unique cybersecurity priorities.
-
 The main menu "Notifications and triggers" for creating and managing notifications is located in the top right-hand corner with the bell icon.
 
 ![Notifications](assets/notifications.png)  
@@ -21,7 +19,9 @@ In OpenCTI, triggers serve as personalized mechanisms for users to stay informed
 
 **Individual user triggers:** Each user possesses the autonomy to craft their own triggers, finely tuned to their unique preferences and responsibilities. By setting up personalized filters and selecting preferred notifiers, users ensure that they receive timely and relevant notifications aligned with their specific focus areas.
 
-**Administrative control:** Platform administrators have the capability to create and manage triggers not only for individual users but also for Groups or Organizations. This provides centralized control and the ability to configure triggers that address collective cybersecurity objectives. Users within the designated Group or Organization will benefit from triggers with read-only access rights.
+**Administrative control:** Platform administrators have the capability to create and manage triggers for Users, Groups and Organizations. This provides centralized control and the ability to configure triggers that address collective cybersecurity objectives. Users within the designated Group or Organization will benefit from triggers with read-only access rights. These triggers are to be created directly on the User|Group|Organization with whom to share them in "Settings > Security > Users|Groups|Organizations".
+
+![Restricted trigger](assets/restricted-trigger.png)
 
 ### Trigger filters
 
@@ -116,4 +116,4 @@ OpenCTI provides two samples of webhook notifiers designed for Teams integration
 
 Notifiers are manageable in the "Settings > Customization > Notifiers" window and can be restricted through Role-Based Access Control (RBAC). Administrators can restrict access to specific Users, Groups, or Organizations, ensuring controlled usage.
 
-To configure custom notifiers and explore detailed setup instructions, refer to the [dedicated documentation page](../administration/notifiers.md).
+For guidance on configuring custom notifiers and explore detailed setup instructions, refer to the [dedicated documentation page](../administration/notifiers.md).
