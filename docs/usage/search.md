@@ -51,7 +51,7 @@ The configuration and impact panel shows all the file types that can be indexed,
 It is also possible to include or exclude uploaded files at global level, and to restrict file indexing to certain entities.
 Finally, it is possible to set a maximum file size for indexing.
 
-Currently supported mime types : `text/plain`, `text/csv`, `application/pdf`, `application/vnd.ms-excel`, `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet` (excel sheets).
+Currently supported mime types : `text/plain`, `text/csv`, `application/pdf`, `application/vnd.ms-excel`, `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet` (excel sheets), `text/html`.
 
 Once indexing has been launched by pressing the ``Start`` button, you can view its progress or ``Pause`` it. You can also use the ``Reset`` button to delete all indexed files from the database.
 It runs every 5 minutes to index last uploaded files.
