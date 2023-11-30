@@ -42,10 +42,10 @@ The new filter implementation bring major changes in the way filtering is done.
 
 - We introduced a new operator: 'nil' and 'not_nil', enabling to test if an attribute is empty or not.
 
-## Warnings: what you should do to ensure a correct migration
+## Warnings: what you must do to ensure a correct migration
 
 We wrote a migration to convert all filters created prior version 5.12 (filters contained in streams, taxii collections, feeds, triggers, workspaces) in the new format.
-But you might have to change your own custom code (your own connectors, queries, python scripts...). For each filter that is hardcoded, you should change the filters format in the new one.
+But you might have to change your own custom code (your own connectors, queries, python scripts...). For each filter that is hardcoded, you must change the filters format in the new one.
 
 To convert filters prior to version 5.12 in the new format:
 - rename the key if it is a key that has been changed in the migration. (The exhaustive list is in the "List of filter keys that have been renamed" section)
