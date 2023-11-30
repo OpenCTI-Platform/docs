@@ -184,11 +184,9 @@ Some keys does not exist in the schema definition, but are allowed in addition. 
 It is the case for:
 - ``sightedBy``: entities to which X is linked via a stix sighting relationship,
 - ``elementId``: entities to which X is related via a stix core relationship,
-- ``ids``: any id of X (instance_id, standard_id, or stix_id),
 - ``connectedToId``: the listened instances for an instance trigger.
 
-For some keys, negative filtering is not supported yet (not_eq operator). It is the case for:
-- ``elementId``
+For some keys, negative filtering is not supported yet (not_eq operator). For instance, it is the case for:
 - ``fromId``
 - ``fromTypes``
 - ``toId``
