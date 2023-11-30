@@ -24,38 +24,19 @@ Also, using the `Advanced search` button, it is possible to directly put filters
 
 ![Advanced search](assets/advanced-search.png)
 
-### Extended search to uploaded files content
+### Full text search in files content
 
 !!! tip "Enterprise edition"
 
-    Extended search to files content is available under the "Filigran entreprise edition" license.
+    Full text search in files content is available under the "Filigran entreprise edition" license.
 
     [Please read the dedicated page to have all information](../administration/enterprise.md)
 
 It's possible to extend the global search by keywords to the content of documents uploaded to the platform via the Data import tab, or directly linked to an entity via its Data tab.
 
-![Extended search](assets/extended-search-open.png)
+![Files search](assets/global-search-files.png)
 
-#### Extended search requirements
-
-**Files indexation requires to have one of these database configurations :**
-
-* Elasticsearch >= 8.4
-* Elasticsearch < 8.4 with [ingest-attachment plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/8.3/ingest-attachment.html)
-* OpenSearch with [ingest-attachment plugin](https://opensearch.org/docs/2.9/install-and-configure/plugins/)
-
-#### Extended search configuration
-
-File indexing can be configured via the ``File indexing`` tab in the ``Settings`` menu.
-The configuration and impact panel shows all the file types that can be indexed, as well as the volume of storage used.
-It is also possible to include or exclude uploaded files at global level, and to restrict file indexing to certain entities.
-Finally, it is possible to set a maximum file size for indexing.
-
-Currently supported mime types : `text/plain`, `text/csv`, `application/pdf`, `application/vnd.ms-excel`, `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet` (excel sheets), `text/html`.
-
-Once indexing has been launched by pressing the ``Start`` button, you can view its progress or ``Pause`` it. You can also use the ``Reset`` button to delete all indexed files from the database.
-It runs every 5 minutes to index last uploaded files.
-
+In order to search in files, you need to configure [file indexing](../administration/file-indexing.md).
 
 ## Bulk search
 
