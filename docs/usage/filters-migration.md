@@ -36,7 +36,7 @@ The new filter implementation bring major changes in the way filtering is done.
     - The keys are of type string (no more static list of enums).
     - The 'values' attribute can no longer contain null values (use the 'nil' operator instead).
 
-- We also renamed some filter keys, to be consistant with the entities schema definitions.
+- We also renamed some filter keys, to be consistent with the entities schema definitions.
 
 - We implemented the handling of the different operators and modes in the backend.
 
