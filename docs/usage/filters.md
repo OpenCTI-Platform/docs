@@ -63,8 +63,8 @@ The available operators are:
 
 
 - ```'not_nil'``` for 'not empty'.
-
-### Examples
+Note: some operator may not be allowed for some key, for additional information please navigate to the "Special keys" section.
+### Examples of filter using OpenCTI version 5.12+
 - entity_type = 'Report'
 ```
 filters = {
@@ -180,7 +180,7 @@ X refers here to the filtered entities.
 - ``entity_type``: X entity type ('Report', 'Stix-Cyber-Observable', ...),
 
 #### Special keys
-Some keys are a bit special: there are not existing in the schema definition, but are allowed. They describe a special behavior.
+Some keys does not exist in the schema definition, but are allowed in addition. They describe a special behavior.
 It is the case for:
 - ``sightedBy``: entities to which X is linked via a stix sighting relationship,
 - ``elementId``: entities to which X is related via a stix core relationship,

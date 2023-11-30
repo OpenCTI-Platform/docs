@@ -4,7 +4,7 @@
 
 Before 5.12, it was not possible to do some complex filters combinations: we couldn't imbricate filters with differents modes (and/or), filter on any available attribute or relation for a given entity type, or test empty fields.
 
-The former format was not adapted for such complex filters, and a refacto was necessary.
+The former format was not adapted for such complex filters, and a refactoring was necessary.
 Indeed:
 - the filters frontend and backend formats were different, requiring conversions,
 - the filter keys were enums, i.e. the keys should belong to the static list of the available keys for the given entity type,
@@ -24,11 +24,11 @@ BackendFilters {
 }
 ```
 
-Because changing filters format impacts almost everything in the platform, we decided to do a complete refacto once and for all, a refacto that would enable almost all complex combinations and compatible with our long term vision of filters in OpenCTI.
+Because changing filters format impacts almost everything in the platform, we decided to do a complete refactoring once and for all. This refactoring will enable almost all complex combinations and will be compatible with our long term vision of filters in OpenCTI.
 
 ## Content: what has been done
 
-The filters refacto bring major changes in the way filtering is done.
+The new filter implementation bring major changes in the way filtering is done.
 
 - We change the filters formats (see FilterGroup type above):
     - In the frontend, an operator and a mode are stored for each key,
@@ -36,19 +36,19 @@ The filters refacto bring major changes in the way filtering is done.
     - The keys are of type string (no more static list of enums).
     - The 'values' attribute can no longer contain null values (use the 'nil' operator instead).
 
-- We also rename some filter keys, to be consistant with the entities schema definitions.
+- We also renamed some filter keys, to be consistant with the entities schema definitions.
 
 - We implemented the handling of the different operators and modes in the backend.
 
-- We introduced a new operator: 'nil' and 'not_nil', enabling to test wether an attribute is empty or not.
+- We introduced a new operator: 'nil' and 'not_nil', enabling to test if an attribute is empty or not.
 
 ## Warnings: what you should do to ensure a correct migration
 
-We wrote a migration to convert all the old stored filters (filters contained in streams, taxii collections, feeds, triggers, workspaces) in the new format.
-But you might have things to change for your own bits of code (your own connectors, queries, python scripts...). For each filter you hardcoded, you should change the filters format in the new one.
+We wrote a migration to convert all filters created prior version 5.12 (filters contained in streams, taxii collections, feeds, triggers, workspaces) in the new format.
+But you might have to change your own custom code (your own connectors, queries, python scripts...). For each filter that is hardcoded, you should change the filters format in the new one.
 
-To convert an old filters (in the old backend format) in the new format:
-- rename the key if it is a key that has been changed in the migration.
+To convert filters prior to version 5.12 in the new format:
+- rename the key if it is a key that has been changed in the migration. (The exhaustive list is in the "List of filter keys that have been renamed" section)
 - replace the 'filterMode' attribute name by 'mode'.
 - if 'values' = [null]: change the filter with:
     - values = []
@@ -153,4 +153,4 @@ const newFilters = {
 
 ## Url with old filters
 When going to an url with filters in the old format, the user will be redirected to the page but all the settings stored in local (filters, ordering mode...) will be deleted. A warning message is displayed, indicating the url contains filters in the old format.
-If you want to share a correct url, you need to copy an url from an OpenCTI instance after 5.12.
+If you want to share an url that works after 5.12 migration, you need to copy an url from an OpenCTI instance after 5.12.
