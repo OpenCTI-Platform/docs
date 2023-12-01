@@ -13,6 +13,21 @@ There are two types of filters:
 - **dynamic filters**: they are not stored in the database, they enable to filter view in the UI. Examples: filters in entities list, investigations, knowledge graphs;
 - **stored filters**: They are attributes of an entity, they are stored as an attribute in the object. Examples: filters in dashboards, feeds, taxii collections, triggers, streams, playbooks.
 
+![Filtering entities](./assets/filters-migration-example1.png)
+
+## Create a filter
+
+To create a filter, add every key you need using the 'Add filter' select box. It will give you the possible attributes on which you can filter in the current view. 
+
+A grey box appears and allows to select:
+- the operator to use
+- the values to compare (if operator is not 'empty' or 'not_empty')
+
+You can add as many filters as you like, even use the same key twice with different operators and values.
+
+The boolean modes (and /or) are either **global** (between every attribute filters) or **local** (between values inside a filter).
+Both can be switched with a single click, changing the logic of your filtering.
+
 ## Dynamic filters persistence 
 
 Dynamic filters are not saved in database, but they are still persistent in the platform frontend side.
@@ -25,7 +40,7 @@ You can then keep working from where you left of.
 Since OpenCTI 5.12, the OpenCTI platform uses a new filter format called `FilterGroup`, that must be used in API calls.
 The `FilterGroup` model enables to do complex filters imbrication with different boolean operators, which extends greatly the filtering capabilities in every parts of the platform. 
 
-The new format can be described as below:
+The new format used internally by OpenCTI and exposed through its API, can be described as below:
 
 ```ts
 // filter formats in OpenCTI >= 5.12
