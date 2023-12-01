@@ -14,7 +14,7 @@ File indexing can be configured via the ``File indexing`` tab in the ``Settings`
 
 The configuration and impact panel shows all file types that can be indexed, as well as the volume of storage used.
 
-It is also possible to include or exclude uploaded files from data import, and to restrict to files related to specific entities.
+It is also possible to include or exclude files uploaded from the global Data import panel and that are not associated with a specific entity in the platform.
 
 Finally, it is possible to set a maximum file size for indexing (5 Mb by default).
 

@@ -34,6 +34,8 @@ Also, using the `Advanced search` button, it is possible to directly put filters
 
 It's possible to extend the global search by keywords to the content of documents uploaded to the platform via the Data import tab, or directly linked to an entity via its Data tab.
 
+It is particularly useful to enable ``Full text indexing`` to avoid missing important information that may not have been structured within the platform. This situation can arise due to a partial automatic import of document content, limitations of a connector, and, of course, errors during manual processing.
+
 ![Files search](assets/global-search-files.png)
 
 In order to search in files, you need to configure [file indexing](../administration/file-indexing.md).
