@@ -3,15 +3,23 @@
 In OpenCTI, you can filter data to target or view entities that have particular attributes.
 
 ## Filters usages
-Filters are used in different locations in the platform.
+Filters are used in many locations in the platform.
 - in entities lists: to display only the entities matching the filters. If an export or a background task is generated, only the filtered data will be taken into account.
 - in investigations and knowledge graphs: to display only the entities matching the filters.
-- in workspaces: to create graphs with only the entities matching the filters.
+- in dashboards: to create Widget graphs and lists with only the entities matching the filters.
 - in feeds, taxii collections, triggers, streams, playbooks, background tasks: to process only the data  or events matching the filters.
 
 There are two types of filters:
-- dynamic filters: they are not stored in the database, they enable to filter view in the UI. Examples: filters in entities list, investigations, knowledge graphs;
-- stored filters: They are attributes of an entity, they are stored as an attribute in the object. Examples: filters of workspaces, feeds, taxii collections, triggers, streams, playbooks.
+- **dynamic filters**: they are not stored in the database, they enable to filter view in the UI. Examples: filters in entities list, investigations, knowledge graphs;
+- **stored filters**: They are attributes of an entity, they are stored as an attribute in the object. Examples: filters in dashboards, feeds, taxii collections, triggers, streams, playbooks.
+
+## Dynamic filters persistence 
+
+Dynamic filters are not saved in database, but they are still persistent in the platform frontend side.
+The filters used in a view are saved as URL parameters, so you can save and share links of these filtered views.
+
+Also, your web browser saves in local storage the filters that you are setting in various places of the platform, allowing to retrieve them when you come back to the same view.
+You can then keep working from where you left of.
 
 ## Filters format (since 5.12)
 Since OpenCTI 5.12, the OpenCTI platform uses a new filter format called `FilterGroup`, that must be used in API calls.
@@ -20,33 +28,52 @@ The `FilterGroup` model enables to do complex filters imbrication with different
 The new format can be described as below:
 
 ```ts
+// filter formats in OpenCTI >= 5.12
+
 type FilterGroup = {
-    mode: 'and' | 'or'
-    filters: Filter[]
-    filterGroups: FilterGroup[] // recursive definition
+  mode: 'and' | 'or'
+  filters: Filter[]
+  filterGroups: FilterGroup[] // recursive definition
 }
 
 type Filter  = {
-    key: string
-    values: string[]
-    operator: 'eq' | 'not_eq' | 'gt' // ... and more
-    mode: 'and' | 'or',
+  key: string[] // or single string (input coercion)
+  values: string[]
+  operator: 'eq' | 'not_eq' | 'gt' // ... and more
+  mode: 'and' | 'or',
 }
+
+// "give me Reports and RFIs, not marked TLP;RED, with no label or labelX"
+const filters = {
+  mode: 'and',
+  filters: [
+    { key: 'entity_type', values: ['Report', 'Case-Rfi'], operator: 'eq', mode: 'or', },
+    { key: 'objectMarking', values: ['<id-for-TLP;RED>'], operator: 'not_eq', mode: 'or', },
+  ],
+  filterGroups: [{
+    mode: 'or',
+    filters: [
+      { key: 'objectLabel', values: ["<id-for-labelX>"], operator: 'eq', mode: 'or', },
+      { key: 'objectLabel', values: [], operator: 'nil', mode: 'or', },
+    ],
+    filterGroups: [],
+  }],
+};
 ```
 
-And can express complex filters like:
+We can express complex, nested filters like:
 
 ```
 (Entity Type = Malware) AND (Marking = TLP;CLEAR or TLP;GREEN)
 OR
-(Entity Type = Intrusion Set) AND (Label = redline)  
+(Entity Type = Intrusion Set) AND (Label = labelX)  
 ```
 
 In a given filter group, the `mode` (`and` or `or`) represents the boolean operation between the different `filters` and `filterGroups` arrays.
 The `filters` and `filterGroups` arrays are composed of objects of type Filter and FilterGroup.
 
 The `Filter` has 4 properties:
-- a `key`, representing the kind of data we want to target (example: `objectLabel` to filter on labels or `createdBy` to filter on the author)
+- a `key`, representing the kind of data we want to target (example: `objectLabel` to filter on labels or `createdBy` to filter on the author) 
 - an array of `values`, representing the values we want to compare to
 - an `operator` representing the operation we want to apply between the `key` and the `values`
 - a `mode` (again, `and` or `or`) to apply between the values if there are several ones
@@ -62,6 +89,11 @@ The available operators are:
 When using a numerical comparison operators (`gt` and the like) against textual values, the alphabetical ordering is used. 
 
 Some operator may not be allowed for some key, for additional information please navigate to the "Special keys" section.
+
+Also note that GraphQL input coercion makes possible using a simple `string` key instead of an array.
+Multi-key filters are not supported across the platform and are reserved to specific, internal cases. 
+**Bottom line: Always use single-key filters.**
+
 
 ### Examples of filter using OpenCTI version 5.12+
 - entity_type = 'Report'
@@ -204,4 +236,3 @@ For filters used in this context, only some keys are supported for the moment:
 - ``fromTypes`` (the entity type in the 'from' of a relationship)
 - ``toId``
 - ``toTypes``
-
