@@ -53,7 +53,7 @@ To convert filters prior to version 5.12 in the new format:
 - if 'values' = [null]: change the filter with:
     - values = []
     - operator = 'nil' if operator was 'eq', operator = 'not_nil' if operator was 'not_eq',
-- if 'values' contained null:
+- if 'values' contained null (example: values = ['XXX', null]):
     - remove the null value of the values array,
     - create a new filter with
         - values = []
