@@ -11,12 +11,13 @@ using different boolean modes (and/or), filter on all available attributes or re
 Legacy of years of development, the former format and filtering mechanics were not adapted for such task, and a profound refactoring was necessary to make it happen.
 
 Here are the main pain points we identified beforehand:
-- the filters frontend and backend formats were very different, requiring careful conversions
-- the filter keys were enums, i.e. the keys would belong to static lists of keys, depending on each given entity type and maintained by hands
-- the operator (`eq`, `not_eq`, etc.) was _inside_ the key (e.g. `entity_type_not_eq`), limiting operator combination and requiring error-prone parsing
-- the frontend format imposed a unique form of combination (`and` between filters, `or` between values inside each filter, and nothing else possible)
-- the flat list structure made impossible filter imbrication by nature
-- Filters and query options were mixed in GQL queries for the same purpose (for instance, option `types` analog to a filter on key `entity_type`)
+
+* the filters frontend and backend formats were very different, requiring careful conversions
+* the filter keys were enums, i.e. the keys would belong to static lists of keys, depending on each given entity type and maintained by hands
+* the operator (`eq`, `not_eq`, etc.) was _inside_ the key (e.g. `entity_type_not_eq`), limiting operator combination and requiring error-prone parsing
+* the frontend format imposed a unique form of combination (`and` between filters, `or` between values inside each filter, and nothing else possible)
+* the flat list structure made impossible filter imbrication by nature
+* Filters and query options were mixed in GQL queries for the same purpose (for instance, option `types` analog to a filter on key `entity_type`)
 
 ```ts
 // filter formats in OpenCTI <= 5.11
@@ -114,12 +115,14 @@ However, you might have your own connectors, queries, or python scripts that use
 If this is the case, you must change the filter format if you want to run the code against OpenCTI 5.12.
 
 To convert filters prior to version 5.12 in the new format:
+
 - update the `key` field if it has been changed in 5.12 (see the full list below)
 - rename the field `filterMode` in `mode`
 - `operator` unchanged
 - if `values` does not contain `null`, you can keep the array as-is
 
 Now you can build your new `FilterGroup` object with:
+
 - `mode: 'and'` 
 - `filters` = array of converted filters (following previous steps),
 - `filterGroups: []`
@@ -149,10 +152,10 @@ const newFilters = {
 if `values` contains a `null` value (for instance `['XXX', null]`), you need to convert the filter using the new `nil` / `not_nil` operators.
 This will happen if you have old filters on labels with the "no label" value, which is actually a `null` in `values`.
 
-- Extract one filter dedicated to `null`
-  - `operator: 'nil'` if operator was `'eq'`, `operator = 'not_nil'` if operator was `not_eq`
-  - `values = []`
-- extract another filter for all the other values
+* Extract one filter dedicated to `null`
+    * `operator: 'nil'` if operator was `'eq'`, `operator = 'not_nil'` if operator was `not_eq`
+    * `values = []`
+* extract another filter for all the other values
 
 ```ts
 // "Must have a label that is not Label1 or Label2"
@@ -190,7 +193,7 @@ for example:
 
 > "All Reports that have either the label "label1" or "label2", or no label at all"
 >
-> `(entity_type = Report) AND (label = "No label" OR label1 OR label2)`.
+> `(entity_type = Report) AND (label = "No label" OR label1 OR label2)`
 
 Cannot be expressed a simple list of filters, it requires a `filterGroup`. This case is detailed in the examples below.
 
@@ -221,7 +224,7 @@ Let's start with a simple case:
 
 > All Reports with label "label1" or "label2"
 >
->  (entity_type = Report) AND (label = label1 OR label2)
+>  `(entity_type = Report) AND (label = label1 OR label2)`
 
 
 ```ts
@@ -264,7 +267,7 @@ And now for a more complex case involving filter group nesting:
 
 > "All Reports that have either the label "label1" or "label2", or no label at all"
 > 
-> (entity_type = Report) AND (label = "No label" OR label1 OR label2)
+> `(entity_type = Report) AND (label = "No label" OR label1 OR label2)`
 
 
 ```ts
