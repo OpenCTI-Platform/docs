@@ -108,7 +108,7 @@ To import a widget, the same mechanism is used, but from a dashboard view.
 
 !!! warning "Configuration compatibility"
 
-    Only JSON files with the required properties will be accepted, including "openCTI_version: [version 5.12.0 and above]", "type: dashboard", and a "configuration". This applies to both dashboards and widgets configurations.
+    Only JSON files with the required properties will be accepted, including "openCTI_version: [5.12.0 and above]", "type: [dashboard|widget]", and a "configuration". This applies to both dashboards and widgets configurations.
 
 
 ### Duplicate
