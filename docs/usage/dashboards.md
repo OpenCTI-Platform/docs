@@ -88,8 +88,10 @@ The widget configuration will be saved as a JSON file, with the title formatted 
 ```
 
 !!! warning "Source platform-related filters"
-    
-    When exporting a dashboard or a widget configuration, all filters will be exported as is. Instance filters are based on internal platform IDs, requiring manual filter adjustment after importing a configuration from another user's platform. Our team is currently working to manage these instance filters.
+
+    When exporting a dashboard or widget configuration, all filters will be exported as is. Filters on objects that do not exist in the receiving platform will need manual deletion after import. Filters to be deleted can be identified by their "delete" barred value.
+
+![Filter to delete](assets/filter-to-delete.png)
 
 
 ### Import
