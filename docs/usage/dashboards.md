@@ -5,7 +5,7 @@ OpenCTI provides an adaptable and entirely customizable dashboard functionality.
 
 ## Dashboard overview
 
-You have the flexibility to tailor the arrangement of [widgets](widgets.md) on your dashboard, optimizing organization and workflow efficiency. Widgets can be intuitively placed to highlight key information. Additionally, dynamically resize widgets from the bottom right corner based on the importance of the information, enabling adaptation to specific analytical needs. This technical flexibility ensures a fluid, visually optimized user experience.
+You have the flexibility to tailor the arrangement of [widgets](widgets.md) on your dashboard, optimizing organization and workflow efficiency. Widgets can be intuitively placed to highlight key information. Additionally, you can resize widgets from the bottom right corner based on the importance of the information, enabling adaptation to specific analytical needs. This technical flexibility ensures a fluid, visually optimized user experience.
 
 Moreover, the top banner of the dashboard offers a convenient feature to configure the timeframe for displayed data. This can be accomplished through the selection of a relative time period, such as "Last 7 days", or by specifying fixed "Start" and "End" dates, allowing users to precisely control the temporal scope of the displayed information.
 
@@ -15,7 +15,6 @@ Moreover, the top banner of the dashboard offers a convenient feature to configu
 ## Access control
 
 In OpenCTI, the power to create custom dashboards comes with a flexible access control system, allowing users to tailor visibility and rights according to their collaborative needs.
-Access Restrictions:
 
 When a user crafts a personalized dashboard, by default, it remains visible only to the dashboard creator. At this stage, the creator holds administrative access rights. However, they can extend access and rights to others using the "Manage access" button, denoted by a locker icon, located at the top right of the dashboard page.
 
