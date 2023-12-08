@@ -57,7 +57,7 @@ To export a widget, the same mechanism is used, but from the burger menu button 
 To export a dashboard configuration from the dashboard view:
 
 1. Navigate to the desired dashboard.
-2. Click on the `Export to JSON` button (file with an arrow pointing to the top right corner) located in the top-right corner of the dashboard.
+2. Click on the `Export` button (file with an arrow pointing to the top right corner) located in the top-right corner of the dashboard.
 
 ![Export JSON button](assets/export-json-button.png)
 
@@ -126,7 +126,7 @@ To duplicate a widget, the same mechanism is used, but from the burger menu butt
 To duplicate a dashboard from the dashboard view:
 
 1. Navigate to the desired dashboard.
-2. Click on the `Duplicate dashboard` button (two stacked sheets) located in the top-right corner of the dashboard.
+2. Click on the `Duplicate the dashboard` button (two stacked sheets) located in the top-right corner of the dashboard.
 
 ![Duplicate dashboard button](assets/duplicate-dashboard-button.png)
 
