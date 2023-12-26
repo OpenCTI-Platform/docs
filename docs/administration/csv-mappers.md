@@ -99,11 +99,11 @@ Note that on this screen:
 
 Click on the attribute to add a __default value__ information.
 
-![mapper-custom](assets/CSV mapper-custom.png)
+![mapper-custom](assets/CSV mapper-attribute.png)
 
 Enter the __default value__ in the input field.
 
-![mapper-attribute](assets/CSV mapper-attribute.png)
+![mapper-attribute](assets/CSV mapper-default.png)
 
 Once the attribute is configured, you can return on the CSV mapper. If mandatory information is not filled in CSV mapper form but a __default value__ exists for that field,
 that allows to parse the CSV file nevertheless.
