@@ -92,10 +92,10 @@ In _settings_ __>__ _Customization_, you need to select the entity type that you
 
 In the configuration of the entity type, you have access to all of the entity's attributes.
 
-Note that on this screen:
+Note that on this screen, for each associated attribute:
 
-* for each associated field, you can modify the __default values__.
-* the label 'mandatory' is displayed for each attribute.
+* you can modify the __default values__
+* the label 'mandatory' is displayed and editable
 
 Click on the attribute to add a __default value__ information.
 
@@ -107,5 +107,3 @@ Enter the __default value__ in the input field.
 
 Once the attribute is configured, you can return on the CSV mapper. If mandatory information is not filled in CSV mapper form but a __default value__ exists for that field,
 that allows to parse the CSV file nevertheless.
-
-
