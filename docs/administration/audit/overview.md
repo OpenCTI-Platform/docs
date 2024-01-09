@@ -28,7 +28,7 @@ As this kind of tracking is expensive, the tracking will only be done for specif
 ### Audit knowledge
 
 Audit is focusing on user administration or security actions.
-Audit will produces **console/logs** files along with user interface elements.
+Audit will produce **console/logs** files along with user interface elements.
 
 ```json
 {
