@@ -12,6 +12,8 @@ The platform provides a seamless process for automatically parsing data from var
 
 **CSV mappers:** The CSV mapper is a tailored functionality to facilitate the import of data stored in CSV files. For more in-depth information on using CSV mappers, refer to the [CSV Mappers](../administration/csv-mappers.md) documentation page.
 
+![Manual import connectors](assets/manual-import-connectors.png)
+
 
 ## Usage
 
@@ -34,6 +36,8 @@ As for the `ImportFileStix` connector and the CSV mappers, there is no identific
 !!! warning "Review workbenches"
 
     Import connectors may introduce errors in identifying object types or add "unknown" entities. Workbenches were established with the intent of reviewing the output of connectors before validation. Therefore, it is crucial to be vigilant when examining the workbench to prevent the import of incorrect data into the platform.
+
+![Global import panel](assets/global-import-panel.png)
 
 
 ## Additional information
