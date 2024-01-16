@@ -56,7 +56,7 @@ In OpenCTI, the different roles are highly customizable. It is possible to defin
 
 ## Presentation of a typical page in OpenCTI
 
-Although there are many entities in OpenCTI and many tabs, most of them are quite similar and only have minor differences from the other, mostly due to some of their characteristics, which requires specific fields or do not require some fields which are necessary for the other. 
+While OpenCTI features numerous entities and tabs, many of them share similarities, with only minor differences arising from specific characteristics. These differences may involve the inclusion or exclusion of certain fields, depending on the nature of the entity.
 
 In this part will only be detailed a general outline of a "typical" OpenCTI page. The specifies of the different entities will be detailed in the corresponding pages below (Activities and Knowledge).
 
