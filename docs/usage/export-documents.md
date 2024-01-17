@@ -1,4 +1,4 @@
-# Export in documents
+# Exports
 
 !!! tip "Under construction"
 
@@ -9,18 +9,21 @@
 
 ## Introduction
 
-With the OpenCTI platform, you can manually export your intelligence content in two formats:
+With the OpenCTI platform, you can manually export your intelligence content in the following formats:
 
-- structured with exports in .json and/or .csv formats,
-- documents with exports in .pdf (.txt?) format
+- JSON,
+- CSV,
+- PDF, 
+- TXT.
 
-![Generate an export panel](assets/Generate_an_export_panel.png)
 
-## Export in structured format
+  ![Generate an export panel](assets/Generate_an_export_panel.png)
+
+## Export in structured or document format
 
 ### Generate an export
 
-To export one or more entities and direct or linked content you have two possibilities. First you can click on the button 'open export panel'. The list of pre-existing exports will open, and in the bottom right-hand corner you can configure and generate a new export.
+To export one or more entities direct or linked content you have two possibilities. First you can click on the button 'Open export panel'. The list of pre-existing exports will open, and in the bottom right-hand corner you can configure and generate a new export.
 
 ![open export panel](assets/open_export_panel.png)
 
@@ -32,7 +35,7 @@ This opens the export settings panel, where you can customize your export accord
 
 ![customize your export](assets/customize_your_export.png)
 
-The second way is to click direcly on the 'Generate an Export' button to export the content of an entity in the desired format. The same settings panel will open.
+The second way is to click directly on the 'Generate an Export' button to export the content of an entity in the desired format. The same settings panel will open.
 
 ![Export entity content](assets/Export_entity_content.png)
 
@@ -42,7 +45,7 @@ All entities in your instance can be exported either directly via Generate Expor
 
 ### Export from one or more entities
 
-You can choose to export a single element, such as a report and its contents, or a set of elements, such as several reports. These exports will contain not only the entity itself, but also related or unrelated elements, depending on the type of export you choose: 'simple' or 'full'.
+You can choose to export a single element, such as a report and its content, or a set of elements, such as several reports. These exports will contain not only the entity itself, but also related or unrelated elements, depending on the type of export you choose: 'simple' or 'full'.
 
 ### Export specific content within an entity
 
