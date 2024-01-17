@@ -51,7 +51,7 @@ You can choose to export a single element, such as a report and its content, or 
 
 You can also choose to export only certain entities linked to your export object. To do so, go to the entity's internal panels.
 
-For example, for a report, if you only want to retrieve entity_type Attack Pattern and indicators to design a detection strategy, go to the entities panel and select specific elements for export.
+For example, for a report, if you only want to retrieve entity type Attack Pattern and indicators to design a detection strategy, go to the entities panel and select specific elements for export.
 
 ![Export specific elements](assets/Export_specific_elements.png)
 
