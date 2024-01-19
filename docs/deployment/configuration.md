@@ -33,6 +33,7 @@ Here are the configuration keys, for both containers (environment variables) and
 
 #### Basic parameters
 
+
 | Parameter                | Environment variable      | Default value         | Description                                                      |
 |:-------------------------|:--------------------------|:----------------------|:-----------------------------------------------------------------|
 | app:port                 | APP__PORT                 | 4000                  | Listen port of the application                                   |
@@ -45,6 +46,7 @@ Here are the configuration keys, for both containers (environment variables) and
 | app:admin:email          | APP__ADMIN__EMAIL         | admin@opencti.io      | Default login email of the admin user                            |
 | app:admin:password       | APP__ADMIN__PASSWORD      | ChangeMe              | Default password of the admin user                               |
 | app:admin:token          | APP__ADMIN__TOKEN         | ChangeMe              | Default token (must be a valid UUIDv4)                           |
+| app:health_access_key    | APP__HEALTH_ACCESS_KEY    | ChangeMe              | Access key that enables access to the `/health` endpoint. Must be changed - will not respond to default value. Access with `/health?health_access_key=ChangeMe` |
 
 #### Network and security
 
