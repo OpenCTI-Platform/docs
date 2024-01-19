@@ -33,7 +33,6 @@ Here are the configuration keys, for both containers (environment variables) and
 
 #### Basic parameters
 
-
 | Parameter                | Environment variable      | Default value         | Description                                                      |
 |:-------------------------|:--------------------------|:----------------------|:-----------------------------------------------------------------|
 | app:port                 | APP__PORT                 | 4000                  | Listen port of the application                                   |
