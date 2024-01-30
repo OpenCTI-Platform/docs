@@ -13,7 +13,7 @@ This section allows the administrator to edit the following settings:
 
 - Platform title
 - Platform favicon URL
-- Sender email address: email address used to send notifications
+- Sender email address: email address displayed as sender when sending notifications. The technical sender is defined in the [SMTP configuration](../deployment/configuration.md#smtp-service).
 - Theme
 - Language
 - Hidden entity types: allows you to customize which types of entities you want to see or hide in the platform. This can help you focus on the relevant information and avoid cluttering the platform with unnecessary data.
