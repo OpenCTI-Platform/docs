@@ -65,4 +65,6 @@ In this section, the administrator can customize the two OpenCTI themes
 This section informs the administrator of the statuses of the different managers used in the Platform. More information about the managers can be found [here](../deployment/managers.md).
 It shows also the used versions of the search engine database, RabbitMQ and Redis.
 
+In cluster mode, the fact that a manager appears as enabled means that it is active in at least one node. 
+
 ![parameters_tools](assets/parameters_tools.png)
