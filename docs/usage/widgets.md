@@ -58,6 +58,7 @@ By leveraging these advanced filters, users can conduct detailed analyses within
 
 ![Widget filters](assets/widget-filters.png)
 
+
 In certain views, you can access buttons like `+`, `+ Relationships,` or `+ Entities`. These buttons enable you to incorporate different data into the same widget for comparative analysis. For instance, in a Line view, adding a second set of filters will display two curves in the widget, each corresponding to one of the filtered data sets. Depending on the view, you can work with 1 to 5 sets of filters. The `Label` field allows you to name a data set, and this label can then be shown as a legend in the widget using the `Display legend` button in the widget parameters (see the next section).
 
 ![Widget multiple filters](assets/widget-multiple-filters.png)
