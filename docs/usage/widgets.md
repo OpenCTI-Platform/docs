@@ -45,7 +45,9 @@ Two types of filters are available in the Knowledge Graph perspective:
         - **Dynamic filters on the source (orange):** Refine data by filtering on entities positioned as the source (in the "from" position) of the relationship.
         - **Dynamic filters on the target (green):** Refine data by filtering on entities positioned as the target (in the "to" position) of the relationship.
 
-**Caution**: the pre-query is limited to 5000 results. If your pre-query results in having more than 5000 results, your widget will only display the 5000 results matching your query, resulting in a wrong view. To avoid this issue, be specific in your pre-query filters to avoid this issue.
+!!! warning "Pre-query limitation"
+
+    The pre-query is limited to 5000 results. If your pre-query results in having more than 5000 results, your widget will only display statistics based on these 5000 results matching your pre-query, resulting in a wrong view. To avoid this issue, be specific in your pre-query filters.
 
 **Example scenario:**
 
