@@ -48,7 +48,7 @@ Process:
 **In the filters view**:
 
 3. Then input your main query (Source type = Malware, Target type = Countries, Relation type = Targets). Add a label to your dataset. 
-4. Add a **an entity data set** by using access button `+ Entities`.
+4. Add **an entity data set** by using access button `+ Entities`.
 5. Add the following filters (Entity type = Malware, In regards of = targets). Add a label to your dataset.
 
 ![filter view](assets/widgets - breakdwonByEntityFilter.png)
@@ -74,7 +74,7 @@ As a result, you get a list of countries broken down by malware types.
 
 **In the filters view**:
 3. Then input your main query (Source type = Malware, Relation type = Targets). Add a label to your dataset. 
-4. Add a **a relation data set** by  by using access button  `+ Relationships`
+4. Add **a relation data set** by using access button  `+ Relationships`
 5. Add the following filters (Source type = Malware, Relation type= targets). Add a label to your dataset.
 
 ![filter view](assets/widget - breakdownByRelationParameter.png)
