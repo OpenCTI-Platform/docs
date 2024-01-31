@@ -31,16 +31,17 @@ A perspective is the way the platform will count the data to display in your wid
 
 Filters vary based on the selected perspective, defining the dataset to be utilized in the widget. Filters are instrumental in narrowing down the scope of data for a more focused analysis.
 
-While filters in the "Entities" and "Activity & History" perspectives align with the platform's familiar search and feed creation filters, the "Knowledge Graph" perspective introduces a more intricate filter configuration.Therefore, they need to be addressed in more detail. Three types of filters are available in the Knowledge Graph perspective:
+While filters in the "Entities" and "Activity & History" perspectives align with the platform's familiar search and feed creation filters, the "Knowledge Graph" perspective introduces a more intricate filter configuration.Therefore, they need to be addressed in more detail.
 
-#### Filter in the context of Knowledge graph
+#### Filter in the context of Knowledge Graph
 
-2 types of filters are available in the Knowledge Graph perspective:
+Two types of filters are available in the Knowledge Graph perspective:
+
 - **Main query filter**
     - **Classic filters (gray):** Define the relationships to be retrieved, forming the basis on which the widget displays data. Remember, statistics in the Knowledge Graph perspective are based on relationships.
   
 - **Pre-query filters**
-    - Pre-query filters are used to **provide to your main query** a specific dataset. In other words, instead of making a query on the whole data set of your platform, you can already target a subset of data that will match certain criteria. They are 2 types of pre-query filters:
+    - Pre-query filters are used to **provide to your main query** a specific dataset. In other words, instead of making a query on the whole data set of your platform, you can already target a subset of data that will match certain criteria. They are two types of pre-query filters:
         - **Dynamic filters on the source (orange):** Refine data by filtering on entities positioned as the source (in the "from" position) of the relationship.
         - **Dynamic filters on the target (green):** Refine data by filtering on entities positioned as the target (in the "to" position) of the relationship.
 
@@ -56,8 +57,7 @@ Let's consider an example scenario: Analyzing the initial access attack patterns
 
 By leveraging these advanced filters, users can conduct detailed analyses within the Knowledge Graph perspective, unlocking insights that are crucial for understanding intricate relationships and statistics.
 
-![Widget filters](assets/widgetKnoweldgeViewPreQueryFilters.png)
-
+![Widget filters](assets/widget-filters.png)
 
 In certain views, you can access buttons like `+`, `+ Relationships,` or `+ Entities`. These buttons enable you to incorporate different data into the same widget for comparative analysis. For instance, in a Line view, adding a second set of filters will display two curves in the widget, each corresponding to one of the filtered data sets. Depending on the view, you can work with 1 to 5 sets of filters. The `Label` field allows you to name a data set, and this label can then be shown as a legend in the widget using the `Display legend` button in the widget parameters (see the next section).
 
