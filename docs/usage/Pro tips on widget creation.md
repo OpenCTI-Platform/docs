@@ -19,6 +19,8 @@ We can classify the widgets in 3 different types:
     - **widgets: horizontal bars**
     - use case example: view the list of malware targeting a country breakdown by the type of malware
 
+![breakdown example](assets/Widget - breakdownExample.png)
+
 ## Adding datasets to your widget
 
 Adding datasets can serve two purposes: comparing data or breakdown a view to have deeper understanding on what a specific dataset is composed of. 
@@ -49,13 +51,19 @@ Process:
 4. Add a **an entity data set** by using access button `+ Entities`.
 5. Add the following filters (Entity type = Malware, In regards of = targets). Add a label to your dataset.
 
+![filter view](assets/widgets - breakdwonByEntityFilter.png)
+
 **In the parameter view:**
 
 6. attribute (of your relation) = entity (so that you display the different entities values)
 7. display the source toggle = off
 8. attribute (of your entity malware) = Malware type (since you want to break down your relations by the malware types)
 
+![parameter view](assets/widget - breakdownByEntityParameter.png)
+
 As a result, you get a list of countries broken down by malware types.
+
+![final result](assets/widget - breakdownByEntityFinal.png)
 
 #### Break down by relation
 
@@ -69,6 +77,8 @@ As a result, you get a list of countries broken down by malware types.
 4. Add a **a relation data set** by  by using access button  `+ Relationships`
 5. Add the following filters (Source type = Malware, Relation type= targets). Add a label to your dataset.
 
+![filter view](assets/widget - breakdownByRelationParameter.png)
+
 **In the parameter view:**
 
 7. attribute (of your relation): entity (so that you display the different entities values)
@@ -76,4 +86,7 @@ As a result, you get a list of countries broken down by malware types.
 9. attribute (of your entity malware) = Malware type (since you want to break down your relations by the malware types)
 10. display the source toggle = off
 
+![paramter view](assets/widget - breakdwonByRelationParameter.png)
+
 As a result, you get a list of malware with the breakdown of their top targets.
+![final view](assets/widget - breakdownByRelationFinal.png)
