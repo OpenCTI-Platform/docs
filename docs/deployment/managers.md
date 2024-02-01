@@ -2,14 +2,20 @@
 
 ## Rules engine
 
-Allows users to execute pre-defined actions based on the data and events in the platform
-to access the list of the rules, ..
+Allows users to execute pre-defined actions based on the data and events in the platform.
+
+These rules are accessible in Settings > Customization > Rules engine
 
 The rules engine is designed to help users automate and streamline their cyber threat intelligence processes.
 
 ## History manager
-This manager keeps tracks of user interactions and system activities in the platform.
+
+This manager keeps tracks of user/connector interactions on entities in the platform.
 It is designed to help users audit and understand the evolution of their CTI data
+
+## Activity manager
+
+The activity manager in OpenCTI is a component that monitors and logs the user actions in the platform such as login, setting update and group update.
 
 ## Background task manager
 
@@ -32,7 +38,7 @@ The retention manager is a component that allows the user to define rules to hel
 
 The notification manager is a component that allows the user to customize and receive alerts about events/changes in the platform.
 
-!! Is this needed here?
+!! Is the next paragraph needed here?
 
 It allows the user to create triggers, which are filters that will generate notifications.
 It can also create and send digests, which are periodic summaries of the notifications that the user is interested in.
@@ -44,8 +50,6 @@ More information about the features handled by this component can be found in th
 
 The ingestion manager in OpenCTI is a component that managers the ingestion of data from RSS or TAXII feeds
 
-## Activity manager
-
 ## Playbook manager
 
 Handles the automation scenarios which can be fully customized and enabled by platform administrators to enrich, filter and modify the data created or updated in the platform.
@@ -54,5 +58,6 @@ Please read [Playbook automation page](../usage/automation.md) to get more infor
 
 ## File index manager
 
-## Indicator decay manager
+The file indexing manager allows users to search for text content within files uploaded to the platform. 
+It extracts and indexes the text content of the files, and stores them in the database.
 
