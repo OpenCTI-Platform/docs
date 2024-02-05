@@ -39,18 +39,21 @@ You can do the same for all the relationships between entities that might be def
 
 ![New representation](assets/csv-mappers-rep-1.png)
 
-Fields might have options besides the mandatory column index, to help extract relevant data.
+Fields might have options besides the mandatory column index, to help extract relevant data:
 
 * __Date__ values are expected in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601?oldformat=true) format, but you can set your own format to the time parser
 * __Multiple values__ can be extracted by specifying the separator used inside the cell (e.g. `+` or `|`)
 
-![Field options](assets/csv-mappers-field-options.png)
+Or to set default values in case some data is missing in the imported file.
+
+![Field options](assets/csv-mappers-field-options-1.png)
+![Field options](assets/csv-mappers-field-options-2.png)
 
 ## CSV Mapper validity
 
 The only parameter required to save a CSV Mapper is a name ; creating and refining its representations can be done iteratively.
 
-All CSV Mappers go through a quick validation that checks if all the representations have all their mandatory fields set. 
+Nonetheless, all CSV Mappers go through a quick validation that checks if all the representations have all their mandatory fields set. 
 Only valid mappers can be run by the users on their CSV files.
 
 Mapper validity is visible in the list of CSV Mappers as shown below.
@@ -84,26 +87,60 @@ The file will then be parsed following the representation rules set in the mappe
 
 By default, the imported elements will be added in a new Analyst Workbench where you will be able to check the result of the import.
 
-## Enter default values for mandatory fields
+## Default values for attributes
 
-In _settings_ __>__ _Customization_, you need to select the entity type that you used in CSV mapper.
+In the case of the CSV file misses some data, you can complete it with default values. To achieve this you have two possibilities:
+
+- Set default values in the settings of the entities,
+- Set specific default values directly in the CSV mapper.
+
+### Set default values in the settings of the entities
+
+!!! info
+Note that adding default values in settings have an impact at entity creation globally on the platform, not only on CSV mappers.
+If you want to apply those default values only at CSV mapper level, please use the second option.
+
+In _settings_ __>__ _Customization_, you can select an entity type and then set default values for its attributes.
 
 ![mapper-settings](assets/CSV  mapper-settings.png)
 
-In the configuration of the entity type, you have access to all of the entity's attributes.
-
-Note that on this screen, for each associated attribute:
-
-* you can modify the __default values__
-* the label 'mandatory' is displayed and editable
+In the configuration of the entity, you have access to entity's attributes that can be managed.
 
 Click on the attribute to add a __default value__ information.
 
 ![mapper-custom](assets/CSV mapper-attribute.png)
 
-Enter the __default value__ in the input field.
+Enter the __default value__ in the input and save the update.
 
 ![mapper-attribute](assets/CSV mapper-default.png)
 
-Once the attribute is configured, you can return on the CSV mapper. If mandatory information is not filled in CSV mapper form but a __default value__ exists for that field,
-that allows to parse the CSV file nevertheless.
+The value filled will be used in the case where the CSV file lacks data for this attribute.
+
+### Set specific default values directly in the CSV mapper
+
+!!! info
+Note that adding default values in the CSV mapper does not have impact elsewhere in the platform.
+Note also that if you fill both a default values in entity settings and the CSV mapper, the one from CSV mapper will be used.
+
+In the mapper form, you will see next to the column index input a gear icon to add extra information for this attribute.
+And if this attribute can have a customizable default value, then you will be able to set one here.
+
+![mapper-attribute](assets/csv-mappers-default-values.png)
+
+The example above shows the case of the attribute `architecture implementation` of a malware. 
+You have some information here. First, it seems we have a default value already set in entity settings for this attribute with the value `[powerpc, x86]`.
+But we want to override this value with another one for our case: `[alpha]`.
+
+### Specific case of marking definitions
+
+For marking definitions, setting a default value for marking definitions is different from other attributes. We are not choosing a particular marking definition to use
+if none is specified in the CSV file. Instead, we will choose a default policy and we have two:
+
+![mapper-attribute](assets/csv-mappers-default-markings.png)
+
+- Use the default marking definitions of the user. In this case the default marking definitions of the connected user importing the CSV file will be used,
+- Let the user choose marking definitions. Here the user importing the CSV file will choose marking definitions (among the ones they can see) when selecting the CSV mapper.
+
+## Additional resources
+
+- **Usefulness:** To additional content on entity customization, refer to the [Customize entities](./entities.md) page in the Administration section of the documentation.
