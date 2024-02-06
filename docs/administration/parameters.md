@@ -52,8 +52,7 @@ This option can be deactivated to have a permanent announcement.
 
     [Please read the dedicated page to have more information](enterprise.md)
 
-<<<<<<< HEAD
-This is where you can configure analytics providers. At the moment only Google analytics v4 is supported.
+This is where you can configure analytics providers. At the moment only Google Analytics v4 is supported.
 
 ## Theme customization
 
@@ -69,5 +68,3 @@ It shows also the used versions of the search engine database, RabbitMQ and Redi
 In cluster mode, the fact that a manager appears as enabled means that it is active in at least one node. 
 
 ![parameters_tools](assets/parameters_tools.png)
-
-Configure analytics providers (at the moment only Google analytics v4).
