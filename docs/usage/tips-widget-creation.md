@@ -22,7 +22,6 @@ Use these widgets if you would like to compare or have some insights about simil
 - Use case example: view the amount of malware, intrusion sets, threat actor groups added in the course of last month in the platform (line or area widget).
 
 !!! warning "Type of object in widget"
-
   These widgets need to use the same "type" of object to work properly. You always need to add relationships in the filter view if you have selected a "knowledge graph" perspective. If you have selected the knowledge graph entity, adding "Entities" (click on `+ entities`) will not work, since you are not counting the same things.
 
 ### Break down widgets
