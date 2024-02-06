@@ -40,13 +40,13 @@ Adding datasets can serve two purposes: comparing data or breakdown a view to ha
 
 ### Use Case 1: compare several datasets
 
-As mentioned in [How to choose the appropriate widget visualization for your use case?](tips_widget_creation.md#howto-section) section you can add data sets to compare different data. Make sure to add the same type of objects (entities or relations) to be able to compare the same objects, by using access buttons like `+`, `+ Relationships`, or `+ Entities`.
+As mentioned in [How to choose the appropriate widget visualization for your use case?](tips-widget-creation.md#howto-section) section you can add data sets to compare different data. Make sure to add the same type of objects (entities or relations) to be able to compare the same objects, by using access buttons like `+`, `+ Relationships`, or `+ Entities`.
 
 You can add up to 5 different data sets.  The `Label` field allows you to name a data set, and this label can then be shown as a legend in the widget using the `Display legend` button in the widget parameters (see the next section).
 
 ### Use case 2: break down your chart
 
-As mentioned in [How to choose the appropriate widget visualization for your use case?](tips_widget_creation.md#howto-section) section you can add data sets to decompose your graph into smaller meaningful chunks. In the below points, you can find some use cases that will help you understand how to structure your data.
+As mentioned in [How to choose the appropriate widget visualization for your use case?](tips-widget-creation.md#howto-section) section you can add data sets to decompose your graph into smaller meaningful chunks. In the below points, you can find some use cases that will help you understand how to structure your data.
 
 You can break down view either by **entity or by relations**, depending on what you need to count.
 
