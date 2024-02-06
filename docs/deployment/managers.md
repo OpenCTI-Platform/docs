@@ -22,7 +22,7 @@ It is designed to help users audit and understand the evolution of their CTI dat
 
 ## Activity manager
 
-The activity manager in OpenCTI is a component that monitors and logs the user actions in the platform such as login, setting update and group update.
+The activity manager in OpenCTI is a component that monitors and logs the user actions in the platform such as login, settings update, and user activities if configured (read, udpate, etc.).
 
 More information can be found [here](../administration/audit/overview.md).
 
@@ -66,7 +66,7 @@ Please read the [Playbook automation page](../usage/automation.md) to get more i
 
 ## File index manager
 
-The file indexing manager allows users to search for text content within files uploaded to the platform. 
-It extracts and indexes the text content of the files, and stores them in the database.
+The file indexing manager extracts and indexes the text content of the files, and stores it in the database.
+It allows users to search for text content within files uploaded to the platform.
 
 More information can be found [here](../administration/file-indexing.md).
