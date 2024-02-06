@@ -108,6 +108,6 @@ As a result, you get a list of malware with the breakdown of their top targets.
 
 ![final view](assets/widget-breakdown-by-relation-final.png)
 
-## More use case
+## More use cases
 
 To see more use cases, feel free to have a look at this [blog post](https://blog.filigran.io/new-octi-dashboards-the-first-graph-dashboarding-engine-for-the-stix-model-406e4eb5842a) that will provide you additional information.
