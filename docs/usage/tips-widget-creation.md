@@ -32,7 +32,7 @@ Use this widget if you want to divide your data set into smaller parts to make i
 - **Widget visualization: horizontal bars.**
 - Use case example: view the list of malware targeting a country breakdown by the type of malware.
 
-![breakdown example](assets/Widget - breakdownExample.png)
+![breakdown example](assets/widget-breakdown-example.png)
 
 ## Adding datasets to your widget
 
@@ -65,7 +65,7 @@ In the filters view:
 4. Add **an entity data set** by using access button `+ Entities`.
 5. Add the following filters `Entity type = Malware AND In regards of = targets`. Add a label to your dataset.
 
-![filter view](assets/widgets - breakdwonByEntityFilter.png)
+![filter view](assets/widget-breakdwon-by-entity-filter.png)
 
 In the parameter view:
 
@@ -73,11 +73,11 @@ In the parameter view:
 7. Display the source toggle = off
 8. Attribute (of your entity malware) = Malware type (since you want to break down your relations by the malware types)
 
-![parameter view](assets/widget - breakdownByEntityParameter.png)
+![parameter view](assets/widget-breakdown-by-entity-parameter.png)
 
 As a result, you get a list of countries broken down by malware types.
 
-![final result](assets/widget - breakdownByEntityFinal.png)
+![final result](assets/widget-breakdown-by-entity-final.png)
 
 #### Break down by relation
 
@@ -94,7 +94,7 @@ In the filters view:
 4. Add **a relation data set** by using access button  `+ Relationships`
 5. Add the following filters `Source type = Malware AND Relation type = targets`. Add a label to your dataset.
 
-![filter view](assets/widget - breakdownByRelationParameter.png)
+![filter view](assets/widget-breakdown-by-relation-filter.png)
 
 In the parameter view:
 
@@ -103,11 +103,11 @@ In the parameter view:
 9. Attribute (of your entity malware) = Malware type (since you want to break down your relations by the malware types)
 10. Display the source toggle = off
 
-![paramter view](assets/widget - breakdwonByRelationParameter.png)
+![paramter view](assets/widget-breakdwon-by-relation-parameter.png)
 
 As a result, you get a list of malware with the breakdown of their top targets.
 
-![final view](assets/widget - breakdownByRelationFinal.png)
+![final view](assets/widget-breakdown-by-relation-final.png)
 
 ## More use case
 
