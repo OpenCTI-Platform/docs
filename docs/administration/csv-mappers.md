@@ -43,7 +43,6 @@ Fields might have options besides the mandatory column index, to help extract re
 Or to set default values in case some data is missing in the imported file.
 
 ![Field options](assets/csv-mappers-field-options-1.png)
-![Field options](assets/csv-mappers-field-options-2.png)
 
 ## CSV Mapper validity
 
@@ -71,10 +70,10 @@ You can then check if the extracted values match the expected entities and relat
 
 You can change the default configuration of the import csv connector in your configuration file.
 ```json
-  "import_csv_built_in_connector": {
-    "enabled": true, 
-    "interval": 10000, 
-    "validate_before_import": false
+"import_csv_built_in_connector": {
+  "enabled": true, 
+  "interval": 10000, 
+  "validate_before_import": false
 },
 ```
 
@@ -98,17 +97,17 @@ In the case of the CSV file misses some data, you can complete it with default v
 
 In _settings_ __>__ _Customization_, you can select an entity type and then set default values for its attributes.
 
-![mapper-settings](assets/CSV  mapper-settings.png)
+![mapper-settings](assets/csv-mapper-settings.png)
 
 In the configuration of the entity, you have access to the entity's attributes that can be managed.
 
 Click on the attribute to add a __default value__ information.
 
-![mapper-custom](assets/CSV mapper-attribute.png)
+![mapper-custom](assets/csv-mapper-attribute.png)
 
 Enter the __default value__ in the input and save the update.
 
-![mapper-attribute](assets/CSV mapper-default.png)
+![mapper-attribute](assets/csv-mapper-default.png)
 
 The value filled will be used in the case where the CSV file lacks data for this attribute.
 
