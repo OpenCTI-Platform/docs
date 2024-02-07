@@ -14,6 +14,7 @@ With the OpenCTI platform, you can manually export your intelligence content in 
 
 ## Export in structured or document format
 
+<a id="generate-export-section"></a>
 ### Generate an export
 
 To export one or more entities you have two possibilities. First you can click on the button "Open export panel". The list of pre-existing exports will open, and in the bottom right-hand corner you can configure and generate a new export.
@@ -30,39 +31,33 @@ This opens the export settings panel, where you can customize your export accord
 
 The second way is to click directly on the "Generate an Export" button to export the content of an entity in the desired format. The same settings panel will open.
 
-![Export entity content](assets/Export_entity_content.png)
+![Export entity content](assets/export_entity_content.png)
 
 ### Export possibilities
 
 All entities in your instance can be exported either directly via Generate Export or indirectly via Export List in .json and .csv formats.
 
-### Export from one or more entities
+### Export a list entities
 
-You have the option to export either a single element, such as report and its content, or a collection of elements, such as multiple reports. These exports will contain not only the entity itself but also related or unrelated elements, depending on the type of export you select: "simple" or "full."
-POURQUOI UNRELATED ???????????????????????????????????
+You have the option to export either a single element, such as a report, or a collection of elements, such as multiple reports. These exports may contain not only the entity itself but also related elements, depending on the type of export you select: "simple" or "full". See the [Export types (simple and full)](export.md#export-type-section) section.
 
-### Export specific content within an entity
+You can also choose to export a list of entities within a container. To do so, go to the container's entities tab. For example, for a report, if you only want to retrieve entity type attack pattern and indicators to design a detection strategy, go to the entities tab and select specific elements for export.
 
-You can also choose to export only certain entities linked to your export object. To do so, go to the entity's internal panels.
+![Export specific elements](assets/export_specific_elements.png)
 
-For example, for a report, if you only want to retrieve entity type Attack Pattern and indicators to design a detection strategy, go to the entities panel and select specific elements for export.
-CA N EXPORTE PAS LE REPORT SI ???????????
-
-
-![Export specific elements](assets/Export_specific_elements.png)
-
+<a id="export-type-section"></a>
 ### Export types (simple and full)
 
 When you wish to export only the content of a specific entity such as a report, you can choose a "simple" export type.
 
 If you also wish to export associated content, you can choose a "full" export. With this type of export, the entity will be exported along with all entities directly associated with the central one (first neighbors).
 
-![Export types](assets/Export_types.png)
+![Export types](assets/export_types.png)
 
-### Exports list
+### Exports list panel
 
-Once an export has been created, you can find it in the export list. Simply click on a particular export to download it.
+Once an export has been created, you can find it in the export list panel. Simply click on a particular export to download it.
 
-You can also generate a new export directly from the Exports list, as explained in the section "**How do I create an export?**". ELLE EST OU CETTE SECTION ????????????????????????????
+You can also generate a new export directly from the Exports list, as explained in the [Generate an export](export.md#generate-export-section) section.
 
-![Exports list](assets/Exports_list.png)
+![Exports list](assets/exports_list.png)
