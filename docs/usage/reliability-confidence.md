@@ -104,7 +104,7 @@ It is always possible to modify an existing template to define a custom scale ad
 
 #### Overview
 
-We know that in organizations, different users do not always have the same expertise or seniority.  As a result, some specific users can be more “trusted” when creating or updating knowledge than others. Additionnaly, because connectors, Taxii feeds and streams are all linked to respectively one user, it is important to be able to differentiate which connector, stream or taxii feed is more trustable that others.
+We know that in organizations, different users do not always have the same expertise or seniority.  As a result, some specific users can be more “trusted” when creating or updating knowledge than others. Additionnaly, because connectors, Taxii feeds and streams are all linked to respectively one user, it is important to be able to differentiate which connector, stream or taxii feed is more trustable than others.
 
 This is why we have introduced the concept of max confidence level to tackle this use case.
 
