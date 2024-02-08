@@ -26,4 +26,4 @@ The list of available connectors can be found in our [connectors catalog](https:
 
 !!! note "Impact of the max confidence level"
 
-  The maximum confidence level per user can have an impact on enrichment connectors, not being able to update data in the platform. To understand the concept and the potential issues you could face, please navigate to this [page](https://docs.opencti.io/latest/usage/reliability-confidence/) to understand.
+  The maximum confidence level per user can have an impact on enrichment connectors, not being able to update data in the platform. To understand the concept and the potential issues you could face, please navigate to this [page](reliability-confidence.md) to understand.

@@ -64,7 +64,7 @@ In order to initiate file imports, users must possess the requisite [capability]
 
 **Max confidence level**
 
-As explained in this [page](https://docs.opencti.io/latest/usage/reliability-confidence/), it is important to set a max confidence level for your users in order to be able to create, update or delete knowledge.
+As explained in this [page](reliability-confidence.md), it is important to set a max confidence level for your users in order to be able to create, update or delete knowledge.
 
 !!! warning "Deprecation warning"
 

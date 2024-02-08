@@ -123,7 +123,7 @@ To have a detailed understanding of the concept, please browse through this diag
 
 #### How to set a confidence level
 
-To see how to set up the confidence level, please go in this [page](https://docs.opencti.io/latest/administration/users/).
+To see how to set up the confidence level, please go in this [page](../administration/users.md).
 
 ## Usage in OpenCTI
 

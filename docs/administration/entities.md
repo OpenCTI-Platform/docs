@@ -65,4 +65,4 @@ Once you have customized your scale, click on "Update" to save your configuratio
 
 !!! note "Max confidence level"
 
-  The above scale also needs to take into account the confidence level per user. To understand the concept, please navigate to this [page](https://docs.opencti.io/latest/usage/reliability-confidence/)
+  The above scale also needs to take into account the confidence level per user. To understand the concept, please navigate to this [page](../usage/reliability-confidence.md)

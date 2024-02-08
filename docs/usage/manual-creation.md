@@ -63,4 +63,4 @@ These supplementary methods offer users flexibility and convenience, allowing th
 
 !!! note "Max confidence level"
 
-  When creating knowledge in the platform, the maximum confidence level of the users is used. Please navigate to this [page](https://docs.opencti.io/latest/usage/reliability-confidence/) to understand this concept and the impact it can have on the knowledge creation.
+  When creating knowledge in the platform, the maximum confidence level of the users is used. Please navigate to this [page](reliability-confidence.md) to understand this concept and the impact it can have on the knowledge creation.

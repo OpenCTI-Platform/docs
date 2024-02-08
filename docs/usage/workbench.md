@@ -41,4 +41,4 @@ For more information on importing files, refer to the [Import from files](import
 
 **Confidence level of created knowledge through workbench**
 
-The confidence level of knowledge created through workbench is affected by the confidence level of the user. Please navigate to this [page](https://docs.opencti.io/latest/usage/reliability-confidence/) to understand in more details.
+The confidence level of knowledge created through workbench is affected by the confidence level of the user. Please navigate to this [page](reliability-confidence.md) to understand in more details.
