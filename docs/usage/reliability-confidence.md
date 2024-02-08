@@ -114,7 +114,7 @@ Max Confidence level per user allows organizations to fine tune their users to e
 
 The overall idea is that users with a max confidence level lower than a confidence level of an entity cannot update or delete this entity.
 
-Also, in a conservative approach, when 2 confidence level are possible, we would always take the lowest one.
+Also, in a conservative approach, when 2 confidence levels are possible, we would always take the lowest one.
 
 To have a detailed understanding of the concept, please browse through this diagram:
 
