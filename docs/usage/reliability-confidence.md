@@ -108,7 +108,7 @@ We know that in organizations, different users do not always have the same exper
 
 This is why we have introduced the concept of max confidence level to tackle this use case.
 
-Max Confidence level per user allows organizations to fine tune their users to ensure knowledge updated and created can be trusted.
+Max Confidence level per user allows organizations to fine tune their users to ensure knowledge updated and created stays as consistent as possible.
 
 #### Overall way of working
 
