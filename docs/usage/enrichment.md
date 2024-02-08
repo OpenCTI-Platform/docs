@@ -24,6 +24,6 @@ Activation of an enrichment connector triggers a contact with the designated rem
 
 The list of available connectors can be found in our [connectors catalog](https://www.notion.site/OpenCTI-Ecosystem-868329e9fb734fca89692b2ed6087e76). In addition, further documentation on connectors is available on [the dedicated documentation page](../deployment/connectors.md).
 
-**Impact of the max confidence level per user**
+!!! note "Impact of the max confidence level"
 
-The maximum confidence level per user can have an impact on enrichment connectors, not being able to update data in the platform. To understand the concept and the potential issues you could face, please navigate to this [page](https://docs.opencti.io/latest/usage/reliability-confidence/) to understand.
+  The maximum confidence level per user can have an impact on enrichment connectors, not being able to update data in the platform. To understand the concept and the potential issues you could face, please navigate to this [page](https://docs.opencti.io/latest/usage/reliability-confidence/) to understand.
