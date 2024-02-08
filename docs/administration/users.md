@@ -71,6 +71,7 @@ When access to a user, it is possible to:
 * Manage its sessions
 * Manage its triggers and digests
 * Visualize the history and operations
+* Manage its max confidence level (override the value inherited from the group)
 
 ![User overview](assets/user-overview.png)
 
@@ -80,15 +81,17 @@ Groups is the main vehicule to manage permissions and [data segregation](segrega
 
 Here is the description of the group available parameters.
 
-| Parameter                                                         | Description                                                                                                                     |
-| :---------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------ |
-| `Auto new markings`                                               | If a new marking definition is created, this group will automatically be granted to it.                                         |
-| `Default membership`                                              | If a new user is created (manually or upon SSO), it will be added to this group.                                                |
-| `Roles`                                                           | Roles and capabilities granted to the users belonging to this group.                                                            |
-| `Default dashboard`                                               | Customize the home dashboard for the users belonging to this group.                                                             |
-| `Default markings`                                                | In `Settings > Customization > Entity types`, if default marking definitions is enabled, default markings of the group is used. |
-| `Allowed markings`                                                | Grant access to the group to the defined marking definitions, more details in [data segregation](segregation.md).               |
-| `Triggers and digests`                                            | Define defaults triggers and digests for the users belonging to this group.                                                     |
+| Parameter              | Description                                                                                                                                                                                                                                                                                            |
+|:-----------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `Auto new markings`    | If a new marking definition is created, this group will automatically be granted to it.                                                                                                                                                                                                                |
+| `Default membership`   | If a new user is created (manually or upon SSO), it will be added to this group.                                                                                                                                                                                                                       |
+| `Roles`                | Roles and capabilities granted to the users belonging to this group.                                                                                                                                                                                                                                   |
+| `Default dashboard`    | Customize the home dashboard for the users belonging to this group.                                                                                                                                                                                                                                    |
+| `Default markings`     | In `Settings > Customization > Entity types`, if default marking definitions is enabled, default markings of the group is used.                                                                                                                                                                        |
+| `Allowed markings`     | Grant access to the group to the defined marking definitions, more details in [data segregation](segregation.md).                                                                                                                                                                                      |
+| `Triggers and digests` | Define defaults triggers and digests for the users belonging to this group.                                                                                                                                                                                                                            |
+| `Max confidence level`   | Define the maximum confidence level for the group: it will impact the capacity to update entities, the confidence level of a newly created entity by a user of the group                                                                                                                               |
+
 
 ![Group overview](assets/group-overview.png)
 
@@ -114,3 +117,6 @@ The platform administrator can promote/demote an organization admin through its 
 
 The "Organization admin" has restricted access to Settings. They can only manage the members of the organizations for which they have been promoted as "admins".
 
+## Warning
+
+A user without Max confidence level won't have the ability to create, delete or update any data in our platform. Please be sure that your users are always either assigned to group that have a confidence level defined or that have an override of this group confidence level.
