@@ -84,10 +84,10 @@ Additional configuration options:
 Ensuring a secure and well-organized environment is paramount in OpenCTI. Here are two recommended best practices to enhance security, traceability, and overall organizational clarity:
 
 1. Create a dedicated user for each source: Generate a user specifically for feed import, following the convention `[F] Source name` for clear identification. Assign the user to the "Connectors" group to streamline user management and permission related to data creation. Please [see here](../deployment/connectors.md#connector-token-section) for more information on this good practice.
-2. Establish a dedicated Organization for the source: Create an organization named after the data source for clear identification. Assign the newly created organization to the "Default author" field in feed import configuration if available.
+2. Assign the users to a specific group, in charge of creating knowledge in your platform and assign to this group a max confidence level. This will ensure that all your users will be able to create and update knowledge in your platform with a confidence level that match your needs. **Without assigning a max confidence level, your users won’t be able to create or update any data.** See in this [page](https://docs.opencti.io/latest/administration/users/) how to assign a confidence level.
+3. Establish a dedicated Organization for the source: Create an organization named after the data source for clear identification. Assign the newly created organization to the "Default author" field in feed import configuration if available.
 
 By adhering to these best practices, you ensure independence in managing rights for each import source through dedicated user and organization structures. In addition, you enable clear traceability to the entity's creator, facilitating source evaluation, dashboard creation, data filtering and other administrative tasks.
-
 
 ## Digest
 
