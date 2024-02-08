@@ -60,7 +60,7 @@ You can manage the users in `Settings > Security > Users`. If you are using [Sin
 
 To create a user, just click on the `+` button:
 
-![Create user](assets/create-user.png)
+![Create user](assets/create-user-new.png)
 
 ### Manage a user
 
@@ -73,7 +73,10 @@ When access to a user, it is possible to:
 * Visualize the history and operations
 * Manage its max confidence level (override the value inherited from the group)
 
-![User overview](assets/user-overview.png)
+![User overview](assets/user-overview-new.png)
+
+In the below image, you can see how to override the value inherited from the group.
+![manage user](assets/user-manage.png)
 
 ## Groups
 
@@ -93,13 +96,13 @@ Here is the description of the group available parameters.
 | `Max confidence level`   | Define the maximum confidence level for the group: it will impact the capacity to update entities, the confidence level of a newly created entity by a user of the group                                                                                                                               |
 
 
-![Group overview](assets/group-overview.png)
+![Group overview](assets/group-overview-new.png)
 
 ### Manage a group
 
 When managing a group, you can define the members and all above configurations.
 
-![Update a group](assets/update-group.png)
+![Update a group](assets/update-group-new.png)
 
 ## Organizations
 
