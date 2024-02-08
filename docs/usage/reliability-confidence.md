@@ -104,11 +104,11 @@ It is always possible to modify an existing template to define a custom scale ad
 
 #### Overview
 
-We know that in organizations, different users do not always have the same expertise or seniority.  As a result, some specific users can be more “trusted” when creating or updating knowledge than others. Additionnaly, because connectors, Taxii feeds and streams are all linked to respectively one user, it is important to be able to differentiate which connector, stream or taxii feed is more trustable than others.
+We know that in organizations, different users do not always have the same expertise or seniority.  As a result, some specific users can be more "trusted" when creating or updating knowledge than others. Additionnaly, because connectors, TAXII feeds and streams are all linked to respectively one user, it is important to be able to differentiate which connector, stream or TAXII feed is more trustable than others.
 
 This is why we have introduced the concept of max confidence level to tackle this use case.
 
-Max Confidence level per user allows organizations to fine tune their users to ensure knowledge updated and created stays as consistent as possible.
+Max confidence level per user allows organizations to fine tune their users to ensure knowledge updated and created stays as consistent as possible.
 
 #### Overall way of working
 
@@ -123,7 +123,7 @@ To have a detailed understanding of the concept, please browse through this diag
 
 #### How to set a confidence level
 
-To see how to set up the confidence level, please go in this [page](https://docs.opencti.io/latest/administration/users/)
+To see how to set up the confidence level, please go in this [page](https://docs.opencti.io/latest/administration/users/).
 
 ## Usage in OpenCTI
 
