@@ -76,7 +76,12 @@ When access to a user, it is possible to:
 ![User overview](assets/user-overview-new.png)
 
 In the below image, you can see how to override the value inherited from the group.
+
 ![manage user](assets/user-manage.png)
+
+!!! warning "Mandatory max confidence level"
+
+  A user without Max confidence level won't have the ability to create, delete or update any data in our platform. Please be sure that your users are always either assigned to group that have a confidence level defined or that have an override of this group confidence level.
 
 ## Groups
 
@@ -119,7 +124,3 @@ The platform administrator can promote/demote an organization admin through its 
 ![Organization admin promoting/demoting](assets/define_organization_admin.png)
 
 The "Organization admin" has restricted access to Settings. They can only manage the members of the organizations for which they have been promoted as "admins".
-
-## Warning
-
-A user without Max confidence level won't have the ability to create, delete or update any data in our platform. Please be sure that your users are always either assigned to group that have a confidence level defined or that have an override of this group confidence level.
