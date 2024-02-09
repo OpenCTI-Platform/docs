@@ -62,9 +62,6 @@ Expanding the scope of file imports, users can seamlessly add files in the `Cont
 
 In order to initiate file imports, users must possess the requisite [capability](../administration/users.md): "Upload knowledge files." This capability ensures that only authorized users can contribute and manage knowledge files within the OpenCTI platform, maintaining a controlled and secure environment for data uploads.
 
-**Max confidence level**
-
-As explained in this [page](reliability-confidence.md), it is important to set a max confidence level for your users in order to be able to create, update or delete knowledge.
 
 !!! warning "Deprecation warning"
 
