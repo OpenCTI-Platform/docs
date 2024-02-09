@@ -73,7 +73,7 @@ When access to a user, it is possible to:
 * Visualize the history and operations
 * Manage its max confidence level (override the value inherited from the group)
 
-![User overview](assets/user-overview-new.png)
+![User overview](assets/user-overveiw-new.png)
 
 In the below image, you can see how to override the value inherited from the group.
 
