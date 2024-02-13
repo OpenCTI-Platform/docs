@@ -30,8 +30,8 @@ Roles are used in the platform to grant the given groups with some **capabilitie
 | &nbsp;&nbsp;&nbsp;&nbsp;`Delete exploration`                       | Delete workspaces whether custom dashboards or investigations.                          |
 | `Access connectors`                                                | Read information in the `Data > Connectors` section.                                    |
 | &nbsp;&nbsp;`Manage connector state`                               | Reset the connector state to restart ingestion from the beginning.                      |
-| `Access Taxii feed`                                                | Access and consume TAXII collections.                                                   |
-| &nbsp;&nbsp;`Manage Taxii collections`                             | Create, update and delete TAXII collections.                                            |
+| `Access data sharing & ingestion`                                  | Access and consume data such as TAXII collections.                                      |
+| &nbsp;&nbsp;`Manage data sharing & ingestion`                      | Create, update and delete data such as TAXII collections.                               |
 | &nbsp;&nbsp;`Manage CSV mappers`                                   | Create, update and delete CSV mappers.                                                  |
 | `Access administration`                                            | Access and manage overall parameters of the platform in `Settings > Parameters`.        |
 | &nbsp;&nbsp;`Manage credentials`                                   | Access and manage roles, groups, users, organizations and security policies.            |
