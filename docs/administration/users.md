@@ -30,9 +30,9 @@ Roles are used in the platform to grant the given groups with some **capabilitie
 | &nbsp;&nbsp;&nbsp;&nbsp;`Delete exploration`                       | Delete workspaces whether custom dashboards or investigations.                          |
 | `Access connectors`                                                | Read information in the `Data > Connectors` section.                                    |
 | &nbsp;&nbsp;`Manage connector state`                               | Reset the connector state to restart ingestion from the beginning.                      |
-| `Access Taxii feed`                                                | Access and consume TAXII collections.                                                   |
-| &nbsp;&nbsp;`Manage Taxii collections`                             | Create, update and delete TAXII collections.                                            |
-| &nbsp;&nbsp;`Manage CSV mappers`                                   | Create, update and delete CSV mappers.                                      |
+| `Access data sharing & ingestion`                                  | Access and consume data such as TAXII collections.                                      |
+| &nbsp;&nbsp;`Manage data sharing & ingestion`                      | Create, update and delete data such as TAXII collections.                               |
+| &nbsp;&nbsp;`Manage CSV mappers`                                   | Create, update and delete CSV mappers.                                                  |
 | `Access administration`                                            | Access and manage overall parameters of the platform in `Settings > Parameters`.        |
 | &nbsp;&nbsp;`Manage credentials`                                   | Access and manage roles, groups, users, organizations and security policies.            |
 | &nbsp;&nbsp;`Manage marking definitions`                           | Update and delete marking definitions.                                                  |
@@ -98,8 +98,7 @@ Here is the description of the group available parameters.
 | `Default markings`     | In `Settings > Customization > Entity types`, if default marking definitions is enabled, default markings of the group is used.                                                                                                                                                                        |
 | `Allowed markings`     | Grant access to the group to the defined marking definitions, more details in [data segregation](segregation.md).                                                                                                                                                                                      |
 | `Triggers and digests` | Define defaults triggers and digests for the users belonging to this group.                                                                                                                                                                                                                            |
-| `Max confidence level`   | Define the maximum confidence level for the group: it will impact the capacity to update entities, the confidence level of a newly created entity by a user of the group                                                                                                                               |
-
+| `Max confidence level`   | Define the maximum confidence level for the group: it will impact the capacity to update entities, the confidence level of a newly created entity by a user of the group                                                                                                                             |
 
 ![Group overview](assets/group-overview-new.png)
 
@@ -109,13 +108,14 @@ When managing a group, you can define the members and all above configurations.
 
 ![Update a group](assets/update-group-new.png)
 
+<a id="organizations-section"></a>
 ## Organizations
 
 Users can belong to organizations, which is an additional layer of [data segregation](segregation.md) and customization.
 
 ## Organization administration
 
-Plateform administrators can promote members of an organization as "Organization administrator". This elevated role grants them the necessary capabilities to create, edit and delete users from the corresponding Organization. Additionally, administrators have the flexibility to define a list of groups that can be granted to newly created members by the organization administrators. This feature simplifies the process of granting appropriate access and privileges to individuals joining the organization.
+Platform administrators can promote members of an organization as "Organization administrator". This elevated role grants them the necessary capabilities to create, edit and delete users from the corresponding Organization. Additionally, administrators have the flexibility to define a list of groups that can be granted to newly created members by the organization administrators. This feature simplifies the process of granting appropriate access and privileges to individuals joining the organization.
 
 ![Organization admin Settings view](assets/organization_admin_view.png)
 
