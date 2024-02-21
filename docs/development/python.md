@@ -1,7 +1,6 @@
 # Python library
 
-The PyCTI library is the official Python client for OpenCTI.
-It is made to help developers interact with the openCTI plaform.
+The PyCTI library is the official Python client for OpenCTI. It is made to help developers interact with the openCTI plaform.
 
 # Installation
 
@@ -11,15 +10,9 @@ To install the latest Python client library, please use `pip`:
 
 # Using the helper functions
 
-The main class `OpenCTIApiClient` contains all what you need to interact
-with the platform, you just have to initialize it. If your OpenCTI instance requires mTLS,
-you can specify either the file path of the SSL .pem file, or provide a key-value pair representing
-the file paths to your cert and private key in a tuple with the `cert` parameter when
-initializing the `OpenCTIApiClient`. If you need to require the verification of the TLS certificate at the server,
-you can provide a boolean value for the `ssl_verify` parameter.
+The main class `OpenCTIApiClient` contains all what you need to interact with the platform, you just have to initialize it. If your OpenCTI instance requires TLS, you can specify either the file path of the SSL .pem file, or provide a key-value pair representing the file paths to your cert and private key in a tuple with the `cert` parameter when initializing the `OpenCTIApiClient`. If you need to require TLS certificate verification on the server, you can provide a boolean value for the `ssl_verify` parameter.
 
-The following example shows how you create an indicator in OpenCTI using the python library
-with TLP marking and OpenCTI compatible date format.
+The following example shows how you create an indicator in OpenCTI using the python library with TLP marking and OpenCTI compatible date format.
 
 ```python
 from dateutil.parser import parse
