@@ -3,16 +3,14 @@
 
 ## Introduction
 
-OpenCTI enforces strict rules to determine the period during which an indicator is effective for detection. This period is defined by the `valid_from` and `valid_until` dates. All along this life, the indicator `score` will decrease according to [configured decay rules](../administration/decay-rules.md).
-
-After the indicator fully expires, the object is marked as `revoked` and the `detection` field is automatically set to `false`. Here, we outline how these dates are calculated within the OpenCTI platform and how the score is updated with decay rules.
+OpenCTI enforces strict rules to determine the period during which an indicator is effective for usage. This period is defined by the `valid_from` and `valid_until` dates. All along its lifecycle, the indicator `score` will decrease according to [configured decay rules](../administration/decay-rules.md). After the indicator expires, the object is marked as `revoked` and the `detection` field is automatically set to `false`. Here, we outline how these dates are calculated within the OpenCTI platform and how the score is updated with decay rules.
 
 
 ## Setting validity dates
 
 ### Data source provided the dates
 
-If a data source provides `valid_from` and `valid_until` dates when creating an indicator on the platform, these dates are used without modification.
+If a data source provides `valid_from` and `valid_until` dates when creating an indicator on the platform, these dates are used without modification. But, if the creation is performed from the UI and the indicator is elligible to be manages by a decay rule, the platform will change this valid_until with the one calculated by the Decay rule.
 
 ### Fallback rules for unspecified dates
 
