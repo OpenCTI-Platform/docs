@@ -3,7 +3,7 @@
 
 ## Introduction
 
-OpenCTI enforces strict rules to determine the period during which an indicator is effective for detection. This period is defined by the `valid_from` and `valid_until` dates. Since 6.0 version, all along this life, the indicator `score` will decrease according to [configured decay rules](../administration/decay-rules.md).
+OpenCTI enforces strict rules to determine the period during which an indicator is effective for detection. This period is defined by the `valid_from` and `valid_until` dates. All along this life, the indicator `score` will decrease according to [configured decay rules](../administration/decay-rules.md).
 
 After the indicator fully expires, the object is marked as `revoked` and the `detection` field is automatically set to `false`. Here, we outline how these dates are calculated within the OpenCTI platform and how the score is updated with decay rules.
 
@@ -28,7 +28,7 @@ Score is updated at each reaction point defined for the decay rule matching the 
 
 ## Example
 
-This URL indicator has matched the `Built-in IP and URL` decay rule. Its initial score at creation is 100, 
+This URL indicator has matched the `Built-in IP and URL` decay rule. Its initial score at creation is 100. 
 
 ![Indicator overview](./assets/indicators-lifecycle-example-overview.png)
 
