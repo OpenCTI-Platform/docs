@@ -10,6 +10,30 @@ ElasticSearch and OpenSearch both support rollover on indices. OpenCTI has been 
 
 ![Indices](assets/indices.png)
 
+
+## OpenCTI Integration User Permissions in OpenSearch/ElasticSearch
+
+- Index Permissions
+    - **Patterns:** `opencti*` _(Dependent on the parameter [elasticsearch:index_prefix](configuration.md#elasticsearch) value)_
+    - **Permissions:** `indices_all`
+
+- Cluster Permissions
+    - `cluster_composite_ops_ro`
+    - `cluster_manage_index_templates`
+    - `cluster:admin/ingest/pipeline/put`
+    - `cluster:admin/opendistro/ism/policy/write`
+    - `cluster:monitor/health`
+    - `cluster:monitor/main`
+    - `cluster:monitor/state`
+    - `indices:admin/index_template/put`
+    - `indices:data/read/scroll/clear`
+    - `indices:data/read/scroll`
+    - `indices:data/write/bulk`
+
+!!! warning "About`indices:*` in _Cluster Permissions_"
+
+    It is crucial to include `indices:*` permissions in **Cluster Permissions** for the proper functioning of the OpenCTI integration. Removing these, even if already present in **Index Permissions**, may result in startup issues for the OpenCTI Platform.
+
 ## ElasticSearch configuration
 
 ### Indices
@@ -141,7 +165,7 @@ curl -X POST "localhost:9200/_reindex?pretty" -H 'Content-Type: application/json
     "index": "opencti_history-000001"
   },
   "dest": {
-    "index": "octi_history-000001"
+    "index": "octi_history"
   }
 }
 '

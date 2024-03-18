@@ -31,6 +31,10 @@ All components of OpenCTI are shipped both as [Docker images](https://hub.docker
 
 ## Using Docker
 
+!!! note "Deploy FIPS 140-2 compliant components"
+
+    We are providing FIPS 140-2 compliant images, please read the [dedicated documentation](../reference/fips.md) to understand how to deploy OpenCTI in FIPS-compliant mode.
+
 ### Introduction
 
 OpenCTI can be deployed using the *docker-compose* command.
@@ -59,6 +63,16 @@ cd docker
 
 ### Configure the environment
 
+!!! warning "ElasticSearch / OpenSearch configuration"
+
+    - We highly recommend to put the ElasticSearch / OpenSearch following parameter:
+
+    ```bash
+    thread_pool.search.queue_size=5000
+    ```
+
+    - Check the [OpenCTI Integration User Permissions in OpenSearch/ElasticSearch](rollover.md#opencti-integration-user-permissions-in-opensearchelasticsearch) for detailed information about the necessary user permissions for the OpenSearch/ElasticSearch integration.
+
 Before running the `docker-compose` command, the `docker-compose.yml` file should be configured. By default, the `docker-compose.yml` file is using environment variables available in the file `.env.sample`.
 
 You can either rename the file `.env.sample` in `.env` and put the expected values or just fill directly the `docker-compose.yml` with the values corresponding to your environment.
@@ -76,6 +90,7 @@ cd ~/docker
 OPENCTI_ADMIN_EMAIL=admin@opencti.io
 OPENCTI_ADMIN_PASSWORD=ChangeMePlease
 OPENCTI_ADMIN_TOKEN=$(cat /proc/sys/kernel/random/uuid)
+OPENCTI_BASE_URL=http://localhost:8080
 MINIO_ROOT_USER=$(cat /proc/sys/kernel/random/uuid)
 MINIO_ROOT_PASSWORD=$(cat /proc/sys/kernel/random/uuid)
 RABBITMQ_DEFAULT_USER=guest
@@ -85,7 +100,9 @@ CONNECTOR_HISTORY_ID=$(cat /proc/sys/kernel/random/uuid)
 CONNECTOR_EXPORT_FILE_STIX_ID=$(cat /proc/sys/kernel/random/uuid)
 CONNECTOR_EXPORT_FILE_CSV_ID=$(cat /proc/sys/kernel/random/uuid)
 CONNECTOR_IMPORT_FILE_STIX_ID=$(cat /proc/sys/kernel/random/uuid)
-CONNECTOR_IMPORT_REPORT_ID=$(cat /proc/sys/kernel/random/uuid)
+CONNECTOR_EXPORT_FILE_TXT_ID=$(cat /proc/sys/kernel/random/uuid)
+CONNECTOR_IMPORT_DOCUMENT_ID=$(cat /proc/sys/kernel/random/uuid)
+SMTP_HOSTNAME=localhost
 EOF
 ) > .env
 ```
@@ -95,8 +112,6 @@ If your `docker-compose` deployment does not support `.env` files, just export a
 ```bash
 export $(cat .env | grep -v "#" | xargs)
 ```
-
-²
 
 As OpenCTI has a dependency on ElasticSearch, you have to set the `vm.max_map_count` before running the containers, as mentioned in the [ElasticSearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html#docker-cli-run-prod-mode).
 
@@ -109,6 +124,7 @@ To make this parameter persistent, add the following to the end of your `/etc/sy
 ```bash
 vm.max_map_count=1048575
 ```
+    
 
 ### Persist data
 
@@ -132,13 +148,13 @@ After changing your `.env` file run `docker-compose` in detached (-d) mode:
 
 ```bash
 sudo systemctl start docker.service
-# Run docker-compose in detached 
+# Run docker-compose in detached
 docker-compose up -d
 ```
 
 #### Using Docker swarm
 
-In order to have the best experience with Docker, we recommend using the Docker stack feature. In this mode you will have the capacity to easily scale your deployment. 
+In order to have the best experience with Docker, we recommend using the Docker stack feature. In this mode you will have the capacity to easily scale your deployment.
 
 ```bash
 # If your virtual machine is not a part of a Swarm cluster, please use:
@@ -175,7 +191,7 @@ sudo apt-get install build-essential nodejs npm python3 python3-pip python3-dev
 
 #### Download the application files
 
-First, you have to [download and extract the latest release file](https://github.com/OpenCTI-Platform/opencti/releases). Then select the version to install depending of your operating system: 
+First, you have to [download and extract the latest release file](https://github.com/OpenCTI-Platform/opencti/releases). Then select the version to install depending of your operating system:
 
 **For Linux:**
 
@@ -294,9 +310,9 @@ python3 worker.py &
 
     ---
 
-    OpenCTI Helm Charts (may be out of date) for Kubernetes with a global configuration file.
+    OpenCTI Helm Charts for Kubernetes with a global configuration file. More information how to deploy here on [basic installation](https://github.com/devops-ia/helm-charts/blob/main/charts/opencti/docs/configuration.md) and [examples](https://github.com/devops-ia/helm-charts/blob/main/charts/opencti/docs/examples.md).
 
-    [:material-github:{ .middle } GitHub Repository](https://github.com/Ascend-Technologies/OpenCTI-HELM-CHART)
+    [:material-github:{ .middle } GitHub Repository](https://github.com/devops-ia/helm-charts/tree/main/charts/opencti)
 </div>
 
 ### Deploy behind a reverse proxy

@@ -6,7 +6,7 @@ One of the core concept of the OpenCTI knowledge graph is all underlying mechani
 
 When an object is created in the platform, whether manually by a user or automatically by the connectors / workers chain, the platform checks if something already exist based on some properties of the object. If the object already exists, it will return the existing object and, [in some cases](), update it as well.
 
-Technically, OpenCTI generates deterministic IDs based on the listed properties below to prevent duplicate (aka "ID Contributing Properties"). Also, it is important to note that there is a special link between `name` and `aliases` leading to not have entities with overlaping aliases or an alias already used in the name of another entity.
+Technically, OpenCTI generates deterministic IDs based on the listed properties below to prevent duplicate (aka "ID Contributing Properties"). Also, it is important to note that there is a special link between `name` and `aliases` leading to not have entities with overlapping aliases or an alias already used in the name of another entity.
 
 ### Entities
 
@@ -40,7 +40,7 @@ Technically, OpenCTI generates deterministic IDs based on the listed properties 
 | Organization            | (`name` OR `x_opencti_alias`) and `identity_class`          |
 | Position                | (`name` OR `x_opencti_alias`) AND `x_opencti_location_type` |
 | Region                  | `name` OR `alias`                                           |
-| Report                  | `name` AND `publised` (date)                                |
+| Report                  | `name` AND `published` (date)                               |
 | RFI Case                | `name` AND `created` (date)                                 |
 | RFT Case                | `name` AND `created` (date)                                 |
 | Sector                  | (`name` OR `alias`) and `identity_class`                    |
@@ -48,6 +48,10 @@ Technically, OpenCTI generates deterministic IDs based on the listed properties 
 | Threat Actor            | `name` OR `alias`                                           |
 | Tool                    | `name` OR `alias`                                           |
 | Vulnerability           | `name` OR `alias`                                           |
+
+!!! info "Names and aliases management"
+    
+    The name and aliases of an entity define a set of unique values, so it's not possible to have the name equal to an alias and vice versa.
 
 ### Relationships
 
@@ -65,10 +69,9 @@ For STIX Cyber Observables, OpenCTI also generate deterministic IDs based on the
 
 ## Update behavior
 
-If an entity already exists in the platform, the `attributes` may be updated by the incoming creation with the following rule:
+In cases where an entity already exists in the platform, incoming creations can trigger updates to the existing entity's attributes.
+This logic has been implemented to converge the knowledge base towards the highest confidence and quality levels for both entities and relationships.
 
-!!! note ""
-    
-    If `confidence_level` of the created entity is >= (greater or equal) then the `confidence_level` of the existing entity, attributes will be updated. Obviously, the `confidence_level` will also be increased with the new one.
+To understand in details how the deduplication mechanism works in context of the maximum confidence level, you can navigate through this diagram (section deduplication):
 
-This logic has been implemented so the platform can converge to the highest confidence and quality levels for the entities and the relationships.
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FlVU6O39B76MJmtnzg9DbZZ%2FConfidence-Level---Documentation%3Ftype%3Dwhiteboard%26node-id%3D0%253A1%26t%3DPQWrdBF6iMGEp0bw-1" allowfullscreen></iframe>

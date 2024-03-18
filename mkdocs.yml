@@ -2,7 +2,7 @@ site_name: OpenCTI Documentation
 site_description: Documentation about OpenCTI, the next-generation Cyber Threat Intelligence platform.
 site_author: Filigran
 site_url: https://docs.opencti.io
-copyright: © 2023 Filigran. All rights reserved
+copyright: © 2024 Filigran. All rights reserved
 repo_name: GitHub
 repo_url: https://github.com/OpenCTI-Platform/opencti
 edit_uri: https://github.com/OpenCTI-Platform/docs/blob/main/docs/
@@ -57,22 +57,22 @@ extra:
 plugins:
   - mike:
       alias_type: symlink
-      canonical_version: latest  
+      canonical_version: latest
   - search
   - git-committers:
       repository: OpenCTI-Platform/docs
-      branch: main  
+      branch: main
   - git-revision-date-localized:
       enable_creation_date: true
       type: timeago
   - glightbox
 
 # Extensions
-markdown_extensions: 
+markdown_extensions:
   - attr_list
   - md_in_html
   - tables
-  - admonition   
+  - admonition
   - def_list
   - pymdownx.inlinehilite
   - pymdownx.snippets
@@ -92,7 +92,7 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
-      alternate_style: true   
+      alternate_style: true
   - pymdownx.highlight:
       use_pygments: true
       anchor_linenums: true
@@ -101,7 +101,7 @@ markdown_extensions:
       auto_title: false
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg   
+      emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.snippets:
@@ -122,6 +122,7 @@ nav:
       - Integrations: deployment/integrations.md
       - Other resources: deployment/resources.md
     - Advanced:
+      - Platform managers: deployment/managers.md
       - Clustering: deployment/clustering.md
       - Indices and rollover: deployment/rollover.md
       - Troubleshooting: deployment/troubleshooting.md
@@ -156,20 +157,21 @@ nav:
       - Inferences and reasoning: usage/inferences.md
       - Enrichment connectors: usage/enrichment.md
       - Merge objects: usage/merging.md
-      - Indicators lifecycle: usage/indicators-lifecycle.md
-    - Act on knowledge:    
+      - Ask AI: usage/ask-ai.md
+    - Act on knowledge:
       - Case management: usage/case-management.md
-      - Notifications:
-        - Notifications and alerting: usage/notifications.md
-        - Sample notifiers: usage/notifiers.md
+      - Notifications and alerting: usage/notifications.md
       - Background tasks: usage/background-tasks.md
-      - Custom dashboards: usage/dashboards.md
+      - Dashboards:
+        - Custom dashboards: usage/dashboards.md
+        - Widget creation: usage/widgets.md
+        - Tips for widget creation: usage/tips-widget-creation.md
       - Workflows and assignation: usage/workflows.md
+      - Indicators lifecycle: usage/indicators-lifecycle.md
       - Automation: usage/automation.md
     - Sharing and exports:
       - Native feeds: usage/feeds.md
-      - Export in structured format: usage/export-structured.md
-      - Export in documents: usage/export-documents.md      
+      - Manual export: usage/export.md
   - Administration:
     - Introduction: administration/introduction.md
     - Enterprise edition: administration/enterprise.md
@@ -185,26 +187,31 @@ nav:
       - Customization:
         - Entity types: administration/entities.md
         - Rules engine: administration/reasoning.md
+        - Notifiers:
+          - Custom notifiers: administration/notifiers.md
+          - Notifier samples: administration/notifier-samples.md
         - Retention policies: administration/retentions.md
-        - Sourcing knowledge: administration/sourcing.md
+        - Decay rules: administration/decay-rules.md
       - Taxonomies: administration/ontologies.md
       - Activity:
         - Overview: administration/audit/overview.md
         - Events: administration/audit/events.md
         - Configuration: administration/audit/configuration.md
         - Activity triggers: administration/audit/triggers.md
+      - File indexing:  administration/file-indexing.md
   - Reference:
+    - Deployment:
+        - FIPS 140-2 installation: reference/fips.md
     - Data:
       - Data model: reference/data-model.md
       - Data Intelligence: reference/data-intelligence.md
       - Taxonomy: reference/taxonomy.md
-      - Knowledge graph: reference/graph.md
     - APIs and feeds:
       - GraphQL API: reference/api.md
+      - Filters:
+        - Filters knowledge: reference/filters.md
+        - Filter migration for 5.12: reference/filters-migration.md
       - Data Streaming: reference/streaming.md
-      - TAXII Feeds: reference/taxii-feeds.md
-      - CSV Feeds: reference/csv-feeds.md
-    - Security and compliance: reference/security.md
   - Development:
     - Prerequisites:
       - Ubuntu: development/environment_ubuntu.md

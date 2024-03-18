@@ -24,9 +24,30 @@ Also, using the `Advanced search` button, it is possible to directly put filters
 
 ![Advanced search](assets/advanced-search.png)
 
+!!! info "Advanced filters"
+
+    You have access to advanced filters all accross the UI, if you want to know more about how to use these 
+    filters with the API or the Python library, [don't hesitate to read the dedicated page](../reference/filters.md)
+
+### Full text search in files content
+
+!!! tip "Enterprise edition"
+
+    Full text search in files content is available under the "Filigran entreprise edition" license.
+
+    [Please read the dedicated page to have all information](../administration/enterprise.md)
+
+It's possible to extend the global search by keywords to the content of documents uploaded to the platform via the Data import tab, or directly linked to an entity via its Data tab.
+
+It is particularly useful to enable ``Full text indexing`` to avoid missing important information that may not have been structured within the platform. This situation can arise due to a partial automatic import of document content, limitations of a connector, and, of course, errors during manual processing.
+
+![Files search](assets/global-search-files.png)
+
+In order to search in files, you need to configure [file indexing](../administration/file-indexing.md).
+
 ## Bulk search
 
-The bulk search capabilities in available in the top bar of the platform and allow you to copy paste a list of keyword or objects (ie. list of domains, list of IP addresses, list of vulnerabilities, etc.) to search in the platform:
+The bulk search capabilities is available in the top bar of the platform and allows you to copy paste a list of keyword or objects (ie. list of domains, list of IP addresses, list of vulnerabilities, etc.) to search in the platform:
 
 ![Bulk search](assets/bulk-search.png)
 
@@ -39,10 +60,10 @@ When searching in bulk, OpenCTI is only looking for an exact match in some prope
 * `value`
 * `subject`
 * `abstract`
-* `hashes_MD5`
-* `hashes_SHA1`
-* `hashes_SHA256`
-* `hashes_SHA512`
+* `hashes.MD5`
+* `hashes.SHA-1`
+* `hashes.SHA-256`
+* `hashes.SHA-512`
 * `x_opencti_additional_names`
 
 When something is not found, it appears in the list as `Unknown` and will be excluded if you choose to export your search result in a JSON STIX bundle or in a CSV file.
