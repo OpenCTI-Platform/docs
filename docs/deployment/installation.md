@@ -233,7 +233,7 @@ cd ../..
 
 The application is just a NodeJS process, the creation of the database schema and the migration will be done at starting.
 
-> Please verify that yarn version is greater than 4 and node version is greater than v19.
+> Please verify that yarn version is greater than 4 and node version is greater or equals to v19.
 > Please note that some Node.js version are outdated in linux package manager, you can download a recent one in https://nodejs.org/en/download or alternatively nvm can help to chose a recent version of Node.js https://github.com/nvm-sh/nvm
 
 ```bash
