@@ -38,7 +38,7 @@ For instance, in the image above, selecting the target _Malware_ and the relatio
 Expanding a graph can add a lot of entities and relations, making it not only difficult to read but sometimes counterproductive since it brings entities and relations that are not useful to your investigations.
 To solve this problem, there is a button to undo the last expansion.
 
-When clicking on this button, we will retrieve the state in which your graph was before your expansion. As a result, please note that all modifications made since the last expansion will be lost: in other words, if you have expanded your graph, and then have added some entities in your graph, when clicking on rollback button, the entities that you have added will not be in your graph.
+When clicking on this button, we will retrieve the state in which your graph was before your expansion. As a result, please note that all add or remove actions made since the last expansion will be lost: in other words, if you have expanded your graph, and then have added some entities in your graph, when clicking on rollback button, the entities that you have added will not be in your graph.
 
 ![Investigation rollback popup](assets/investigation-rollback-popup.png)
 
