@@ -15,7 +15,7 @@ Here are some examples of use cases:
 <a id="dashboard-section"></a>
 ## Welcome dashboard
 
-The welcome page gives any visitor on the OpenCTI platform an outlook on the live of the platform. It can be replaced by a [custom dashboard](dashboards.md), created by a user (or the default dashboard set up in a role, a group or an organization).
+The welcome page gives any visitor on the OpenCTI platform an overview of what's happening on the platform. It can be replaced by a [custom dashboard](dashboards.md), created by a user (or the default dashboard set up in a role, a group or an organization).
 
 ![Dashboard](assets/dashboard.png)
 
