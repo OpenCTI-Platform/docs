@@ -17,7 +17,7 @@ In this type of trigger, you will need to configure various options:
 
 - Notification target: user interface or email,
 - Recipients: the recipient of the notification,
-- Filters: a set of filters to get only events that really interested you.
+- Filters: a set of filters to get only events that really interest you.
 
 ## Event structure
 

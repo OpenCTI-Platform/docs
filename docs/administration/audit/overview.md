@@ -18,7 +18,7 @@ The activity groups 3 different concepts that need to be explained.
 
 ### Basic knowledge
 
-The basic knowledge refers to all STIX data knowledge inside OpenCTI. Every create/update/delete actions on that knowledge is accessible through the history. That basic activity is handled by the history manager and can also be found directly on each entity.
+The basic knowledge refers to all STIX data knowledge inside OpenCTI. Every create/update/delete action on that knowledge is accessible through the history. That basic activity is handled by the history manager and can also be found directly on each entity.
 
 ### Extended knowledge
 
