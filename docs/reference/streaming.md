@@ -2,7 +2,7 @@
 
 ## Presentation
 
-In order to provide a real time way to consume STIX CTI information, OpenCTI provides data events in a stream that can be consume to react on creation, update, deletion and merge.
+In order to provide a real time way to consume STIX CTI information, OpenCTI provides data events in a stream that can be consumed to react on creation, update, deletion and merge.
 This way of getting information out of OpenCTI is highly efficient and already use by some connectors.
 
 ## Technology
