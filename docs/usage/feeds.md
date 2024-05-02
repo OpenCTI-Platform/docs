@@ -13,7 +13,7 @@ Feeds are configured in the "Data > Data sharing" window. Configuration for all 
 
 By carefully configuring filters and access controls, you can tailor the behavior of Live streams, TAXII collections, and CSV feeds to align with your specific data-sharing needs.
 
-
+<a id="live-stream-section"></a>
 ## Live streams
 
 ### Introduction
