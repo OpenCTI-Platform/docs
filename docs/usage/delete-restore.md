@@ -1,36 +1,63 @@
 # Delete and restore knowledge
 
 Knowledge can be deleted from OpenCTI either in an overview of an object or using [background tasks](background-tasks.md)
+When we delete an object, we also delete all its relationships and references to other objects. 
 
-When we delete an object, we also delete all its relationships with other objects.
-If we deleted an object by mistake, prior to 6.1 version, there was no way to undo this operation, the knowledge was lost permanently.
+The deletion event is written to the [stream](../reference/streaming.md), to trigger automated [playbooks](./automation.md) or synchronize another platform.
 
-Since 6.1 version, it is possible to restore deleted objects.
+Prior to 6.1 version, there was no way to undo this operation and the knowledge was lost permanently.
+Since OpenCTI 6.1, we now keep record of the deleted objects for a given period of a time, allowing to restore them on demand. This does not impact the stream events or other side effect of the deletion: the object is still _deleted_.
+
 
 ## Trash
 
-We added a view called "Trash" that will display all deleted operations:
+We added a view called "Trash" that will display all delete operations, entities and relationships alike.
 
 ![Trash](assets/trash.png)
 
-Each deleted object can now be restored or permanently deleted from this view:
+A delete operation contains not only the entity or relationship that has been deleted, but also all the relationships and references from (to) this main object to (from) other elements in the platform.
+
+You can sort, filter or search this table using the usual UI controls. You are limited to the type of object, their representation (most of the time, the _name_ of the object), the user who deleted the object, the date and time of deletion and the marking of the object.
+
+Note that the delete operations (i.e. the entries in this table view) inherit the marking of the main entity that was deleted, and thus follow the same access restriction as the object that was deleted.
+
+You can individually restore or permanently delete an object from the trash view using the burger menu at the end of the line.
 
 ![Trash actions](assets/trash-actions.png)
+
+Alternatively, you can use the checkboxes at the start of the line to select a subset of deleted objects, and trigger a background task to restore or permanently delete them by batch.
 
 ## Restore
 
 Restoring an element will create it again in the platform with the same information it had before it has been deleted.
-It will also restore all its relationships that have been deleted when deleting the object.
-If the object had attached files, they will be also restored.
+It will also restore all the relationships from or to this object, that have been also deleted when deleting the object.
+If the object had attached files (uploaded or exported), they will be also restored.
 
 ![Trash restore confirm](assets/trash-restore-confirm.png)
 
 ## Permanent delete
 
-We can also delete permanently the object, its relationships, and attached files (uploaded or exported).
+We can also delete permanently the object, its relationships, and attached files.
 
 ![Trash delete confirm](assets/trash-delete-confirm.png)
 
 ## Trash retention
 
-Deleted objects are kept in trash during 7 days by default, then they are permanently deleted by the trash manager.
+Deleted objects are kept in trash during a fixed period of time (7 days by default), then they are permanently deleted by the [trash manager](../deployment/managers.md#trash-manager).
+
+## Limitations
+
+When it comes to restoring a deleted object from the trash, the current implementation shows several limitations. 
+First and foremost, if an object in the trash has lost a relationship dependency (i.e. the other side of a relationship from or to this object is no longer in live database), you will not be able to restore the object.
+
+![restore error: a dependency is in the trash](assets/trash-error-dependency-in-trash.png)
+
+In such case, if the missing dependency is in the trash too, you can manually restore this dependency first and then retry.
+
+If the missing dependency has been permanently deleted, the object cannot be recovered.
+
+![restore error: a dependency is in the trash](assets/trash-error-dependency-missing.png)
+
+In other words:
+* **no partial restore**: the object and _all_ its relationships must be restored in one pass
+* **no "cascading" restore**: restoring one object does not restore automatically all linked objects in the trash
