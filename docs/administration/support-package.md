@@ -1,14 +1,25 @@
 # Support Package
 
-Support packages are usefull for troubleshooting issue that occurs on OpenCTI platform.
+Support packages are useful for troubleshooting issue that occurs on OpenCTI platform.
 Administrators can request to create and download a support package that contains recent platform error logs and usage statistics.
 
 Support Package can be requested from "Settings > Support" menu.
 
 ![Support package overview](./assets/support-package-overview.png)
 
-1. On a click on "Generate support package" button on the top right, the support package is requested.
-1. A background task on the platform gathers logs and interesting data and creates an archive
+## Package generation
 
-1. When everything is ready, the status is changed to READY and the support package can be downloaded
-1. In case of platform instability, some logs might not be retrieve and the support package request may stay "In progress" for ever. In that case it's possible to use the "force download" button to get a partial support package archive. This partial support package archive contains all logs that have been collected so far.
+On a click on "Generate support package", a support event is propagated to every platform instances to request needed information.
+Every instance that will receive this message will process the request and send the files to the platform.
+During this processing the interface will display the expected support package name in an IN PROGRESS state waiting for completion.
+After finishing the process the support package will move to the READY state and the buttons download and delete will be activated.
+
+## Package download
+
+After file generation, using the download button will dynamically create a (zip) containing all instances logs and telemetry.
+
+## Partial package
+
+In case of platform instability, some logs might not be retrieved and the support package will be incomplete.
+
+If some instances fail to send their data, you will be able to force download a partial zip only after 1 minute. In case of a support package taking more than 5 minutes, the status will be moved to "timeout".
