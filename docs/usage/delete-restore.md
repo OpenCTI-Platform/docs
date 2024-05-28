@@ -1,17 +1,16 @@
 # Delete and restore knowledge
 
 Knowledge can be deleted from OpenCTI either in an overview of an object or using [background tasks](background-tasks.md)
-When we delete an object, we also delete all its relationships and references to other objects. 
+When an object is deleted, all its relationships and references to other objects are also deleted. 
 
 The deletion event is written to the [stream](../reference/streaming.md), to trigger automated [playbooks](./automation.md) or synchronize another platform.
 
-Prior to 6.1 version, there was no way to undo this operation and the knowledge was lost permanently.
-Since OpenCTI 6.1, we now keep record of the deleted objects for a given period of a time, allowing to restore them on demand. This does not impact the stream events or other side effect of the deletion: the object is still _deleted_.
+Since OpenCTI 6.1, a record of the deleted objects is kept for a given period of a time, allowing to restore them on demand. This does not impact the stream events or other side effect of the deletion: the object is still _deleted_.
 
 
 ## Trash
 
-We added a view called "Trash" that will display all delete operations, entities and relationships alike.
+A view called "Trash" displays all "delete" operations, entities and relationships alike.
 
 ![Trash](assets/trash.png)
 
@@ -29,15 +28,15 @@ Alternatively, you can use the checkboxes at the start of the line to select a s
 
 ## Restore
 
-Restoring an element will create it again in the platform with the same information it had before it has been deleted.
-It will also restore all the relationships from or to this object, that have been also deleted when deleting the object.
-If the object had attached files (uploaded or exported), they will be also restored.
+Restoring an element creates it again in the platform with the same information it had before its deletion.
+It also restores all the relationships from or to this object, that have been also deleted during the deletion operation.
+If the object had attached files (uploaded or exported), they are also restored.
 
 ![Trash restore confirm](assets/trash-restore-confirm.png)
 
 ## Permanent delete
 
-We can also delete permanently the object, its relationships, and attached files.
+From the Trash panel, it is also possible to delete permanently the object, its relationships, and attached files.
 
 ![Trash delete confirm](assets/trash-delete-confirm.png)
 

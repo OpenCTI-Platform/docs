@@ -79,9 +79,7 @@ More information can be found [here](../administration/decay-rules.md).
 
 ## Trash manager
 
-The trash manager is responsible to delete permanently elements stored in the trash after a specified period of time (7 days by default).
-
-More information about the trash can be found [here](../usage/delete-restore.md).
+The trash manager is responsible to delete permanently elements stored in the [trash](../usage/delete-restore.md) after a specified period of time (7 days by default).
 
 ## Filigran telemetry manager
 
