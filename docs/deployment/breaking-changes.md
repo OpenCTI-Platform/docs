@@ -6,7 +6,7 @@ Please follow the migration guides if you need to upgrade your platform.
 
 ## OpenCTI 6.2
 
-Change to the observable "promote" return value: we now return the created Indicator instead of the original Observable.
+Change to the observable "promote" return value: the API now returns the created Indicator instead of the original Observable.
 
 * GraphQL Mutation `StixCyberObservableEditMutations.promote` is now deprecated
 * New GraphQL Mutation `StixCyberObservableEditMutations.promoteToIndicator` introduced
