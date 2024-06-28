@@ -16,6 +16,9 @@ Change to the observable "promote" return value: the API now returns the created
 * New Client-python method `client.stix_cyber_observable.promote_to_indicator_v2` introduced
 
 
+Change to the SAML authentication: when `want_assertions_signed` and `want_authn_response_signed` SAML parameter are not present in OpenCTI configuration, the default is set to "true" by the underlaying library (passport-saml) when previously it was false by default. If you have issues after upgrade, you can try with both of them set to false.
+
+
 !!! warning "Discontinued Support"
 
     Please note that the deprecated methods will be permanently removed in OpenCTI 6.5.
