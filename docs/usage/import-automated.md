@@ -104,7 +104,12 @@ Additional configuration options:
 The CSV mappers allow the user to configure the markings representations. The user can either choose the marking definition levels or use default ones.
 This setting is took in account and applied globally on every ingested entities.
 
-Given user choice configuration, the user can select the markings based-on the selected responsible for data creation allowed markings.
+in CSV Mappers, if you created a representative for Marking definition, you could have chosen between 2 options:
+
+ - let the user choose  marking definitions
+ - Use default marking definitions of the user
+
+This configuration applies when using a CSV Mapper for a CSV Ingester. If you select a CSV Mapper containing the option "Use default marking definitions of the user", the default marking definitions of the user you chose to be responsible for the data creation will be applied to all data imported. If you select a CSV Mapper containing the option "let the user choose  marking definitions", you will be presented with the list of all the marking definitions of the user you chose to be responsible for the data creation (and not yours!)
 
 To finalize the creation, click on "Verify" to run a check on the submitted URL with the selected CSV mapper. A valid URL-CSV mapper combination results in the identification of up to 50 entities.
 
