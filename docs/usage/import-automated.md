@@ -99,7 +99,7 @@ Additional configuration options:
 - User responsible for data creation: Define the user responsible for creating data received from this CSV feed. Best practice is to dedicate one user per source for organizational clarity. Please [see the section "Best practices" below](import-automated.md#best-practices-section) for more information.
 - Import from date: Specify the date of the oldest data to retrieve. Leave the field empty to import everything.
 
-![CSV feeds creation: prior CSV mapper test](assets/csv-feeds-creation.png)
+![CSV feeds creation: prior CSV mapper test](assets/csv-feeds-creation-prior-test.png)
 
 
 in CSV Mappers, if you created a representative for Marking definition, you could have chosen between 2 options:
