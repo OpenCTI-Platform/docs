@@ -101,7 +101,6 @@ Additional configuration options:
 
 ![CSV feeds creation: prior CSV mapper test](assets/csv-feeds-creation.png)
 
-The CSV mappers allow the user to configure the markings representations. The user can either choose the marking definition levels or use default ones.
 
 in CSV Mappers, if you created a representative for Marking definition, you could have chosen between 2 options:
 
