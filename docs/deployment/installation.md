@@ -100,6 +100,7 @@ CONNECTOR_EXPORT_FILE_CSV_ID=$(cat /proc/sys/kernel/random/uuid)
 CONNECTOR_IMPORT_FILE_STIX_ID=$(cat /proc/sys/kernel/random/uuid)
 CONNECTOR_EXPORT_FILE_TXT_ID=$(cat /proc/sys/kernel/random/uuid)
 CONNECTOR_IMPORT_DOCUMENT_ID=$(cat /proc/sys/kernel/random/uuid)
+CONNECTOR_ANALYSIS_ID=$(cat /proc/sys/kernel/random/uuid)
 SMTP_HOSTNAME=localhost
 EOF
 ) > .env
