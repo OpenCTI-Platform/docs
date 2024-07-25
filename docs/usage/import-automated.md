@@ -156,7 +156,7 @@ By adhering to these best practices, you ensure independence in managing rights 
 
 An ingestion manager run periodically in background, and for each running feeds:
 - fetches new data from the source. When data is paginated, fetches the next page
-- compose stix bundle for data and send them in queue to be processed by workers
+- compose a stix bundle for data and send it in queue to be processed by workers
 
 !!! Note on timeline of data ingestion from Taxii feed, CSV feed, and RSS feed.
 
