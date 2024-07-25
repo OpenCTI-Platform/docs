@@ -154,7 +154,7 @@ By adhering to these best practices, you ensure independence in managing rights 
 
 ### Automated import behaviors
 
-An ingestion manager run periodically in background, and for each running feeds:
+An ingestion manager runs periodically in background, and for each running feeds:
 - fetches new data from the source. When data is paginated, fetches the next page
 - compose a stix bundle for data and send it in queue to be processed by workers
 
