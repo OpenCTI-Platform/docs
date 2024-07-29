@@ -73,6 +73,25 @@ The CSV feed facilitates the automatic generation of a CSV file, accessible via 
 
 ![CSV feed](assets/csv-feed.png)
 
-!!! note "CSV size limit"
+### CSV size limit
 
-    The CSV file generated has a limit of 5 000 entries. If more than 5 000 entities are retrieved by the platform, only the most recent 5 000 will be shared in the file.
+The CSV file generated has a limit of 5 000 entries by default. 
+If more than 5 000 entities are retrieved by the platform, only the most recent 5 000 will be shared in the file.
+    
+You can change this limit by setting the corresponding environment variable:
+
+```
+DATA_SHARING__MAX_CSV_FEED_RESULT=10000
+```
+
+Or in the platform configuration file:
+
+```
+"data_sharing": {
+  "max_csv_feed_result": 10000
+},
+```
+!!! warning "Performance considerations"
+
+    Changing the size limit can lead to performance degradation depending on your platform and your CSV feed configuration. 
+    Please test your setup properly and align this number with your platform capacity to avoid any problem.
