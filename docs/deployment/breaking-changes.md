@@ -4,6 +4,23 @@ This section lists breaking changes introduced in OpenCTI, per version starting 
 
 Please follow the migration guides if you need to upgrade your platform. 
 
+## OpenCTI 6.3
+
+### Adding of built-in retention rules on files and workbenches
+
+After a migration to 6.3, existing platforms will have 2 new retention rules and every new platform will be created with 2 built-in retention rules. These rules can be updated and deleted.
+
+These 2 rules aims to prevent a large amount of unused files and workbenches in Data > Import.
+
+Here are some details about the added rules:
+- a retention rule on files (scope = file, maximum retention days = 133): all the global files (i.e. files uploaded in Data > Import) correctly uploaded and whose imports are all correctly completed will be deleted if their upload occurred more than 133 days ago.
+- a retention rule on workbenches (scope = workbench, maximum retention days = 60): all the global workbenches (i.e. workbenches in Data > Import) will be deleted if they haven't been modified for more than 60 days.
+
+!!! warning "Files permanent deletion"
+
+    After the migration, the global files uploaded for more than 133 days and the global workbenches not updated for more than 60 days will be permanently deleted.
+
+
 ## OpenCTI 6.2
 
 ### Change to the observable "promote"  
