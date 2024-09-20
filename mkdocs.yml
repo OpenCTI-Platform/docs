@@ -117,7 +117,12 @@ nav:
       - Configuration: deployment/configuration.md
       - Authentication: deployment/authentication.md
       - Upgrade: deployment/upgrade.md
-      - Breaking changes: deployment/breaking-changes.md
+      - Breaking changes:
+        - Index: deployment/breaking-changes.md
+        - Migration guides:
+          - Promote to Indicator: deployment/breaking-changes/6.2-promote-to-indicator.md
+          - SAML authentication: deployment/breaking-changes/6.2-saml-authentication.md
+          - New filter API: deployment/breaking-changes/5.12-filters.md
     - Ecosystem:
       - Connectors: deployment/connectors.md
       - Integrations: deployment/integrations.md
@@ -219,7 +224,6 @@ nav:
       - GraphQL API: reference/api.md
       - Filters:
         - Filters knowledge: reference/filters.md
-        - Filter migration for 5.12: reference/filters-migration.md
       - Data Streaming: reference/streaming.md
     - Deployment and stack:
         - Usage telemetry: reference/usage-telemetry.md
