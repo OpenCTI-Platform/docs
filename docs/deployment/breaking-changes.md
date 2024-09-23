@@ -10,8 +10,8 @@ This table regroups all the breaking changes introduced, with the corresponding 
 
 | Change                                                           | Deprecated in | Changed in |
 |:-----------------------------------------------------------------|:--------------|:-----------|
-| [SAML authentication parameters](#change-to-SAML-authentication) | 6.2           | 6.5        |
-| [Promote Observable API](#change-to-the-observable-promote-API)  |               | 6.2        |
+| [Promote Observable API](#change-to-the-observable-promote-API)  | 6.2           | 6.5        |
+| [SAML authentication parameters](#change-to-SAML-authentication) |               | 6.2        |
 | [Major changes to Filtering API](#new-filtering-API)             |               | 5.12       |
 
 
