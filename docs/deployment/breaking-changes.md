@@ -10,10 +10,28 @@ This table regroups all the breaking changes introduced, with the corresponding 
 
 | Change                                                           | Deprecated in | Changed in |
 |:-----------------------------------------------------------------|:--------------|:-----------|
+| [Removing some stream connectors](#removing-some-stream-connectors)  | 6.3           | 6.6        |
 | [Promote Observable API](#change-to-the-observable-promote-API)  | 6.2           | 6.5        |
 | [SAML authentication parameters](#change-to-SAML-authentication) |               | 6.2        |
 | [Major changes to Filtering API](#new-filtering-API)             |               | 5.12       |
 
+
+
+## OpenCTI 6.3
+
+### Deprecation
+
+<a id="removing-some-stream-connectors"></a>
+#### Removing some stream connectors  
+
+Some bi-directional stream connectors have been divided into two distinct connectors:
+
+- An **external import connector** that gathers information from external organizations, applications, or services into OpenCTI.
+- A **stream connector** that transfers OpenCTI data to third-party platforms.
+
+The existing connectors affected by this change will be removed and replaced with these two new connectors.
+
+For more details, see [this migration guide](./breaking-changes/6.3-removing-some-connectors.md)
 
 ## OpenCTI 6.2
 
