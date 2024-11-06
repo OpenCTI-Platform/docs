@@ -143,7 +143,7 @@ The workers can have more or less verbose outputs:
 
 #### INSUFFICIENT_CONFIDENCE_LEVEL
 
-    TODO : Explain why this error
+The INSUFFICIENT_CONFIDENCE_LEVEL error occurs when a connector attempts to update an entity that already exists in the platform and was previously created by a connector with a higher confidence level. In this case, it may be necessary to review the level of confidence of the users associated with the connectors.
 
 #### ELEMENT_NOT_FOUND
 
