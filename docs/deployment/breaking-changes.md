@@ -4,6 +4,13 @@ This section lists breaking changes introduced in OpenCTI, per version starting 
 
 Please follow the migration guides if you need to upgrade your platform. 
 
+## OpenCTI 6.4
+
+**GraphQL API**
+
+* **Query** csvMapperTest is now deprecated and replaced with **Mutation** csvMapperTest
+
+
 ## OpenCTI 6.2
 
 ### Change to the observable "promote"  
