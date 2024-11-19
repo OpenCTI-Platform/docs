@@ -16,6 +16,7 @@ Enter a name for your mapper and some basic information about your CSV files:
 
 - The line separator used (defaults to the standard comma character)
 - The presence of a header on the first line
+- The char to escape the lines
 
 !!! info "Header management"
 
@@ -32,6 +33,13 @@ For each field, set the corresponding columns mapping (the letter-based index of
 References to other entities should be picked from the list of all the other representations already defined earlier in the mapper.
 
 You can do the same for all the relationships between entities that might be defined in this particular CSV file structure.
+
+If your CSV file contains multiple entities in separate rows, you can enable "Entity dynamic mapping". 
+Click the toggle button to activate it. You must then specify the following:
+
+- the column that contains the entity-type
+- the operator ("Equal" or "Not equal")
+- the content of the entity-type column
 
 ![New representation](assets/csv-mappers-rep-1.png)
 
