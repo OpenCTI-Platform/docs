@@ -34,14 +34,33 @@ References to other entities should be picked from the list of all the other rep
 
 You can do the same for all the relationships between entities that might be defined in this particular CSV file structure.
 
-If your CSV file contains multiple entities in separate rows, you can enable "Entity dynamic mapping". 
+![New representation](assets/csv-mappers-rep-1.png)
+
+### Entity dynamic mapping
+
+If your CSV file contains multiple entities in separate rows but in the same columns, you can enable "Entity dynamic mapping". 
 Click the toggle button to activate it. You must then specify the following:
 
-- the column that contains the entity-type
+- the column that contains the differentiator
 - the operator ("Equal" or "Not equal")
-- the content of the entity-type column
+- the value in this column that we compare with
 
-![New representation](assets/csv-mappers-rep-1.png)
+For instance, if the column A contains the observable type (such as `Ipv4`, `URL`), and the column B the observable value (`1.2.3.4`, `www.example.com`) you can
+set 2 representatives for IPv4 and URL entities, with dynamic mapping depending on the content of column A ; column B being used in both representatives as the observable value. 
+
+| Type                                                                         | Value                                                          | 
+|:-----------------------------------------------------------------------------|:---------------------------------------------------------------|
+| IPv4                                                    | 1.2.3.4                                     |
+| IPv4                                                    | 1.2.3.5                                     |
+| URL                                                    | www.example.com                                     |
+| IPv4                                                    | 1.2.3.6                                     |
+
+
+![Dynamic mapping (1)](assets/csv-mappers-dynamic-1.png)
+
+![Dynamic mapping (2)](assets/csv-mappers-dynamic-2.png)
+
+### Field options
 
 Fields might have options besides the mandatory column index, to help extract relevant data:
 
@@ -79,7 +98,7 @@ You can then check if the extracted values match the expected entities and relat
 
 !!! warning "Test with a small file"
 
-    We strongly recommend limiting test files to 100 lines and 1MB. Otherwise, the browser may crash.
+    The test is a blocking process for the platform. We strongly recommend limiting test files to 100 lines and 1MB, to prevent performance issues.
 
 
 ## Use a mapper for importing a CSV file
