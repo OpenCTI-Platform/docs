@@ -168,6 +168,19 @@ For marking definitions, setting a default value is different from other attribu
 
 ![mapper-attribute](assets/csv-mappers-default-markings.png)
 
+### Duplicate the configuration of the CSV mappers
+
+If you need to modify your previous configuration, we recommend to duplicate the CSV mapper using the duplicate option in the burger button.
+
+![mapper-duplicate-button](assets/csv-mapper-duplicate-button.png)
+
+As you see, when you duplicate your CSV mapper, the fields are pre-filled but you can change any of them. We advice you to keep the name with '-copy' to signify the origin of the duplicate CSV.
+
+![mapper-duplicate-form](assets/csv-mapper-duplicate-form.png)
+
+You can always verify your configuration before validating the form (with a file containing 100 lines max).
+
+
 ## Additional resources
 
 - **Usefulness:** To additional content on entity customization, refers to the [Customize entities](./entities.md) page in the Administration section of the documentation.
