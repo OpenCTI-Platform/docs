@@ -123,6 +123,7 @@ nav:
           - Promote to Indicator: deployment/breaking-changes/6.2-promote-to-indicator.md
           - SAML authentication: deployment/breaking-changes/6.2-saml-authentication.md
           - New filter API: deployment/breaking-changes/5.12-filters.md
+          - Removing some connectors: deployment/breaking-changes/6.3-removing-some-connectors.md
     - Ecosystem:
       - Connectors: deployment/connectors.md
       - Integrations: deployment/integrations.md
