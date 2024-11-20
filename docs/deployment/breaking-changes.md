@@ -53,10 +53,6 @@ Upgrading `passport-saml` library introduced a breaking change with respect to t
 
 For more details, see [this migration guide](./breaking-changes/6.2-saml-authentication.md).
 
-#### How to migrate
-
-If you have issues after upgrade, you can try with both parameters set to `false`.
-
 ## OpenCTI 5.12
 
 ### Breaking changes
