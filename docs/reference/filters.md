@@ -82,7 +82,7 @@ The `Filter` has 4 properties:
 
 The available operators are:
 
-| Value           | Meaning               | Available for         |
+| Value           | Meaning               | Limited to            |
 |-----------------|-----------------------|-----------------------|
 | eq              | equal                 |                       |
 | not_eq          | different             |                       |
@@ -101,8 +101,7 @@ The available operators are:
 | search          | have occurences       | short and long string |
 
 Precisions:
-- The operators `nil` and `not_nil` don't require anything inside `values`.
-- For the comparison operators, it's the alphabetical ordering that is used against textual values.
+- The operators `nil` and `not_nil` don't require anything inside `values` (you should provide an empty array).
 - There is a small difference between `search` and `contains`. `search` finds any occurrence of specified words, regardless of order, while "contains" specifically looks for the exact sequence of words you provide.
 
 !!! note "Always use single-key filters"
@@ -219,9 +218,8 @@ Here are some of the most useful special filter keys:
 
 * ``sightedBy``: entities to which X is linked via a STIX sighting relationship,
 * ``workflow_id``: status id of the entities, or status template id of the status of the entities,
-* ``representative``: entities whose representative (name for reports, value for some observables, composition of the source and target names for a relationship...) matches the filter,
+* ``representative``: representation of an entity (name for reports, value for some observables, composition of the source and target names for a relationship...),
 * ``connectedToId``: the listened instances for an instance trigger.
-* ``representative`` (the main representation of the entity, it can be the name/value/etc according to the entity type)
 * ``ids``: match any of the entity id, internal_id, standard_id or stix_ids
 * ``computed_reliability``: reliability, or reliability of the author if no reliability
 * ``source_reliability``: reliability of the author
