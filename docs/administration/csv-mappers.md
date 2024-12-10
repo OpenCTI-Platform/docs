@@ -38,7 +38,7 @@ You can do the same for all the relationships between entities that might be def
 
 ## Create a new reference representation (label, author, markings,..)
 
-If you need to map an entity in your CSV mapper, with **ref attributes as author, markings, label, external references or kill chain phase**. 
+If you need to map an entity in your CSV mapper, with **ref attributes as author, markings, label, external references or kill chain phase**, you must add a new entity representation. 
 First in the field, you must see no options available: 
 
 ![csv](assets/csv-mapper-author-no-options.png)
