@@ -10,7 +10,7 @@ This table regroups all the breaking changes introduced, with the corresponding 
 
 | Change                                                           | Deprecated in | Changed in |
 |:-----------------------------------------------------------------|:--------------|:-----------|
-| [Removing some stream connectors](#removing-some-stream-connectors)  | 6.3           | 6.6        |
+| [Removing bi-directional stream connectors](#removing-some-stream-connectors)  | 6.3           | 6.6        |
 | [Promote Observable API](#change-to-the-observable-promote-API)  | 6.2           | 6.5        |
 | [SAML authentication parameters](#change-to-SAML-authentication) |               | 6.2        |
 | [Major changes to Filtering API](#new-filtering-API)             |               | 5.12       |
@@ -52,10 +52,6 @@ For more details, see [this migration guide](./breaking-changes/6.2-promote-to-i
 Upgrading `passport-saml` library introduced a breaking change with respect to the default SAML parameters regarding signing responses and assertions. 
 
 For more details, see [this migration guide](./breaking-changes/6.2-saml-authentication.md).
-
-#### How to migrate
-
-If you have issues after upgrade, you can try with both parameters set to `false`.
 
 ## OpenCTI 5.12
 

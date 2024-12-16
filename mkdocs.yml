@@ -120,6 +120,7 @@ nav:
       - Breaking changes:
         - Index: deployment/breaking-changes.md
         - Migration guides:
+          - Removing bi-directional stream connectors: deployment/breaking-changes/6.3-removing-some-connectors.md
           - Promote to Indicator: deployment/breaking-changes/6.2-promote-to-indicator.md
           - SAML authentication: deployment/breaking-changes/6.2-saml-authentication.md
           - New filter API: deployment/breaking-changes/5.12-filters.md
