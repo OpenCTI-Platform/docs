@@ -42,13 +42,13 @@ It is possible to create as many playbooks as needed which are running independe
 ![Create a new playbook](assets/playbook_create.png)
 
 The first step to define in the playbook is your event source.
-To do so, click on the grey rectangle in the center of the workspace and select the right component.
+To do so, click on the grey rectangle in the center of the workspace and select the input component that suits your needs.
 
 ![Choose input component](assets/playbook_input.png)
 
 ### Listen knowledge events
-With this event source, the playbook will be triggered on any knowledge event (create, update or delete) with customizable filters.
-You can use same filters as in other part of the platform.
+With this event source, the playbook will be triggered on any knowledge event (create, update or delete) that matches the selected filters.
+Note that you are limited to a subset of filters, available for stream events that contain STIX data objects.
 
 ![Listening creation event for TLP:GREEN IPs and domain names](assets/playbook_listen.png)
 
