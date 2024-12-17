@@ -41,7 +41,7 @@ You can do the same for all the relationships between entities that might be def
  **Reference attributes** like author, markings, label, external references or kill chain phase, are modeled in the platform as entities. As such, they should be extracted from the CSV files through new entity representations in the mapper.
 
 
-First in the field, you must see no options available: 
+At first, you shall see no options available in the list: 
 
 ![csv](assets/csv-mapper-author-no-options.png)
 
