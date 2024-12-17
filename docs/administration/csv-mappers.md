@@ -57,7 +57,7 @@ According to the reference, in this array, you will find the representation you 
 | kill chain phase    | Kill chain phase                     |
 
 
-For instance in the Attack Pattern, if you want an author, markings, external references and a kill chain phase, you need to add and to configure each new entity below the Attack pattern:
+For instance, if you want to add to an Attack Pattern an author, some markings, an external references and a kill chain phase, you need to add and to configure each new entity representations below the Attack pattern:
 
 ![csv](assets/csv-mapper-ref-representation.png)
 
