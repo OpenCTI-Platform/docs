@@ -48,13 +48,13 @@ At first, you shall see no options available in the list:
 
 According to the reference, in this array, you will find the representation you need to configure corresponding to the appropriate attribute:
 
-| Attribute reference | Entity representation | 
-|:--------------------|:----------------------|
-| author              | Individual            |
-| markings            | Marking definition    |
-| label               | Label                 |
-| external references | External references   |
-| kill chain phase    | Kill chain phase      |
+| Attribute reference | Entity representation                | 
+|:--------------------|:-------------------------------------|
+| author              | Individual or System or Organization |
+| markings            | Marking definition                   |
+| label               | Label                                |
+| external references | External references                  |
+| kill chain phase    | Kill chain phase                     |
 
 
 For instance in the Attack Pattern, if you want an author, markings, external references and a kill chain phase, you need to add and to configure each new entity below the Attack pattern:
