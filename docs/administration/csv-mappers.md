@@ -38,7 +38,7 @@ You can do the same for all the relationships between entities that might be def
 
 ## Create a new reference representation (label, author, markings,..)
 
-If you need to map an entity in your CSV mapper with **ref attributes as author, markings, label, external references or kill chain phase**, you must add a new entity representation. 
+ **Reference attributes** like author, markings, label, external references or kill chain phase, are modeled in the platform as entities. As such, they should be extracted from the CSV files through new entity representations in the mapper.
 
 
 First in the field, you must see no options available: 
