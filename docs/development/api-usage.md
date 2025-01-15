@@ -1,6 +1,6 @@
 # GraphQL playground (GraphiQL)
 
-GraphiQL is an integrated development environment (IDE) provided by OpenCTI for exploring and testing GraphQL APIs. It offers a user-friendly interface that allows developers to interactively query the GraphQL schema, experiment with different queries, and visualize the responses.
+The GraphQL playground is an integrated development environment (IDE) provided by OpenCTI for exploring and testing GraphQL APIs. Based on [GraphiQL](https://github.com/graphql/graphiql), it offers a user-friendly interface that allows developers to interactively query the GraphQL schema, experiment with different queries, and visualize the responses.
 
 
 ## Key features
