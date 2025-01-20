@@ -59,7 +59,7 @@ In the 'Content Preview' tab, you can preview what a file generated from your Fi
 
 In the right panel, the widgets saved in your template are displayed.
 - To add an existing widget in your content, copy the variable name and paste it in your content.
-- To add a widget, click on the 'add data in content' button and follow the steps to create a visualization.
+- To add a widget, click on the 'add data in content' button and follow the steps to create a visualization. For more information on how to create a widget, please read  [Widget creation](../usage/widgets.md).
 - You can only delete widgets that are not used in your content (they are highlighted with a warning icon).
 
 ![Fintel templates widgets](./assets/fintelTemplates-widgets.png)
