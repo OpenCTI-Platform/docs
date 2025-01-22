@@ -32,7 +32,13 @@ To define authorized members, you need to click on the '**Manage Access Restrict
 For the containers **Report**, **Grouping**, and **Incident Response**, as well as **Case RFT** and **Case RFI**, it is possible to define authorized members directly when creating the entity.
 
 ![authorized-members-creation-form.png](assets%2Fauthorized-members-creation-form.png)
+
+## Administrate restricted entities
+
+It is possible to access the list of entities restricted by authorized members via the '**Data > Restrictions**' tab. This tab is accessible to a platform administrator with the '**Bypass**' capability, ensuring that all entities with authorized members are listed without any restriction. Through this tab, it is possible to view the entities restricted by authorized members as well as additional information, such as the date when authorized members were activated. The administrator can also choose to remove the restriction by clicking on the '**Remove Access Restriction**' padlock.
  
+![authorized-members-restrictions.png](assets%2Fauthorized-members-restrictions.png)
+
 ## Authorized members and organization segregation
 
 For certain container **Reports**, **Groupings**, **Incident Response**, **Case RFI**, and **Case RFT* when segregation by organization is enabled and the container is shared with an organization, it is possible to define authorized members to further restrict access to these members who do not belong to the organization.
