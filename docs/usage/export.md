@@ -54,7 +54,7 @@ In containers, under Enterprise Edition, it's possible to generate html and pdf 
 Finished intelligence files can be generated via the general Export button or under the 'Content' section of your container.
 ![Generate Fintel templates button](assets/fintelTemplate-generate-button.png)
 
-You can choose the type of your file (html or pdf), its name, its marking, and the maximum markings of the entities that may be included in the Fintel template widgets. Indeed a template can include lists of entities (for instance, the indicators contained in your container) and you may want to restrict the displayed entities according to their markings.
+You can choose the type of your file (html or pdf), its name, its marking, and the maximum markings of the entities that may be included in the file. Indeed a template can include lists of entities (for instance, the indicators contained in your container) and you may want to restrict the displayed entities according to their markings.
 The internal connector generating your template is called 'Generate FINTEL from template'.
 ![Export (html) Fintel template pop-up](assets/fintelTemplates-export-html.png)
 
