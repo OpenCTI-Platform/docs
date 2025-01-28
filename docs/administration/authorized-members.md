@@ -41,7 +41,7 @@ It is possible to access the list of entities restricted by authorized members v
 
 ## Authorized members and organization segregation
 
-For certain container **Reports**, **Groupings**, **Incident Response**, **Case RFI**, and **Case RFT* when segregation by organization is enabled and the container is shared with an organization, it is possible to define authorized members to further restrict access to these members who do not belong to the organization.
+For certain container **Reports**, **Groupings**, **Incident Response**, **Case RFI**, and **Case RFT** when segregation by organization is enabled and the container is shared with an organization, it is possible to define authorized members to further restrict access to these members who do not belong to the organization.
 
 **This restriction will only apply to the container and will not cascade to the entities contained within the container.**
 
