@@ -409,6 +409,23 @@ We assume that *Group1* exists in the platform, and *newGroup* doesn’t exist. 
 "auto_create_group": true
 ```
 
+## Prevent users assignation to default groups
+A new user logging in the platform for the first time is created with the default groups.
+
+To prevent this, you can add the variable prevent_default_groups to your SSO configuration. If this variable is true, a new user created user won't be assigned to the default groups.
+This variable is available with LDAP, SAML and OpenID, (like for the auto_create_group variable).
+
+**Example**
+
+With this added to the configuration, a new user will be created with no groups.
+
+```json
+"prevent_default_groups": true
+```
+
+With nothing added to the configuration (prevent_default_groups is false by default), a new user will be created with the default groups.
+
+
 ## Examples
 
 ### LDAP then fallback to local
