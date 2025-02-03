@@ -1,13 +1,12 @@
 # Exclusion List
 
-The fight against false-positive indicators is a perpetual struggle in the discipline of threat intelligence.
-How can you prevent that indicators from your EDR alerts will be pushed to detection automatically? 
-These false positives, while harmless, slow down the security teams and distract them from addressing real threats.
+Exclusion lists are used to exclude some stix pattern type indicators from being created in the platform, depending on it's stix pattern values.
+
 
 ## Create an exclusion  list
-First, go to the Settings and Customization menu. On the right handside, you will see a new menu “Exclusion lists”.
+Exclusion lists can be configured on the "Settings > Customization > Exclusion lists" menu.
 
-On this first screen, you can see the main view of the interface ailing to present a clear, organised presentation of the existing lists.
+On this first screen, you can see the main view of the interface aiming to present a clear, organised presentation of the existing lists.
 
 ![Exclusion lists interface](./assets/exclusion-lists/exclusion-lists-interface.png)
 
