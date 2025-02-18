@@ -255,6 +255,13 @@ filters = {
 };
 ```
 
+This filter is not working for the following relationships since OpenCTI version 6.5:
+- the relationships of type ``related_to`` with an ``Observable`` as source type,
+- the relationships of type ``located_at`` with an ``Ipv4/Ipv6 Address`` or a ``City`` as source type, and a ``Region`` or ``Country`` as target type,
+- the relationships of type ``targets`` with a ``Region``, ``Country`` or ``Sector`` as target type.
+
+
+
 #### Limited support in stream events filtering
 
 Filters that are run against the event stream are not using the complete schema definition in terms of filtering keys.
