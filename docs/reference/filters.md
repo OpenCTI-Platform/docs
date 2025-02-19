@@ -262,7 +262,7 @@ filters = {
     This filter is based on denormalized information for relationships.
     In a given entity, for each of the relationships in which it is involved, we store the relationship type and the id of the other entity involved.
 
-    But for performance reasons, this denormalized information is not stored anymore since OpenCTI 6.5 for some relationships implicating high data volumes.
+    For performance reasons, this denormalized information is not stored for some relationships involving high data volumes.
 
     Thus, the ``regardingOf`` filter does not detect the following relationships:
     - the relationships of type ``related_to`` with an ``Observable`` as source type,
