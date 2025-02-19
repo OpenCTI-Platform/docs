@@ -255,10 +255,27 @@ filters = {
 };
 ```
 
-This filter is not working for the following relationships since OpenCTI version 6.5:
-- the relationships of type ``related_to`` with an ``Observable`` as source type,
-- the relationships of type ``located_at`` with an ``Ipv4/Ipv6 Address`` or a ``City`` as source type, and a ``Region`` or ``Country`` as target type,
-- the relationships of type ``targets`` with a ``Region``, ``Country`` or ``Sector`` as target type.
+![RegardingOf filter](./assets/filters-regardingOf.png)
+
+!!! warning "This filter may exclude some results for technical reasons"
+
+    This filter is based on denormalized information for relationships.
+    In a given entity, for each of the relationships in which it is involved, we store the relationship type and the id of the other entity involved.
+
+    But for performance reasons, this denormalized information is not stored anymore since OpenCTI 6.5 for some relationships implicating high data volumes.
+
+    Thus, the ``regardingOf`` filter does not detect the following relationships:
+    - the relationships of type ``related_to`` with an ``Observable`` as source type,
+
+        Example of relationship: APT41 (intrusion set) related to Winscp.rnd (file observable)
+
+    - the relationships of type ``located_at`` with an ``Ipv4/Ipv6 Address`` or a ``City`` as source type, and a ``Region`` or ``Country`` as target type,
+
+        Example of relationship: Paris located at France
+
+    - the relationships of type ``targets`` with a ``Region``, ``Country`` or ``Sector`` as target type.
+
+        Example of relationship: MalwareX targets Asia
 
 
 
