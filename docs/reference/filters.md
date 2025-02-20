@@ -272,12 +272,15 @@ filters = {
 
     - the relationships of type ``located_at`` with an ``Ipv4/Ipv6 Address`` or a ``City`` as source type, and a ``Region`` or ``Country`` as target type,
 
-        Example of relationship: Paris located at France
+        Example: given the relationship "IP 1.1.1.1 (observable) located in France (Country)" present in the platform
+        France would not be returned when using filter "In regard of" located at 1.1.1.1
+        1.1.1.1 would be returned when using filter "In regard of" located at France
 
     - the relationships of type ``targets`` with a ``Region``, ``Country`` or ``Sector`` as target type.
 
         Example: given the relationship "0mega (Malware) targets Energy (Sector)" present in the platform
-        Energy would not be returned when using filter "In regard of" targets 0mega
+        Energy would not be returned when using filter "In regards of" targets 0mega
+        0mega will be returned when using filter "In regards of" targets Energy
 
 
 
