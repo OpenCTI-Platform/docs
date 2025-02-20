@@ -276,7 +276,8 @@ filters = {
 
     - the relationships of type ``targets`` with a ``Region``, ``Country`` or ``Sector`` as target type.
 
-        Example of relationship: MalwareX targets Asia
+        Example: given the relationship "0mega (Malware) targets Energy (Sector)" present in the platform
+        Energy would not be returned when using filter "In regard of" targets 0mega
 
 
 
