@@ -262,9 +262,9 @@ filters = {
     This filter is based on denormalized information for relationships.
     In a given entity, for each of the relationships in which it is involved, we store the relationship type and the id of the other entity involved.
 
-    For performance reasons, this denormalized information is not stored on all sides for some relationships involving high data volumes.
+    For performance reasons, this denormalized information is not stored in the source entity for some relationships involving high data volumes.
 
-    Thus, the ``regardingOf`` filter does not detect the following relationships:
+    Thus, the ``regardingOf`` filter does not detect the following relationships in case we are looking for the source entity:
     - the relationships of type ``related_to`` with an ``Observable`` as source type,
 
         Example: given the relationship "Winscp.rnd (file observable) related to APT41 (intrusion set)" present in the platform
