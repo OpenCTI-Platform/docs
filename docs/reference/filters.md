@@ -267,8 +267,9 @@ filters = {
     Thus, the ``regardingOf`` filter does not detect the following relationships:
     - the relationships of type ``related_to`` with an ``Observable`` as source type,
 
-        Example: given the relationship "APT41 (intrusion set) related to Winscp.rnd (file observable)" present in the platform
+        Example: given the relationship "Winscp.rnd (file observable) related to APT41 (intrusion set)" present in the platform
         APT41 would not be returned when using filter "In regards of" related to Winscp.rnd
+        Winscp.rnd would be returned when using filter "In regards of" related to APT41
 
     - the relationships of type ``located_at`` with an ``Ipv4/Ipv6 Address`` or a ``City`` as source type, and a ``Region`` or ``Country`` as target type,
 
