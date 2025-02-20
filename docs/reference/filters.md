@@ -260,9 +260,11 @@ filters = {
 !!! warning "This filter may exclude some results for technical reasons"
 
     This filter is based on denormalized information for relationships.
-    In a given entity, for each of the relationships in which it is involved, we store the relationship type and the id of the other entity involved.
+    In a given entity, we directly store the id of the entities with which the entity has a relationship. This allows fast queries involving relationship filters.
+    
+    However, this approach might lead to ever-growing entities in database, with hundreds of thousands of ids stored in a given entity. Take for example a very active Intrusion Set, with tons of observables related to it. The corresponding  denormalization data in the Intrusion Set would represent a significant overhead, leading to dramatical performance drop during some operations manipulating this object.
 
-    For performance reasons, this denormalized information is not stored in the source entity for some relationships involving high data volumes.
+    For performance reasons, this denormalized information is thus not stored in the source entity for some relationships involving high data volumes.
 
     Thus, the ``regardingOf`` filter does not detect the following relationships in case we are looking for the source entity:
     - the relationships of type ``related_to`` with an ``Observable`` as source type,
