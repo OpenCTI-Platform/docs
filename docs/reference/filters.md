@@ -262,7 +262,9 @@ filters = {
     This filter is based on denormalized information for relationships.
     In a given entity, we directly store the id of the entities with which the entity has a relationship. This allows fast queries involving relationship filters.
     
-    However, this approach might lead to ever-growing entities in database, with hundreds of thousands of ids stored in a given entity. Take for example a very active Intrusion Set, with tons of observables related to it. The corresponding  denormalization data in the Intrusion Set would represent a significant overhead, leading to dramatical performance drop during some operations manipulating this object.
+    However, this approach might lead to ever-growing entities in database, with hundreds of thousands of ids stored in a given entity. 
+    Take for example a very active Intrusion Set, with tons of observables related to it. 
+    The corresponding denormalization data in the Intrusion Set would represent a significant overhead, leading to dramatical performance drop during some operations manipulating this object.
 
     For performance reasons, this denormalized information is thus not stored in the source entity for some relationships involving high data volumes.
 
