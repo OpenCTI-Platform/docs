@@ -287,6 +287,10 @@ filters = {
         Energy would not be returned when using filter "In regards of" targets 0mega
         0mega will be returned when using filter "In regards of" targets Energy
 
+If a values combination may not return all the results because one of the above relationships is involved, a warning icon is displayed before the filter icon :
+
+![RegardingOf filter with warning](./assets/filters-regardingOf-warning.png)
+
 
 
 #### Limited support in stream events filtering
