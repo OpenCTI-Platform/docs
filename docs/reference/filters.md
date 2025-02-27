@@ -91,13 +91,13 @@ The available operators are:
 |-----------------|-----------------------|-----------------------|
 | eq              | equal                 |                       |
 | not_eq          | different             |                       |
+| nil             | empty / no value      |                       |
+| not_nil         | non-empty / any value |                       |
 | gt              | greater than          | numbers and dates     |
 | gte             | greater than or equal | numbers and dates     |
 | lt              | lower than            | numbers and dates     |
 | lte             | lower than or equal   | numbers and dates     |
 | within          | in a datetime range   | dates                 |
-| nil             | empty / no value      |                       |
-| not_nil         | non-empty / any value |                       |
 | starts_with     | starts with           | short string          |
 | not_starts_with | doesn't start with    | short string          |
 | ends_with       | ends with             | short string          |
