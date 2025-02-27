@@ -102,7 +102,7 @@ The available operators are:
 | not_starts_with | doesn't start with    | short string          |
 | ends_with       | ends with             | short string          |
 | not_ends_with   | doesn't end with      | short string          |
-| contains        | contains              | short string          |
+| contains        | contains exactly      | short string          |
 | not_contains    | doesn't contain       | short string          |
 | search          | have occurences       | short and long string |
 
