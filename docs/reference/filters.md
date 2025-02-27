@@ -139,7 +139,7 @@ filters = {
 };
 ```
 
-- With the `within` operator you should provide exactly 2 strings in `values`: the 'from' and 'to' of the datetime range. The values can be either a datetime in UTC format, either a relative date expression in date math format.
+- With the `within` operator you should provide exactly 2 strings in `values`: the 'from' and 'to' of the datetime range. The values can be either a datetime in the ISO 8601 format (and UTC timezone), either a relative date expression in date math format.
 
 ```ts
 // Example: Reports with publication date within the last year
@@ -156,6 +156,38 @@ filters = {
         values: ['now-1y', 'now'],
         operator: 'within',
       }
+    ],
+    filterGroups: [],
+};
+```
+
+- If you use operators of comparisons (`gt`, `gte`, `lt`, `lte`), the values should be strings representing either a number for filters of type number, either a date in the ISO 8601 format (and UTC timezone) for date filters.
+
+```ts
+// Example: confidence > 50
+filters = {
+    mode: 'and',
+    filters: [
+      {
+        key: 'confidence',
+        values: ['50'],
+        operator: 'gt',
+      },
+    ],
+    filterGroups: [],
+};
+```
+
+```ts
+// Example: publication date after January 1st 2020
+filters = {
+    mode: 'and',
+    filters: [
+      {
+        key: 'published',
+        values: ['2020-01-01T00:00:00Z'],
+        operator: 'gt',
+      },
     ],
     filterGroups: [],
 };
