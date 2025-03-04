@@ -161,7 +161,10 @@ filters = {
 };
 ```
 
-- If you use operators of comparisons (`gt`, `gte`, `lt`, `lte`), the values should be strings representing either a number for filters of type number, either a date in the ISO 8601 format (and UTC timezone) for date filters.
+- If you use operators of comparisons (`gt`, `gte`, `lt`, `lte`), the values should be strings representing
+
+  - a number for filters of type number,
+  - a date in the ISO 8601 format (and UTC timezone) or a relative date expression in date math format for date filters.
 
 ```ts
 // Example: confidence > 50
@@ -186,6 +189,21 @@ filters = {
       {
         key: 'published',
         values: ['2020-01-01T00:00:00Z'],
+        operator: 'gt',
+      },
+    ],
+    filterGroups: [],
+};
+```
+
+```ts
+// Example: platform creation date in the last 24 hours
+filters = {
+    mode: 'and',
+    filters: [
+      {
+        key: 'created_at',
+        values: ['now-24h'],
         operator: 'gt',
       },
     ],
