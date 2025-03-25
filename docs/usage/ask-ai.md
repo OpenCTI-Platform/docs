@@ -68,7 +68,9 @@ A short video on the FiligranHQ YouTube channel presents tha capabilities of Ask
 An Ask AI button is available in the top search bar, enabling you to switch the search bar in NLQ mode. There you can write questions and assertion in natural language.
 ![Ask AI button in the top search bar](assets/nlq-button.png)
 
-The LLM model will return filters corresponding to your question. These filters will be used to display the list of associated entities.
+The LLM model will return filters corresponding to your question. The model constructs filters in the OpenCTI filters format, with exiting filter keys (attributes, relations input names and some special filter keys), and available operators. The model also takes into account the exiting entity and relationship types.
+
+The NLQ filters will be used to display the list of associated entities.
 ![Example of results with NLQ](assets/nlq-example.png)
 
 If you provide a name representing an entity in your question, a search will be launched in the platform to look for the entity corresponding the best to it (search in names, values, representatives, aliases...).
@@ -78,9 +80,20 @@ If you provide a name representing an entity in your question, a search will be 
 - If no entities are found, the filter associated with the entity will not be used in the result.
   ![Example of results with NLQ and a not found entity](assets/nlq-result-not-found-entity.png)
 
+If the question is not understood or out of the OpenCTI cyber context, no filters may be found.
+![Example of results with NLQ with no result](assets/nlq-no-result.png)
+
 !!! note "Limited results"
 
-    We propose our first version of an NLQ model: it is still under developement and may need improvements. Thus some questions may not be correctly understood.
+    We propose our first version of an NLQ model: it is still under developement and may need improvements.
+    Thus some questions may not be correctly or fully understood.
+    
+    In particular, here are some limitations:
+
+    - it is not possible to search among relationships (only entities).
+      Example: List the relationships involving Paradise Ransomware.
+    - the questions out of the actual filtering possibilities can't be translated in filters. It is the case for questions specifying properties about an entity attribute or an entity linked to an other (second level information).
+      Example: List the indicators related to a malwares located in Europe.
 
 
 !!! warning "Using NLQ may increase your costs"
