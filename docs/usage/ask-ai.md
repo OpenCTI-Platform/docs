@@ -78,6 +78,11 @@ If you provide a name representing an entity in your question, a search will be 
 - If no entities are found, the filter associated with the entity will not be used in the result.
   ![Example of results with NLQ and a not found entity](assets/nlq-result-not-found-entity.png)
 
+!!! note "Limited results"
+
+    We propose our first version of an NLQ model: it is still under developement and may need improvements. Thus some questions may not be correctly understood.
+
+
 !!! warning "Using NLQ may increase your costs"
 
     The Natural Language Query feature works by injecting heavy prompts to the LLM model (to explain the filters structure and provide examples). Thus the LLM is called with quite complex queries and using it may generate significant costs in a big organization.
