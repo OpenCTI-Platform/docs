@@ -63,6 +63,27 @@ Fom the Content tab of a Container (Reports, Groupings and Cases), Ask AI can al
 
 A short video on the FiligranHQ YouTube channel presents tha capabilities of AskAI: https://www.youtube.com/watch?v=lsP3VVsk5ds.
 
+### Assistance to find specific entities (Natural Language Query)
+
+An Ask AI button is available in the top search bar, enabling you to switch the search bar in NLQ mode. There you can write questions and assertion in natural language.
+![Ask AI button in the top search bar](assets/nlq-button.png)
+
+The LLM model will return filters corresponding to your question. These filters will be used to display the list of associated entities.
+![Example of results with NLQ](assets/nlq-example.png)
+
+If you provide a name representing an entity in your question, a search will be launched in the platform to look for the entity corresponding the best to it (search in names, values, representatives, aliases...).
+- If entities are found, the id of the entity corresponding the best will be used in the filter.
+  ![Example of results with NLQ and a found entity](assets/nlq-result-found-entity.png)
+
+- If no entities are found, the filter associated with the entity will not be used in the result.
+  ![Example of results with NLQ and a not found entity](assets/nlq-result-not-found-entity.png)
+
+!!! warning "Using NLQ may increase your costs"
+
+    The Natural Language Query feature works by injecting heavy prompts to the LLM model (to explain the filters structure and provide examples). Thus the LLM is called with quite complex queries and using it may generate significant costs in a big organization.
+    For our client in Saas, there are no additional costs since they use our own instance of OpenAI.
+
+
 ## Improving generated elements of Ask AI
 
 Be aware that the text quality is highly dependent on the capabilities of the associated LLM.
