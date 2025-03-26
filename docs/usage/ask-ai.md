@@ -68,11 +68,11 @@ A short video on the FiligranHQ YouTube channel presents tha capabilities of Ask
 An Ask AI button is available in the top search bar, enabling you to switch the search bar in NLQ mode. There you can write questions and assertion in natural language.
 ![Ask AI button in the top search bar](assets/nlq-button.png)
 
-The LLM model will return filters corresponding to your question. The model constructs filters in the OpenCTI filters format with empty ``filterGroups``. Thus, the filters are limited to one level of imbrication: a list of filters separated by a single and/or mode.
+The LLM model will return filters corresponding to your question. The model constructs filters in the OpenCTI filters format with empty ``filterGroups``. Thus, filters are currently limited to one level of imbrication: a list of filters separated by a single and/or mode.
 The LLM constructs the filters with :
-- exiting filter keys (attributes, relations input names and some special filter keys),
+- existing filter keys (attributes, relations input names and some special filter keys),
 - the available operators (equals, greater than, etc.),
-- the exiting entity and relationship types for the possible values of entity types filters.
+- existing entity and relationship types for the possible values of entity types filters.
 
 The found NLQ filters will be used to display the list of associated entities.
 ![Example of results with NLQ](assets/nlq-example.png)
