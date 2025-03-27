@@ -63,54 +63,54 @@ Fom the Content tab of a Container (Reports, Groupings and Cases), Ask AI can al
 
 A short video on the FiligranHQ YouTube channel presents tha capabilities of AskAI: https://www.youtube.com/watch?v=lsP3VVsk5ds.
 
-### Assistance to find specific entities (Natural Language Query)
+### Assistance for finding specific entities (Natural Language Query)
 
-An Ask AI button is available in the top search bar, enabling you to switch the search bar in NLQ mode. There you can write questions and assertion in natural language.
+An Ask AI button is available in the top search bar. It enables to switch the search bar in NLQ mode where you can write questions or assertions in natural language.
 ![Ask AI button in the top search bar](assets/nlq-button.png)
 
-The LLM model will return filters corresponding to your question. The model constructs filters in the OpenCTI filters format with empty ``filterGroups``. Thus, filters are currently limited to one level of imbrication: a list of filters separated by a single and/or mode.
+The system uses a Large Language Model (LLM) to generate corresonding filters based on your question. The model constructs filters in the OpenCTI filters format with empty ``filterGroups``. Thus, filters are currently limited to one level of imbrication: a list of filters separated by a single and/or mode.
 The LLM constructs the filters with :
 - existing filter keys (attributes, relations input names and some special filter keys),
 - the available operators (equals, greater than, etc.),
 - existing entity and relationship types for the possible values of entity types filters.
 
-The found NLQ filters will be used to display the list of associated entities.
+The NLQ filters result is then used to display the list of matching entities.
 ![Example of results with NLQ](assets/nlq-example.png)
 
 If the question is not understood or out of the OpenCTI cyber context, no filters may be found.
 ![Example of results with NLQ with no result](assets/nlq-no-result.png)
 
 
-!!! warning "Using NLQ may increase your costs"
+!!! warning "Token usage and cost notice"
 
-    The Natural Language Query feature works by injecting heavy prompts to the LLM model (to explain the filters structure and provide examples). Thus the LLM is called with quite complex queries and using it may generate significant costs in a big organization.
-    For our client in Saas, there are no additional costs since they use our own instance of OpenAI.
+    The Natural Language Query feature relies on heavy prompts sent to the language model to describe the filters structure and provide examples. These complex queries may generate significant token usage.
+    When using a custom API endpoint (e.g., OpenAI, Mistral) with your own API key, this may result in increased costs. We recommend checking your provider's pricing documentation to estimate costs accurately.    
+    For our SaaS customers, queries are routed through our hosted model instance and do not incur additional costs.
 
 #### NLQ results involving an entity
 
-If you provide a name representing an entity in your question, a search will be launched in the platform to look for the entity corresponding the best to it (search in names, values, representatives, aliases...).
-- If entities are found, the id of the entity corresponding the best will be used in the filter.
+If your question includes a term detected as a term representing an entity, a search will be triggered across multiple fields (name, value, aliases, etc.) to resolve it.
+- If a match is found, its ID will be used in the generated filters.
   ![Example of results with NLQ and a found entity](assets/nlq-result-found-entity.png)
 
-- If no entities are found, the filter associated with the entity will not be used in the result.
+- If no match is found, the part of the filters involving the entity will be skipped.
   ![Example of results with NLQ and a not found entity](assets/nlq-result-not-found-entity.png)
 
 #### Actual NLQ model limitations
 
-We propose our first version of an NLQ model: it is still under development and may need improvements.
-Thus, some questions may not be correctly or fully understood.
+This is the first version of an NLQ model. It is still in development and may not yet handle all use cases.
 
 In particular, here are some limitations:
 
-- it is not possible to search among relationships (only entities).
+- It is not possible to search among relationships (only entities).
 
   Example: ``List the relationships involving Paradise Ransomware.``
 
-- the questions out of the actual filtering possibilities can't be translated in filters. It is the case for questions specifying properties about an entity attribute or an entity linked to an other (second level information).
+- The model cannot filter on properties of related entities (second level information).
 
   Example: ``List the indicators related to a malwares located in Europe.``
 
-- the questions translated in imbricated filters (filters with several levels separated by different and/or modes).
+- No Multi-level logic combinations yet, queries requiring embedded filters combinations (e.g., mixing AND/OR modes between different filters) are not yet supported.
   
   Example: ``What are the malwares created by admin or having label 'test'?`` 
 
