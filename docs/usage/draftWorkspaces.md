@@ -79,6 +79,16 @@ Drafts can be approved even if there are ongoing processes still ongoing, but pl
 
 Depending on the draft operation of the data, the ingestion process will be sightly different. Only Create, Update and Delete operations are sent for ingestion. Created entities will be fully sent for ingestion. But updated entities will not be fully sent for ingestion and upserted: instead, only the updates applied in the draft will be applied on the main knowledge version. For deletions, only deleted entities will have a delete action applied, and not deletion linked entities
 
+### Data segregation & RBAC in draft
+
+Given that in draft you can see your platform, it is important to highlight that:
+
+- [Capabilities](../administration/users.md) will apply in draft: a user without the ability to create or update knwoledge won't be able to create or update knowledge in draft. additionnally, this user won't be able to approve a draft either.
+- [Confidence level](reliability-confidence.md) applies in draft: confidence level will apply in draft, in the exact same way that they are enforced in the platform.
+- [Markings](../administration/segregation.md) will apply in draft: if you are not able to view a data in the platform, then you won't be able to see it in draft either.
+- [Data segregation](../administration/organization-segregation.md): if you have enabled data segregation and an entity has not been shared with you, when accessing a draft, this entity will remain not accessible to you. Additionally, if in the meantime, this entity has been shared to you, this entity will remain hidden from you in draft, since the draft has been created before the access has been granted to you.
+
+
 ## Draft read only view
 
 Once the draft has been approved and that it is now in a validated status, it is no longer possible to enter this draft and apply modifications in it.
@@ -90,3 +100,15 @@ However, it is still possible to see the modifications that existed when the dra
 When opening a validated draft, the same draft overview will be avaible to see all of the draft changes.
 
 In addition, the progress of the ingestion of the draft approval is visible on top of the data lists.
+
+## Features not available in draft
+
+Even though drafts try to provide as many actions as possible in the platform, some actions either do not make sense or have not been implemented yet to work in draft mode. Among them:
+
+- playbooks
+- inference rules
+- sharing to org
+- apply authorized members
+- downloading knowledge
+- disseminate a file
+- merge entities
