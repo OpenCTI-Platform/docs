@@ -11,7 +11,7 @@ The first way to create a draft is to manually create one, in the Drafts page. W
 
 ![Draft creation page](assets/draftWorkspace-manual-creation.png)
 
-The second way drafts can be created is when files are imported in the platform. Depending on the platform and connector configuration, uploading a file can automatically generate an import of that file. This automatic import can generate a draft where the result of the file import is available.
+The second way drafts can be created is when files are imported in the platform. Depending on the platform and connector configuration, uploading a file can automatically generate an import of that file. This automatic import can generate a draft where the result of the file import is available. We have created a variable to let you choose your import (either workbench or draft): [Configuration](../deployment/configuration.md).
 
 In addition, files can be manually imported. When that is the case, an option is available to decide the validation mode to use. When the draft validation mode is selected, a draft will be automatically created and the result of the file import will be available in it.
 
