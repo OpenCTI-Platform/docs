@@ -106,6 +106,10 @@ In particular, here are some limitations:
 
   Example: ``List the relationships involving Paradise Ransomware.``
 
+- The model is not built to handle dates yet.
+
+  Example: ``List the reports published after January.``
+
 - The model cannot filter on properties of related entities (second level information).
 
   Example: ``List the indicators related to a malwares located in Europe.``
