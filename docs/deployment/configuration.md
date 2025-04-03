@@ -245,7 +245,7 @@ Here are the configuration keys, for both containers (environment variables) and
 | ai:model               | AI__MODEL                   |               | Model to be used for text generation (depending on type)                      |
 | ai:model_images        | AI__MODEL_IMAGES            |               | Model to be used for image generation (depending on type)                     |
 | ai:version             | AI__VERSION                 |               | The version of the deployment server (used for AzureAI)                       |
-| ai:ai_azure_instance   | AI__AI_AZURE_INSTANCE       |               | The Azure instance name you use (https://<ai_azure_instance>.opeani.azure.ai) |
+| ai:ai_azure_instance   | AI__AI_AZURE_INSTANCE       |               | The Azure instance name you use (https://<ai_azure_instance>.openai.azure.ai) |
 | ai:ai_azure_deployment | AI__AI_AZURE_DEPLOYMENT     |               | The Azure deployment (often equal to the model used)                          |
 
 #### Protect Sensitive Configurations
