@@ -45,7 +45,8 @@ Then users will be able to give more detail on reason that lead to this request,
 
 ### Accepting or declining a request to access to knowledge
 
-Users that are both:
+Users who are both:
+
 - in the organization where the knowledge actually belong
 - in the group that has been configured in Request for information entity settings
 
