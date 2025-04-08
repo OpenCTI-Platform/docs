@@ -63,6 +63,11 @@ User that are allowed to see the dedicated Request for Information and allowed t
 
 ## Disabling request access feature
 
-In entity setting, delete all status in "Specific Workflow for Request Access" section and the button will not appear in the error message `Restricted entity already exists`
+If you have attempted to use the functionality but need to remove it due to policy:
+
+- In entity setting, delete all status in "Specific Workflow for Request Access" section. 
+- You can alternatively remove the group in `Validator membership`. 
+
+This will restore the default behavior, and the button will not appear in the error message `Restricted entity already exists`.
 
 ![Example of request access workflow disabled](assets/request-access/specific-workflow.png)
