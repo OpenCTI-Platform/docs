@@ -60,3 +60,9 @@ There is two dedicated button "Validate" and "Decline": with one click on Valida
 
 User that are allowed to see the dedicated Request for Information and allowed to share the knowledge, will also be notified on dedicated Request for Information creation.
 ![Exemple of notification](assets/request-access/request-access-notifications.png)
+
+## Disabling request access feature
+
+In entity setting, delete all status in "Specific Workflow for Request Access" section and the button will not appear in the error message `Restricted entity already exists`
+
+![Example of request access workflow disabled](assets/request-access/specific-workflow.png)
