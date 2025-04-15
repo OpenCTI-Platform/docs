@@ -165,20 +165,27 @@ Here are the configuration keys, for both containers (environment variables) and
 
 #### Redis
 
-| Parameter                  | Environment variable        | Default value | Description                                                                           |
-|:---------------------------|:----------------------------|:--------------|:--------------------------------------------------------------------------------------|
-| redis:mode                 | REDIS__MODE                 | single        | Connect to redis in "single", "sentinel or "cluster"  mode                            |
-| redis:namespace            | REDIS__NAMESPACE            |               | Namespace (to use as prefix)                                                          |
-| redis:hostname             | REDIS__HOSTNAME             | localhost     | Hostname of the Redis Server                                                          |
-| redis:hostnames            | REDIS__HOSTNAMES            |               | Hostnames definition for Redis cluster or sentinel mode: a list of host:port objects. |
-| redis:port                 | REDIS__PORT                 | 6379          | Port of the Redis Server                                                              |
-| redis:sentinel_master_name | REDIS__SENTINEL_MASTER_NAME |               | Name of your Redis Sentinel Master (mandatory in sentinel mode)                       |
-| redis:use_ssl              | REDIS__USE_SSL              | `false`       | Is the Redis Server has TLS enabled                                                   |
-| redis:username             | REDIS__USERNAME             |               | Username of the Redis Server                                                          |
-| redis:password             | REDIS__PASSWORD             |               | Password of the Redis Server                                                          |
-| redis:database             | REDIS__DATABASE             |               | Database of the Redis Server (only work in single mode)                               |
-| redis:ca                   | REDIS__CA                   | []            | List of path(s) of the CA certificate(s)                                              |
-| redis:trimming             | REDIS__TRIMMING             | 2000000       | Number of elements to maintain in the stream. (0 = unlimited)                         |
+| Parameter                        | Environment variable              | Default value | Description                                                                           |
+|:---------------------------------|:----------------------------------|:--------------|:--------------------------------------------------------------------------------------|
+| redis:mode                       | REDIS__MODE                       | single        | Connect to redis in "single", "sentinel" or "cluster" mode                            |
+| redis:namespace                  | REDIS__NAMESPACE                  |               | Namespace (to use as prefix)                                                          |
+| redis:hostname                   | REDIS__HOSTNAME                   | localhost     | Hostname of the Redis Server                                                          |
+| redis:hostnames                  | REDIS__HOSTNAMES                  |               | Hostnames definition for Redis cluster or sentinel mode: a list of host:port objects. |
+| redis:port                       | REDIS__PORT                       | 6379          | Port of the Redis Server                                                              |
+| redis:use_ssl                    | REDIS__USE_SSL                    | `false`       | Is the Redis Server has TLS enabled                                                   |
+| redis:username                   | REDIS__USERNAME                   |               | Username of the Redis Server                                                          |
+| redis:password                   | REDIS__PASSWORD                   |               | Password of the Redis Server                                                          |
+| redis:database                   | REDIS__DATABASE                   |               | Database of the Redis Server (only work in single mode)                               |
+| redis:ca                         | REDIS__CA                         | []            | List of path(s) of the CA certificate(s)                                              |
+| redis:trimming                   | REDIS__TRIMMING                   | 2000000       | Number of elements to maintain in the stream. (0 = unlimited)                         |
+| redis:sentinel_failover_detector | REDIS__SENTINEL_FAILOVER_DETECTOR |               | TODO                                                                                  |
+| redis:sentinel_master_name       | REDIS__SENTINEL_MASTER_NAME       |               | Name of your Redis Sentinel Master (mandatory in sentinel mode)                       |
+| redis:sentinel_password          | REDIS__SENTINEL_PASSWORD          |               | TODO                                                                                  |
+| redis:sentinel_preferred_slaves  | REDIS__SENTINEL_PREFERRED_SLAVES  |               | TODO                                                                                  |
+| redis:sentinel_role              | REDIS__SENTINEL_ROLE              |               | TODO                                                                                  |
+| redis:sentinel_tls               | REDIS__SENTINEL_TLS               |               | TODO                                                                                  |
+| redis:sentinel_update_sentinels  | REDIS__SENTINEL_UPDATE_SENTINELS  |               | TODO                                                                                  |
+
 
 #### RabbitMQ
 
