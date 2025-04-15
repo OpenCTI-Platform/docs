@@ -178,6 +178,11 @@ Here are the configuration keys, for both containers (environment variables) and
 | redis:database                   | REDIS__DATABASE                   |               | Database of the Redis Server (only work in single mode)                               |
 | redis:ca                         | REDIS__CA                         | []            | List of path(s) of the CA certificate(s)                                              |
 | redis:trimming                   | REDIS__TRIMMING                   | 2000000       | Number of elements to maintain in the stream. (0 = unlimited)                         |
+| redis:activity_trimming          | REDIS__ACTIVITY_TRIMMING          |               | TODO                                                                                  |
+| redis:notification_trimming      | REDIS__NOTIFICATION_TRIMMING      |               | TODO                                                                                  |
+| redis:host_ip_family             | REDIS__HOST_IP_FAMILY             |               | TODO                                                                                  |
+| redis:nat_map                    | REDIS__NET_MAP                    |               | TODO                                                                                  |
+| redis:scale_reads                | REDIS__SCALE_READS                |               | TODO                                                                                  |
 | redis:sentinel_failover_detector | REDIS__SENTINEL_FAILOVER_DETECTOR |               | TODO                                                                                  |
 | redis:sentinel_master_name       | REDIS__SENTINEL_MASTER_NAME       |               | Name of your Redis Sentinel Master (mandatory in sentinel mode)                       |
 | redis:sentinel_password          | REDIS__SENTINEL_PASSWORD          |               | TODO                                                                                  |
