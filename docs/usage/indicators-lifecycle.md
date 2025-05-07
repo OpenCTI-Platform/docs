@@ -34,6 +34,24 @@ Right next to the indicator score, there is a button `Lifecycle` which enables t
 
 ![Indicator lifecycle](./assets/indicators-lifecycle-example-dialog.png)
 
+## How the decay can be impacted indicator updates
+
+The decay rule is a mathematical computation based on:
+- valid until
+- indicator score
+- being revoked or not
+
+### Changing valid until date
+
+### Changing score
+
+### Changing revoke state
+
 ## Conclusion
 
 Understanding how OpenCTI calculates validity periods and scores is essential for effective threat intelligence analysis. These rules ensure that your indicators are accurate and up-to-date, providing a reliable foundation for threat intelligence data.
+
+## Related reading:
+
+- [Indicator decay manager](../deployment/managers.md)
+- [Decay rules configuration](../administration/decay-rules.md)
