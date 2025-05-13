@@ -95,7 +95,7 @@ This strategy can be used to authenticate your user with your company SAML and i
         "entry_point": "https://auth.mydomain.com/auth/realms/mydomain/protocol/saml",
         "saml_callback_url": "http://localhost:4000/auth/saml/callback",
         // "private_key": "MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwg...",
-        "cert": "-----BEGIN CERTIFICATE-----\nMIICmzCCAYMCBgF2Qt3X1zANBgkqhkiG9w0BAQsFADARMQ8w...",
+        "cert": "-----BEGIN CERTIFICATE-----\nMIICmzCCAYMCBgF2Qt3X1zANBgkqhkiG9w0BAQsFADARMQ8w...\n-----END CERTIFICATE-----",
         "logout_remote": false
         "want_assertions_signed": true,
         "want_authn_response_signed": true,
