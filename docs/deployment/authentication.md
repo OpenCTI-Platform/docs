@@ -106,7 +106,7 @@ This strategy can be used to authenticate your user with your company SAML and i
 
 For the SAML strategy to work:
 
-- The `cert` parameter is mandatory (PEM format) because it is used to validate the SAML response. It must include the header, footer and newline (\n) characters.
+- The `cert` parameter is mandatory (PEM format) because it is used to validate the SAML response. Depending on certificate format it may include the header, footer and newline (\n) characters.
 - The `private_key` (PEM format) is optional and is only required if you want to sign the SAML client request.
 
 !!! note "Certificates"
