@@ -82,3 +82,69 @@ The workers can have more or less verbose outputs:
 !!! warning "TOO_MANY_REQUESTS/12/disk usage exceeded flood-stage watermark..."
     
     Disk full, no space left on the device for ElasticSearch.
+
+### Error code
+
+##### MULTIPLE_REFERENCES_ERROR
+
+    TODO : Explain why this error
+
+#### UNSUPPORTED_ERROR
+
+    TODO : Explain why this error
+
+#### DATABASE_ERROR
+
+    TODO : Explain why this error
+
+#### VALIDATION_ERROR
+
+    TODO : Explain why this error
+
+#### MULTIPLE_ENTITIES_ERROR
+
+    TODO : Explain why this error
+
+#### ACL_ERROR
+
+    TODO : Explain why this error
+
+#### MISSING_REFERENCE_ERROR
+
+    TODO : Explain why this error
+
+#### INTERNAL_SERVER_ERROR
+
+    TODO : Explain why this error
+
+#### ELEMENT_ID_COLLISION
+
+    TODO : Explain why this error
+
+#### INCORRECT_INDICATOR_FORMAT
+
+    TODO : Explain why this error
+
+#### INCORRECT_OBSERVABLE_FORMAT
+
+    TODO : Explain why this error
+
+#### RESTRICTED_ELEMENT
+
+    TODO : Explain why this error
+
+#### MULTIPLE_REFERENCES_FOUND
+
+    TODO : Explain why this error
+
+#### SELF_REFERENCING_RELATION
+
+    TODO : Explain why this error
+
+#### INSUFFICIENT_CONFIDENCE_LEVEL
+
+The INSUFFICIENT_CONFIDENCE_LEVEL error occurs when a connector attempts to update an entity that already exists in the platform and was previously created by a connector with a higher confidence level. In this case, it may be necessary to review the level of confidence of the users associated with the connectors.
+
+#### ELEMENT_NOT_FOUND
+
+    TODO : Explain why this error
