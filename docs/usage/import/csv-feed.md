@@ -35,7 +35,7 @@ Here's a step-by-step guide to configure Csv Feeds:
 
 Additional configuration options:
 
-- User responsible for data creation: Define the user responsible for creating data received from this CSV feed. Best practice is to dedicate one user per source for organizational clarity. Please [see the section "Best practices" above](../import-automated.md#best-practices-section) for more information.
+- User responsible for data creation: Define the user responsible for creating data received from this CSV feed. Best practice is to dedicate one user per source for organizational clarity by clicking on "Create automatic user". The name is not editable (unless you change the feed's name) but you must define a confidence level (between 0 and 100) to set this confidence to the user that will be automatically created. _Important_ : before clicking on "Create automatic user" you must define a default group for ingestion users, in the Settings part.
 - Description
 
 ![csv-feeds-creation.png](../assets/csv-feeds-creation.png)
