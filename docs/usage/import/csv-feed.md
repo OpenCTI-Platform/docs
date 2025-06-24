@@ -14,7 +14,7 @@ Ensuring a secure and well-organized environment is paramount in OpenCTI. Here a
 
 By adhering to these best practices, you ensure independence in managing rights for each import source through dedicated user and organization structures. In addition, you enable clear traceability to the entity's creator, facilitating source evaluation, dashboard creation, data filtering and other administrative tasks.
 
-In "Settings > Policies", you can now define a default group for ingestion user and so create a specific user on creating the CSV Feed.
+Under Settings > Policies, you can now define a default group for the ingestion user, allowing you to create a specific user when setting up the CSV Feed.
 
 ![Select default group in settings](../assets/settings_default_group.png)
 
