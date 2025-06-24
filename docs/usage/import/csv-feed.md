@@ -23,11 +23,11 @@ Under Settings > Policies, you can now define a default group for the ingestion 
 Here's a step-by-step guide to configure Csv Feeds:
 
 1. CSV URL: Provide the URL of the CSV file exposed from which items will be imported.
-2. Configure your CSV Mapper
-   1. Define a CSV Mapper on the fly by clicking the "Inline CSV Mapper"
-   2. Choose the CSV mapper to be used to import the data.
-3. Authentication type (if necessary): Enter the authentication type.
-4. Select the scheduling interval; by default, it is set to 1 hour.
+2. Configure Your CSV Mapper
+    1. Create a CSV mapper on the fly by clicking "Inline CSV Mapper."
+    2. Select the CSV mapper you want to use for data import.
+3. Authentication Type (if required): Specify the authentication method to be used.
+4. Scheduling Interval: Choose how often the feed should run. By default, this is set to 1 hour.
 
 !!! note "CSV mapper"
 
