@@ -1,6 +1,6 @@
 # Fintel Design
 
-Fintel design are used to customize and preview your own fintel template. You can know add your own colors and logo to the template.
+Fintel design are used to customize and preview your own fintel template. You can now create fintel designs to produce finished intelligence documents matching your organization's brand guidelines.
 
 ## Create a fintel design
 Fintel designs can be configured on the "Settings > Customization > Fintel designs" menu.
@@ -28,7 +28,7 @@ Now let's customize a little bit this template.
 ![Fintel design customization](./assets/fintel-designs/fintel-design-custom.png)
 
 As you can see now in the preview you can change the following data:
-- Logo
+- Logo: you can use png, jpg, svg files (even url are accepted)
 - Gradiant color
 - Text color
 
