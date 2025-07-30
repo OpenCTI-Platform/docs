@@ -74,7 +74,14 @@ You can manage the users in `Settings > Security > Users`. If you are using [Sin
 
 To create a user, just click on the `+` button:
 
-![Create user](assets/create-user-new.png)
+![Create user](assets/create_user.png)
+
+It is possible to create `Service accounts`. These accounts are specifically designed for technical users, such as connectors.
+An email address is automatically generated for the `Service account`. Although these accounts generally do not receive emails, it is possible to add a personalized email.
+A password is automatically generated for the `Service account` and it is not stored in the database. Technical users like connectors will authenticate using their API tokens.
+Users have the flexibility to manually convert their User to Service accounts by clicking on the `Convert` button
+
+![Convert User](assets%2Fconvert_user.png)
 
 ### Manage a user
 
