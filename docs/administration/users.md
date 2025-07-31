@@ -88,7 +88,7 @@ Although these accounts generally do not receive emails, it is possible to add a
 
 ## Main difference between a Service Account & a user
 
-- A Service Account will be considered to belong to the platform's organization to ensure it can access the data: service account when loggign in, will be considered as users of the main platform organisation, in addition of their current organization. This will be done by manually adding **the platform org to the user's session**. It will not be possible to change this behavior. Therefore, even if you change your main platform organization, your service account will always be considered to be pat of the main platform organisation, ensuring that you do not have any issue ingesting data. Removing your platform org will ensure that your service account does not belong anymore to the platform organisation, unless a specific relation between the organisation and the service account has been created.
+- A Service Account will be considered to belong to the platform's organization to ensure it can access the data: service account when logging in, will be considered as users of the main platform organisation, in addition of their current organization. This will be done by manually adding **the platform org to the user's session**. It will not be possible to change this behavior. Therefore, even if you change your main platform organization, your service account will always be considered to be part of the main platform organisation, ensuring that you do not have any issue ingesting data. Removing your platform org will ensure that your service account does not belong anymore to the platform organisation, unless a specific relation between the organisation and the service account has been created.
 - A Service Account will not be able to log in via Email & Password since the password of the service account will not exists in DB.
 - A service account will not be able to receive emails.
 
@@ -103,7 +103,7 @@ Two options are possible:
 
 Converting a user into a service account will simply remove its password from our Database. The "new" service account will still have the same ID & same Token than the user, to preserve data consistency.
 
-Converting back a service account into a user wll also be possible. However, if the service account has directly been created as a service account without adding a specific email address, the "new" user won't be able to trigger a password reset flow to get a new password. We therefore advise you to first provide a valid email adress to your "new" user, so that the "new" user can trigger the reset password flow by himself/herself.
+Converting back a service account into a user will also be possible. However, if the service account has directly been created as a service account without adding a specific email address, the "new" user won't be able to trigger a password reset flow to get a new password. We therefore advise you to first provide a valid email address to your "new" user, so that the "new" user can trigger the reset password flow by himself/herself.
 
 
 ### Manage a user
