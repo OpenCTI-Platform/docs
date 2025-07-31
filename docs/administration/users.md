@@ -78,7 +78,7 @@ To create a user, just click on the `+` button:
 
 # Service Account
 
-Service Account aims adminstrators to create technical users. Service accounts do not have any password which therefore prevent them from logging in via UI.
+Service Account aims administrators to create technical users. Service accounts do not have any password which therefore prevent them from logging in via UI.
 
 ## Create a Service Account
 It is possible to create `Service accounts`. These accounts are specifically designed for technical users, such as connectors.
