@@ -100,8 +100,9 @@ As you see previously, you need to verify your CSV configuration before validati
 You can select CSV Feeds from the XTM Hub by clicking the ```Import from Hub``` button
 
 #### One-click CSV Feed deployment
+
 From the XTM Hub, you can effortlessly deploy your desired CSV Feed with just a single click.
-To get started, simply register your OpenCTI platform following the instructions in our Registration documentation here: XXX (this documentation is on the XTM Hub project).
+To get started, simply register your OpenCTI platform following the instructions in our [OpenCTI registration documentation](/administration/hub/).
 Next, navigate to your preferred CSV Feed and click the ```Deploy in OpenCTI``` button located in the top right corner.
 If you have multiple OpenCTI platforms registered, choose the platform where you wish to deploy the CSV Feed.
 You will then be redirected to the OpenCTI platform, where the process will proceed automatically.
