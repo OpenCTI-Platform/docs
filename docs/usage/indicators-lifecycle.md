@@ -56,7 +56,7 @@ Updating score restart a decay lifecycle computation with the decay rule that is
 
 - Updating an indicator and **moving revoked to true**: means that the decay manager will ignore the indicator. The score is automatically updated to be au maximum the revoke score of the decay rule that applies, or zero if no decay rules applies.
 
-- Updating an indicator and **moving revoked to false**: means that the indicator must be valid given the decay lifecycle. If there is no score update along with the revoke update, the score is automatically updated to be the score at indicator creation, or if this score is lower to the revoke score then the default score of 50. The valid until is then computed with this new score value.
+- Updating an indicator and **moving revoked to false**: means that the indicator must be valid given the decay lifecycle. If there is no score update along with the revoke update, the score is automatically updated to be the score at indicator creation, or if there is no decay rule 50. The valid until is then computed with this new score value.
 
 ### Managing concurency updates from distinct sources
 
