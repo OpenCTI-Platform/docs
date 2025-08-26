@@ -458,6 +458,12 @@ Can be configured manually using the configuration file `config.yml` or through 
 | worker:telemetry_prometheus_port   | WORKER_PROMETHEUS_TELEMETRY_PORT   | 14270         | Port of the Prometheus endpoint           |
 | worker:telemetry_prometheus_host   | WORKER_PROMETHEUS_TELEMETRY_HOST   | 0.0.0.0       | Listen address of the Prometheus endpoint |
 
+#### Performance
+
+| Parameter                          | Environment variable               | Default value | Description                                                            |
+|:-----------------------------------|:-----------------------------------|:--------------|:-----------------------------------------------------------------------|
+| worker:thread_busy_wait            | WORKER_THREAD_BUSY_WAIT            | true          | Enable busy-waiting for worker threads. Disable for higher throughput  |
+
 ### Connector specific configuration
 
 For specific connector configuration, you need to check each connector behavior.
