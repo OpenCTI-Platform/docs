@@ -50,7 +50,7 @@ An update can occurs either on an actual update, or if an indicator is already e
 
 ### Upating score
 
-Updating score restart a decay lifecycle computation with the decay rule that is already stored in the indicator. It means that the valid until date is updated along with a score update.
+Updating score restarts a decay lifecycle computation with the decay rule that is already stored in the indicator. It means that the valid until date is updated along with a score update.
 
 ### Updating the revoke state
 
