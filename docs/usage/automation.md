@@ -139,7 +139,7 @@ Will apply a complex automation built-in rule. This kind of rule might impact pe
 
 #### Send to notifier
 
-Will generate a Notification each time a STIX 2.1 bundle is received.
+Will generate a Notification each time a STIX 2.1 bundle is received. Note that Notifier ends a branch but does not save any changes. Best practice is to create a branch next to the notifier using the button on the bottom right of the Notifier Component and add the send for ingestion in the same output branch.
 
 #### Promote observable to indicator
 
