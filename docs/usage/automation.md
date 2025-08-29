@@ -60,7 +60,7 @@ If you need to share a playbook with a colleague that is not on the same platfor
 
 #### Import a playbook
 
-You can import a playbook in OpenCTI coming either from your own platform or another plaform. simply go to playbooks, click on import & select the playbook you want to import.
+You can import a playbook in OpenCTI coming either from your own platform or another platform. Simply go to playbooks, click on import & select the playbook you want to import.
 
 !!! warning "Verify your playbook"
 
