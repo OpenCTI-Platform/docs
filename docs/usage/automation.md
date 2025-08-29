@@ -86,7 +86,7 @@ You can import a playbook in OpenCTI coming either from your own platform or ano
 
 ### Listen knowledge events
 With this event source, the playbook will be triggered on any knowledge event (create, update or delete) that matches the selected filters.
-Note that you are limited to a subset of filters, available for stream events that contain STIX data objects.
+Note that you are limited to a subset of filters available for stream events that contain STIX data objects.
 
 ![Listening creation event for TLP:GREEN IPs and domain names](assets/playbook_listen.png)
 
