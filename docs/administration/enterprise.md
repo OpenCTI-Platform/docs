@@ -38,7 +38,7 @@ Organizations segregation is a way to segregate your data considering the organi
 
 ### Authorized Members
 
-On the top of organizations management and segregation, use authorized members to restrict access to a specifc instance (entity/observable). This is particually useful if a specific incident occurs and you need to hide the case tracking the resolution to all the users of the platform, or to control who can edit, who can view and who can manage the entity. 
+On the top of organizations management and segregation, use authorized members to restrict access to a specifc instance (entity/observable). This is particually useful if a specific incident occurs and you need to hide the case tracking the resolution to all the users of the platform, or to control who can edit, who can view and who can manage the entity. Please read [Authorized Members page](https://docs.opencti.io/latest/administration/authorized-members/) to get all information.
 
 
 ### Full text indexing
