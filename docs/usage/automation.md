@@ -68,7 +68,7 @@ You can import a playbook in OpenCTI coming either from your own platform or ano
 
 **Applicable steps & data to verify:**
 - Listen knowledge events/ Manual enrollment / Query knowledge on regular basis / Match knowledge / Reduce knowledge / Manipulate knowledge
-   - Verify if any of the following data is correctly define in your playbook, otherwise create it in your platform
+   - Verify if any of the following data is correctly defined in your playbook, otherwise create it in your platform
       - Taxonomies: any not existing taxonomy will be shown as deleted (Labels, vocabularies...) 
       - Specific instances (entity/observable): If your playbook was listening on a specific instance, verify that the instance exists in your platform
       - Marking: verify that the marking you're listening to exists in your platform
