@@ -38,7 +38,7 @@ A well-designed playbook end with a component executing an action based on the p
 ## Create a playbook
 ### Manual creation 
 
-It is possible to create as many playbooks as needed which are running independently. You can give a name and description to each playbook.
+It is possible to create as many playbooks as needed, which run independently. You can give a name and description to each playbook.
 
 ![Create a new playbook](assets/playbook_create.png)
 
