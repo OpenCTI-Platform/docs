@@ -35,7 +35,7 @@ A well-designed playbook end with a component executing an action based on the p
 
     The STIX bundle processed by the playbook won't be written in the platform without specifying it using the appropriate component, i.e. "Send for ingestion".
 
-## Create a Playbook
+## Create a playbook
 ### Manual Creation 
 
 It is possible to create as many playbooks as needed which are running independently. You can give a name and description to each playbook.
