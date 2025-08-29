@@ -64,7 +64,7 @@ You can import a playbook in OpenCTI coming either from your own platform or ano
 
 !!! warning "Verify your playbook"
 
-    It is possible that imported playbooks contains data that does not exist in your platofrm. For instance, the intial playbook could have listened on a specific label & apply a spefific marking that does exist in your platform. Thereofre when you import a playbook, alwyas check all of the boxes/steps to ensure your playbook willl run smoothly.
+    Imported playbooks may contain data that does not exist in your platform. For instance, the initial playbook could have listened on a specific label & applied a specific marking that does not exist in your platform. Therefore, when you import a playbook, always check all the boxes/steps to ensure your playbook will run smoothly.
 
 **Applicable steps & data to verify:**
 - Listen knowledge events/ Manual enrollment / Query knowledge on regular basis / Match knowledge / Reduce knowledge / Manipulate knowledge
