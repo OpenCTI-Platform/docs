@@ -72,7 +72,7 @@ You can import a playbook in OpenCTI coming either from your own platform or ano
       - Taxonomies: any not existing taxonomy will be shown as deleted (Labels, vocabularies...) 
       - Specific instances (entity/observable): If your playbook was listening on a specific instance, verify that the instance exists in your platform
       - Marking: verify that the marking you're listening to exists in your platform
-      - Author: verify that the identities in your platform exsits
+      - Author: verify that the identities in your platform exist
       - Creaotrs: verify that you have existing users in your platform
 - Enrich through connector
    - Verify if any of the following data is correctly define in your playbook, otherwise create it in your platform
