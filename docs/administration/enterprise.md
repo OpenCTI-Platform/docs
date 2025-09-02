@@ -67,7 +67,7 @@ Dissemination lists are email lists that are used to be send documents (pdf/html
 
 ### Email Template
 
-Use email template to create templates of email to be sent to your users. Leverage this functionality to automatically send emails to the users you have created without the need of sending them credentials. Additionnally,you can for instance, use these template to warn all your users of a maintenance window/
+Use email template to create templates of email to be sent to your users. Leverage this functionality to automatically send emails to the users you have created without the need of sending them credentials. Additionnally, you can for instance, use these templates to warn all your users of a maintenance window.
 
 
 ## More to come
