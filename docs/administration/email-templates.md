@@ -15,8 +15,13 @@ The use cases that this feature will enable you to reach are:
 ## Create a template
 You need the capabily to manage credentials to access this feature.
 
+![email-template-overview](./assets/email-template-overview.png)
+
 Go to parameters/security and you will find the menu on the right handside.
 Click on create an email template to create a new one and ensure that fields bellow are provided.
+
+![email-template-create](./assets/email-template-create.png)
+
 
 ### Fields to create a new template
 **Email template name**
@@ -30,6 +35,9 @@ Instead of only using the platform sender email address define in Settings/param
 
 ### Configure your template
 When you create your template, you will land on an email template interface, allowing you to configure the look and feel of your email. 
+
+![email-template-create-config](./assets/email-template-create-config.png)
+
 
 !!! Warning "Save your template"
 
@@ -71,9 +79,9 @@ Platform URL of the platform
 #### Additionnal Options
 You can use our HTML editor to format you text, but also insert images, in order to define the email of your choice. 
 
+
 ### Test your template
 Click on the Send test email: this will send you an email, using all the configuration, the variables and the format you have defined to help you assess whether it is the final version or not.
-
 
 
 ## Use template
@@ -82,9 +90,16 @@ Click on the Send test email: this will send you an email, using all the configu
 
 If you want an email to be sent at use creation, simply fill the field "Email Template" within the user form and an email will be triggered to the email you have provided.
 
+![email-template-send-at-creation](./assets/email-template-send-at-creation.png)
+
 ### Massively send an email
 Select a user within the list of user and click on the send email button. Simply chose the email template you want and click on send.
 
+![email-template-massive-ops](./assets/email-template-massive-ops.png)
+
+
 ### Send an email to an single user
 Go in the overview of a user and click on send email. Simply chose the email template you want and click on send.
+
+![email-template-send-individual-email](./assets/email-template-send-individual-email.png)
 
