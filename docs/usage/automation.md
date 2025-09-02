@@ -183,7 +183,7 @@ By default, wrapping is applied to entities having triggered the playbook. You c
 It is possible to add a case template to the container wrapper step. If you select a Case in the "container type", then the case template field will be enabled, allowing you to create a case with some tasks associated.
 
 **Create a new container at each run**
-You can decide whether you want to create a container each time this step is trigger: by default, this is disabled, so that you can consolidate information within the same container if some update occurs.
+You can decide whether you want to create a container each time this step is triggered: by default, this is disabled, so that you can consolidate information within the same container if some update occurs.
 
 **Specific situation: wrap an incident into a case**
 When the primary entity you listen to is an incident & then use the "Container Wrapper" step to create a case out of your incident, by default you case will reuse some of the attributes of your incident: 
