@@ -186,7 +186,7 @@ It is possible to add a case template to the container wrapper step. If you sele
 You can decide whether you want to create a container each time this step is triggered: by default, this is disabled, so that you can consolidate information within the same container if some update occurs.
 
 **Specific situation: wrap an incident into a case**
-When the primary entity you listen to is an incident & then use the "Container Wrapper" step to create a case out of your incident, by default you case will reuse some of the attributes of your incident: 
+When the primary entity you listen to is an incident & then use the "Container Wrapper" step to create a case out of your incident, by default, your case will reuse some of the attributes of your incident: 
 - Author
 - Labels
 - Assignee
