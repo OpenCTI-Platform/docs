@@ -151,7 +151,7 @@ Will send the received STIX 2.1 bundle to the stated enrichment connector and se
 ##### Specifities of the component
 **Step will fail if a single entity does not match the connector scope**
 Entities that are passed to this stage must be compatible with the enrichment connector being used, as otherwise the playbook may stop at this stage. 
-The best approach is to use a first playbook that will **flag your data, by applying a specific label through manipulate knowledge step** and have another playbook listening to entities/observables being created or edited with this specific label to apply the corect enrichment connector through a decision tree. The *Reduce Knowledge* component can be used to filter out incompatible entities from being passed to this stage.
+The best approach is to use a first playbook that will **flag your data, by applying a specific label through manipulate knowledge step** and have another playbook listening to entities/observables being created or edited with this specific label to apply the correct enrichment connector through a decision tree. The *Reduce Knowledge* component can be used to filter out incompatible entities from being passed to this stage.
 
 **Step will fail if an observable triggered by the enrichment is not foud**
 If the playbook stops form time to time at this step it might be because the observable (or entity) is not found in the third party system in charge of enriching the observable (or entity).
