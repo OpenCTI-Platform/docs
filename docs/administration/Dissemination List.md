@@ -11,12 +11,14 @@ Dissemination list in OpenCTI aims to help you create mailing lists that are use
 To create a dissemination list, you need to have the capability Manage credentials (see the list of [capabilities in the user page](https://docs.opencti.io/latest/administration/users/) for more information). 
 Access the security menu & click on dissemination list.
 
-
+![dissemination-list-overview.png](assets%2Fdissemination-list-overview.png)
 
 Here you can view all the existing lists that are provisioned in the platform.
 
 
-Click on create diseemination list: simply add a name & copy/past or write all the emails you want emails to be sent to. You need to have one email per line.
+Click on create dissemination list: simply add a name & copy/past or write all the emails you want emails to be sent to. You need to have one email per line.
+
+![dissemination-list-create.png](assets%2Fdissemination-list-create.png)
 
 
 ## Edit a list
@@ -30,11 +32,17 @@ Once you have worked on your container & generated your template, whether it is 
 
 Click on the Disseminate button within the Content view of your container to access the configurations options. 
 
+![Dissemination-list-send.png](assets%2FDissemination-list-send.png)
+
+
 ### Dissemination Configuration 
 
 **Use OpenCTI template** 
 By default enabled. This option allow you to decide whether or not you want to use the OpenCTI look and feel within your email, or if you would rather use an email without predefined style. 
 This option is specifically useful if you would like to send the content of your finished intelligence document directly as an email body, without additionnal formatting. 
+
+![dissemination-list-disseminate.png](assets%2Fdissemination-list-disseminate.png)
+
 
 **Dissemination list**
 Chose the dissemination list you want. Any dissemination list created within the platform will be shown in this dropdown.
