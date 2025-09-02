@@ -300,7 +300,7 @@ In this list, you will find:
 At the top right of the interface, you can access execution trace of your playbook and consult the raw data after every step of your playbook execution.
 
 ### Useful for troublshooting:
-- Less steps than the amount of steps of your playbook: If your playbook contains for instance 5 steps and only 4 steps are shown, it means that the playbook stopped at the 4th step.
+- Fewer steps than the number of steps of your playbook: If your playbook contains, for instance, 5 steps and only 4 steps are shown, it means that the playbook stopped at the 4th step.
 - Data created/ingested by the playbook does not contain the right modifications applied in the manipulate step: verify that your step is present, and that the operations you wanted to apply is well applied (you need to see the operation type, the field & the value)
 - Use the different routes to help troubleshoot your playbook: if you're using multiple components that involves mutliple routes, it is sometimes useful to test your playbook by adding a "manipulate knowledge" step to add a label for instance, in order to understand the route your bundle is taking if you feel that the data created by your playbook is not the one you expect. 
 
