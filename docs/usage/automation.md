@@ -278,7 +278,7 @@ Will allow you to continue only if some specific conditions are met.
 ##### Specifities of the component
 **Routes:**
 - No-match: if none of the entity/observable contained in the bundle passes the matching condition, then the STIX bundle will follow the **no-match** route.
-- Out: if at least one of the entity/observable contained in the bundle passes the matching condition, then the stix bundle will follow will follow the **out** route.
+- Out: if at least one of the entity/observable contained in the bundle passes the matching condition, then the STIX bundle will follow the **out** route.
 
 ## Enroll manually an entity into a playbook
 
