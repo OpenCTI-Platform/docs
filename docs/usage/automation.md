@@ -273,7 +273,7 @@ With a first step listening on: entity type = IPV4 OR Report AND label = test. A
 
 #### Match knowledge
 
-Will allow you to continue only if some specific conditions are met. 
+It will allow you to continue only if some specific conditions are met. 
 
 ##### Specifities of the component
 **Routes:**
