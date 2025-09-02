@@ -160,7 +160,7 @@ If the playbook stops from time to time at this step, it might be because the ob
 
 #### Manipulate knowledge
 
-Will add, replace or remove compatible attribute of the entities contains in the received STIX 2.1 bundle and send out the modified bundle.
+Will add, replace, or remove compatible attributes of the entities contained in the received STIX 2.1 bundle and send out the modified bundle.
 
 By default, modification is applied to entities having triggered the playbook. You can toggle the corresponding option to apply it to all elements in the bundle (elements that might result from enrichment for example).
 
