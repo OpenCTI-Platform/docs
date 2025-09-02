@@ -24,14 +24,10 @@ Click on create an email template to create a new one and ensure that fields bel
 
 
 ### Fields to create a new template
-**Email template name**
-Give your template a name to easily find it.
 
-**Email subject**
-Provide a subject to your email.
-
-**Display name of the sender**
-Instead of only using the platform sender email address define in Settings/parameters, you can define the name of the sender of the email. 
+- **Email template name**: Give your template a name to easily find it.
+- **Email subject**: Provide a subject to your email.
+- **Display name of the sender**: Instead of only using the platform sender email address define in Settings/parameters, you can define the name of the sender of the email. 
 
 ### Configure your template
 When you create your template, you will land on an email template interface, allowing you to configure the look and feel of your email. 
@@ -49,32 +45,15 @@ Some variables can be used to help you buidling your template. Copy/paste them o
 
 You can find them on the right handside: 
 
-**$user.firstname (First name)**
-First name of the usr
-
-**$user.lastname (Last name)**
-Last name of the user
-
-**$user.name (Name)**
-Name of the user
-
-**$user.user_email (Email)**
-Email of the user
-
-**$user.api_token (API token)**
-Token of the user
-
-**$user.account_status (Status)**
-Account status of the user
-
-**$user.objectOrganization (Organizations)**
-ORganization of the user
-
-**$user.account_lock_after_date (Expire Date)**
-Expiry date of the account 
-
-**$settings.platform_url (Platform URL)**
-Platform URL of the platform
+- **$user.firstname (First name)**: First name of the user
+- **$user.lastname (Last name)**: Last name of the user
+- **$user.name (Name)**: Name of the user
+- **$user.user_email (Email)**: Email of the user
+- **$user.api_token (API token)**: Token of the user
+- **$user.account_status (Status)**: Account status of the user
+- **$user.objectOrganization (Organizations)**: ORganization of the user
+- **$user.account_lock_after_date (Expire Date)**: Expiry date of the account 
+- **$settings.platform_url (Platform URL)**: Platform URL of the platform
 
 #### Additionnal Options
 You can use our HTML editor to format you text, but also insert images, in order to define the email of your choice. 
