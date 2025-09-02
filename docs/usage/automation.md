@@ -170,7 +170,7 @@ These operations will only remove and & replace data that has been added in the 
 
 **Routes:**
 - Unmodified: because of the above reason, if none of your entities contained in your STIX bundle have been modified, then the STIX bundle will follow the **unmodified** route.
-- Out: if at least one of the entity or observable of your stix bundle has been successfully modified by the manipulate knowledge step, then the stix bundle will follow the **Out** route.
+- Out: if at least one of the entity or observable of your STIX bundle has been successfully modified by the manipulate knowledge step, then the STIX bundle will follow the **Out** route.
 
 
 #### Container wrapper
