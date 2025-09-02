@@ -63,11 +63,11 @@ Finished intelligence templates are models that can be used in containers to gen
 
 ### Dissemination list
 
-Dissemination lists are email lists that are used to be send documents (pdf/html) to the right audience. Combined with Fintel Templates, this feature allow you to send  finished intelligence document to the appropriate list of recipients.
+Dissemination lists are email lists that are used to be send documents (pdf/html) to the right audience. Combined with Fintel Templates, this feature allow you to send  finished intelligence document to the appropriate list of recipients (please read [Dissemination list](../administration/dissemination-list.md).
 
 ### Email Template
 
-Use email template to create templates of email to be sent to your users. Leverage this functionality to automatically send emails to the users you have created without the need of sending them credentials. Additionnally, you can for instance, use these templates to warn all your users of a maintenance window.
+Use email template to create templates of email to be sent to your users. Leverage this functionality to automatically send emails to the users you have created without the need of sending them credentials. Additionnally, you can for instance, use these templates to warn all your users of a maintenance window. (please read [Email templates](../administration/email-templates.md).
 
 
 ## More to come
