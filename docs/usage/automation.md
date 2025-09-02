@@ -166,7 +166,7 @@ By default, modification is applied to entities having triggered the playbook. Y
 
 ##### Specifities of the component
 **Remove & replace operations:**
-These operation will only remove and & replace data that have been added in the context of this playbook. This step cannot be used to modify attributes of an entity (or observable) that has already been written in your platform. For instance, if an entity is ingested with a TLP:RED marking and a specific label and your playbook listens to any entity created entity with this specific label, if you have a step remove TLP:RED marking within your playbook, this step will not be executed because the TLP:RED would be already written in your platform.
+These operations will only remove and & replace data that has been added in the context of this playbook. This step cannot be used to modify attributes of an entity (or observable) that has already been written in your platform. For instance, if an entity is ingested with a TLP:RED marking and a specific label, and your playbook listens to any entity created with this specific label, if you have a step to remove TLP:RED marking within your playbook, this step will not be executed because the TLP:RED marking would already be written in your platform.
 
 **Routes:**
 - Unmodified: because of the above reason, if none of your entities contained in your stix bundle have been modified, then the stix bundle will follow will follow the **unmodified** route.
