@@ -14,6 +14,7 @@ The use cases that this feature will enable you to reach are:
 
 ## Create a template
 
+
 You need the capabily to manage credentials to access this feature.
 
 ![email-template-overview](./assets/email-template-overview.png)
@@ -32,6 +33,7 @@ Click on Create an email template to create a new one and ensure that the fields
 
 ### Configure your template
 
+
 When you create your template, you will land on an email template interface, allowing you to configure the look and feel of your email. 
 
 ![email-template-create-config](./assets/email-template-create-config.png)
@@ -43,6 +45,7 @@ When you create your template, you will land on an email template interface, all
 
 
 #### Use variables
+
 
 Some variables can be used to help you build your template. Copy/paste them or simply write them into your template to use them
 
@@ -59,10 +62,12 @@ You can find them on the right-hand side:
 - **$settings.platform_url (Platform URL)**: Platform URL of the platform
 
 #### Additional options
+
 You can use our HTML editor to format your text, but also insert images, to define the email of your choice. 
 
 
 ### Test your template
+
 
 Click on the Send test email: this will send you an email, using all the configuration, the variables, and the format you have defined to help you assess whether it is the final version or not.
 
@@ -76,6 +81,7 @@ If you want an email to be sent at user creation, simply fill the field "Email T
 ![email-template-send-at-creation](./assets/email-template-send-at-creation.png)
 
 ### Massively send an email
+
 
 Select a user from the list of users and click on the send email button. Simply choose the email template you want and click on send.
 
