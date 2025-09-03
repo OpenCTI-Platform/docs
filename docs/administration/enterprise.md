@@ -38,7 +38,7 @@ Organizations segregation is a way to segregate your data considering the organi
 
 ### Authorized Members
 
-On the top of organizations management and segregation, use authorized members to restrict access to a specifc instance (entity/observable). This is particually useful if a specific incident occurs and you need to hide the case tracking the resolution to all the users of the platform, or to control who can edit, who can view and who can manage the entity. Please read [Authorized Members page](https://docs.opencti.io/latest/administration/authorized-members/) to get all information.
+On top of organization management and segregation, use authorized members to restrict access to a specific instance (entity/observable). This is particularly useful if a specific incident occurs and you need to hide the case tracking the resolution to all the users of the platform, or to control who can edit, who can view, and who can manage the entity. Please read [Authorized Members page](https://docs.opencti.io/latest/administration/authorized-members/) to get all information.
 
 
 ### Full text indexing
@@ -63,11 +63,11 @@ Finished intelligence templates are models that can be used in containers to gen
 
 ### Dissemination list
 
-Dissemination lists are email lists that are used to be send documents (pdf/html) to the right audience. Combined with Fintel Templates, this feature allow you to send  finished intelligence document to the appropriate list of recipients (please read [Dissemination list](../administration/dissemination-list.md).
+Dissemination lists are email lists that are used to send documents (PDF/HTML) to the right audience. Combined with Fintel Templates, this feature allows you to send a finished intelligence document to the appropriate list of recipients (please read [Dissemination list](../administration/dissemination-list.md).
 
-### Email Template
+### Email template
 
-Use email template to create templates of email to be sent to your users. Leverage this functionality to automatically send emails to the users you have created without the need of sending them credentials. Additionnally, you can for instance, use these templates to warn all your users of a maintenance window. (please read [Email templates](../administration/email-templates.md).
+Use an email template to create templates of emails to be sent to your users. Leverage this functionality to automatically send emails to the users you have created without the need to send them credentials. Additionally, you can, for instance, use these templates to warn all your users of a maintenance window. (please read [Email templates](../administration/email-templates.md).
 
 
 ## More to come
