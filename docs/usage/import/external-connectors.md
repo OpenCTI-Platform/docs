@@ -13,7 +13,7 @@ The level of configuration granularity regarding the imported data type varies w
 Resetting the connector state enables you to restart the ingestion process from the very beginning.
 Additionally, resetting the connector state will purge the RabbitMQ queue for this specific connector.
 
-However, this action requires the "Manage connector state" capability (more details about capabilities: [List of capabilities](../administration/users.md#list-of-capabilities)). Without this specific capability, you will not be able to reset the connector state.
+However, this action requires the "Manage connector state" capability (more details about capabilities: ![List of capabilities](../administration/users.md#list-of-capabilities)). Without this specific capability, you will not be able to reset the connector state.
 
 When the action is performed, a message is displayed confirming the reset and inform you about the number of messages that will be purged
 
