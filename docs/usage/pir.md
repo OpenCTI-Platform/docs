@@ -10,7 +10,7 @@ Note that this feature is under Enterprise Edition and requires capabilities (a 
 
 ## PIR general behavior
 
-A PIR is focused on some entities of interest, and give relevant information about them. You can
+A PIR is focused on some entities of interest and gives relevant information about them. You can:
 - list these entities,
 - filter and order them by their score for the Pir,
 - have access to a news feed and an historic displaying the last important event concerning them,
