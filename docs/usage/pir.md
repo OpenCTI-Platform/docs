@@ -60,7 +60,7 @@ The number of messages in the queue shows the tasks not yet processed by the wor
 ![PIR Overview: PIR details](assets/pir-overview-details.png)
 
 
-- the Number of threats (number of entities of interest for the Pir) by entity type.
+- the Number of threats (number of entities of interest for the PIR) by entity type.
 - the News feed: the last historic events of interest give an insight into the last important news in your context (see the 'PIR Activities' section for more information on the events displayed there).
 - the Top Authors of threat entities: repartition of the authors of the entities of interest.
 - the Top Authors of relationships from Threats: repartition of the authors of the relationships that have caused a marking of entities of interest (ie the 'targets Energy/Europe' relationships in our example).
