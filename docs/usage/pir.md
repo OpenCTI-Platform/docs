@@ -92,7 +92,7 @@ Due to technical limitations, only the first 5000 flagged entities are used to r
 ## PIR Activities
 
 The Activities tab lists the events of interest for the PIR:
-- Addition or removal of an entity in the Pir (meaning a new entity is detected as of interest, or an entity is no more of interest),
+- Addition or removal of an entity in the PIR (meaning a new entity is detected as of interest, or an entity is no more of interest),
 - Change in the score of threat (increase of score because it targets a new criteria, or decrease of score because it targets no more a criteria),
 - Creation or deletion of a relationship involving a threat of interest (except for 'indicates' relationships that are not taken into account because they can be numerous and pollute the activities logs),
 - Addition or removal of a threat of interest in a container.
