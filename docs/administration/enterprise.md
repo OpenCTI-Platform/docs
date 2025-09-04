@@ -71,7 +71,7 @@ Use an email template to create templates of emails to be sent to your users. Le
 
 ### Priority Intelligence Requirement
 
-Priority Intelligence Requirements (PIRs) are gather and prioritize the most relevant and crucial information based on the user's focus, helping them analyze key insights needed for effective decision-making and risk assessment (please read [Priority Intelligence Requirement](../usage/pir.md)).
+Priority Intelligence Requirements (PIRs) gather and prioritize the most relevant and crucial information based on the user's focus, helping them analyze key insights needed for effective decision-making and risk assessment (please read [Priority Intelligence Requirement](../usage/pir.md)).
 
 
 ## More to come
