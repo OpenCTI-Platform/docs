@@ -1,4 +1,4 @@
-# Priority Intelligence Requirement (Pir)
+# Priority Intelligence Requirement (PIR)
 
 Priority Intelligence Requirements (PIRs) refer to the most important information needed to make intelligence-based decisions, achieve key objectives and assess potential risks. PIRs help focus resources and efforts on gathering and analysing the most relevant and crucial information.
 
