@@ -45,7 +45,7 @@ With our example, a malware targeting the Energy sector but not Europe will have
 If a relationship respecting the filters and criteria is deleted, the score decreases, or the entity is removed from the PIR if there is no other relationship maintaining it in the PIR.
 
 Note that entities matching a criteria because of an event happening before the beginning of the rescan will not be taken into account!
-For instance, if a malware has a relationship with Energy that was created 3 months ago, and a PIR is created with a rescan period of 1 month, the malware will not be added to the Pir unless the relationship is updated (and a new event concerning it shows in the stream).
+For instance, if a malware has a relationship with Energy that was created 3 months ago, and a PIR is created with a rescan period of 1 month, the malware will not be added to the PIR unless the relationship is updated (and a new event concerning it shows in the stream).
 
 ## PIR overview
 
