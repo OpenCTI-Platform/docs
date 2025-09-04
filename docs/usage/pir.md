@@ -61,7 +61,40 @@ In the 'Overview', you have access to
 
 
 - the Number of threats (number of entities of interest for the Pir) by entity type
-- the News feed: the last historic events of interest gives an insight of the last important news in your context (see the 'History' section for more information on the events displayed there).
+- the News feed: the last historic events of interest gives an insight of the last important news in your context (see the 'Pir Activities' section for more information on the events displayed there).
 - the Top Authors of threat entities: repartition of the authors of the entities of interest
 - the Top Authors of relationships from Threats: repartition of the authors of the relationships that have caused a marking of entities of interest (ie the 'targets Energy/Europe' relationships in our example),
 - the Number of threats over time: the number of entities marked as of interest over time.
+
+![PIR Overview: Widgets and news feed](assets/pir-overview-widgets.png)
+
+
+## Pir threats
+
+In the threats tab, the list of the entities of interest for this Pir are displayed.
+In particular, it is possible to order and filter them by score or by the last score evolution date, to highlight the most relevant entities.
+
+On hovering the score, the targets of the entity is displayed, indicating why it is present in the Pir (for instance: because it targets both Europe and Energy).
+
+![PIR Threats](assets/pir-threats.png)
+
+
+
+## Pir Analyses
+
+The Analyses tab gather the containers containing a threat of interest or an entity in the criteria of the Pir.
+
+Due to technical limitations, only the first 5000 flagged entities are used to retrieve Containers. So in case of consequence Pirs, this screen may miss some containers.
+
+![PIR Analyses](assets/pir-analyses.png)
+
+
+## Pir Activities
+
+The Activities tab list the events of interest for the Pir:
+- Addition or removal of an entity in the Pir (meaning a new entity is detected as of interest, or an entity is no more of interest),
+- Changing in the score of threat (increase of score because it targets a new criteria, or decrease of score because it targets no more a criteria),
+- Creation or deletion of a relationship involving a threat of interest (except for 'indicates' relationships that are not taken into account because they can be numerous and pollute the activities logs),
+- Addition or removal of a threat of interest in a container.
+
+![PIR Activities](assets/pir-activities.png)
