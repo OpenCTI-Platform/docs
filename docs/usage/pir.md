@@ -35,7 +35,7 @@ At a PIR creation, the user indicates
 
 The PIR manager is listening to the stream events. If a rescan period has been given, it listens to the stream from the date corresponding to the rescan (for instance: 1 month before now).
 
-For each event, the entity involved is marked as of interest for the PIR, if there is a creation of a relationship
+For each event, the entity involved is marked as of interest for the PIR, if there is a creation of a relationship:
 - respecting one of the PIR criteria (for instance, the event is a relationship 'Malware X targets the Energy sector'),
 - and respecting the PIR filters (in the example: the relationship has a confidence superior or equal to 60).
 
