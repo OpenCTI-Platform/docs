@@ -55,7 +55,7 @@ In the 'Overview', you have access to:
 - the PIR details: rescan period, filters, criteria, creation date, creators, description, processing delay.
 
 The processing delay is the difference between the last stream event and the last event processed by the PIR. It indicates the late compared to the stream.
-    The number of messages in the queue shows the tasks not yet processed by the worker.
+The number of messages in the queue shows the tasks not yet processed by the worker.
 
 ![PIR Overview: PIR details](assets/pir-overview-details.png)
 
