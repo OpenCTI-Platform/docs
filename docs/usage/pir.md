@@ -82,7 +82,7 @@ On hovering the score, the targets of the entity is displayed, indicating why it
 
 ## Pir Analyses
 
-The Analyses tab gather the containers containing a threat of interest or an entity in the criteria of the Pir.
+The Analyses tab gathers the containers containing a threat of interest or an entity in the criteria of the Pir.
 
 Due to technical limitations, only the first 5000 flagged entities are used to retrieve Containers. So in case of consequence Pirs, this screen may miss some containers.
 
