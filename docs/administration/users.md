@@ -20,7 +20,7 @@ Roles are used in the platform to grant the given groups with some **capabilitie
 | `Bypass all capabilities`                               | Just bypass everything including data segregation and enforcements.                     |
 | `Access knowledge`                                      | Access in read-only to all the knowledge in the platform.                               |
 | &nbsp;&nbsp;`Access to collaborative creation`          | Create notes and opinions (and modify its own) on entities and relations.               |
-| &nbsp;&nbsp;`Can use web interface export functions`    | Ability to download widgets/graphs... as images/pdf.                                    |
+| &nbsp;&nbsp;`Can use web interface export functions`    | Ability to download widgets/graphs... as images/PDF.                                    |
 | &nbsp;&nbsp;`Create / Update knowledge`                 | Create and update existing entities and relationships.                                  |
 | &nbsp;&nbsp;&nbsp;&nbsp;`Restrict organization access`  | Share entities and relationships with other organizations.                              |
 | &nbsp;&nbsp;&nbsp;&nbsp;`Delete knowledge`              | Delete entities and relationships (and merge data).                                     |
