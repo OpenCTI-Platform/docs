@@ -198,4 +198,4 @@ kubectl logs -n xtm-composer deployment/xtm-composer
 
 1. Configure XTM Composer - See [Configuration Reference](configuration.md)
 2. Connect to OpenCTI/OpenBAS - See [Quick Start](quick-start.md)
-3. Verify connector management functionality
+3. Verify integration management functionality

@@ -34,7 +34,7 @@ Core settings for the XTM Composer manager instance.
 - **Description**: Human-readable name for the manager
 - **Required**: No
 - **Type**: string
-- **Default**: `Filigran connector manager`
+- **Default**: `Filigran integration manager`
 
 #### manager.execute_schedule
 - **YAML Path**: `manager.execute_schedule`

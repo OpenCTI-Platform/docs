@@ -30,7 +30,7 @@ XTM Composer is a micro-orchestration tool that manages connectors/collectors/in
 2. **API Module** (`src/api/`)
    - Abstracts platform communication through `ComposerApi` trait
    - Handles GraphQL queries/mutations for OpenCTI
-   - Manages connector configuration retrieval and status updates
+   - Manages container configuration retrieval and status updates
 
 3. **Orchestrator Module** (`src/orchestrator/`)
    - Implements `Orchestrator` trait for different container systems
