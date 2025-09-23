@@ -13,6 +13,7 @@ The OpenCTI Integration Manager is a deployment tool that simplifies the managem
     - [Architecture Design](integration-manager/architecture.md) - Detailed technical architecure documentation
     - [Installation Guide](integration-manager/installation.md) - System requirements and installation methods
     - [Configuration Reference](integration-manager/configuration.md) - Complete configuration documentation
+    - [Security Deep Dive](integration-manager/security.md) - Database, encryption, and access control documentation
     - [Development Guide](../development/integration-manager.md) - Setup for development and contribution
     - [Troubleshooting Guide](integration-manager/troubleshooting.md) - Solutions to common issues
 
@@ -96,5 +97,3 @@ The OpenCTI Integration Manager is a deployment tool that simplifies the managem
 - Updating the configuration of a managed connector is possible. Changes will take effect after a short delay.
 
 - For security reasons, API keys/tokens are never displayed in the UI after being saved.
-
-
