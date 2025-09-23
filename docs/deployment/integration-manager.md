@@ -5,7 +5,7 @@
 The OpenCTI Integration Manager is a deployment tool that simplifies the management and deployment of connectors within the platform. It supports two deployment methods:
 
 - An intuitive web interface for direct UI-based deployment.
-- A Docker-based method for self-hosted deployments requiring infrastructure control.
+- A container-based method for self-hosted deployments requiring infrastructure control.
 
 ![demo-feature](assets/composer.gif)
 
@@ -18,8 +18,12 @@ The OpenCTI Integration Manager is a deployment tool that simplifies the managem
     - the connector’s detail view,
     - or the **Settings** page.
 
+    Add photo
+
 
 - The **Integration Manager** must be installed and operational to deploy connectors.
+
+    Add photo
 
 ## Browsing the connector catalog
 
@@ -51,8 +55,7 @@ The OpenCTI Integration Manager is a deployment tool that simplifies the managem
     - **Additional options**: connector-specific configuration.
 
 3. Click **Deploy**. Once the connector is created, you will be redirected to the connector instance view.
-
-4. ⚠️ Newly created connectors are not started automatically. You can still update their configuration via the **Update** action.
+⚠️ Newly created connectors are not started automatically. You can still update their configuration via the **Update** action.
 
 5. When ready, click **Start** to run the connector.
 
@@ -70,7 +73,7 @@ The OpenCTI Integration Manager is a deployment tool that simplifies the managem
     - Built-in connectors: *Active* or *Inactive*.
 
 - **Filters in the Monitoring screen** are available only if:
-    - The Enterprise Edition is enabled, and
+    - The **Enterprise Edition** is enabled, and
     - There is at least one managed connector deployed.
 
 - Only **managed connectors** can be started/stopped from the UI, and only they provide logs in the interface. 
@@ -82,14 +85,6 @@ The OpenCTI Integration Manager is a deployment tool that simplifies the managem
 
 ## Deploying the Integration Manager
 
-To deploy the Integration Manager, please refer to the [official installation guide](https://github.com/FiligranHQ/xtm-composer/blob/docs/comprehensive-documentation-update/docs/installation.md)
+To deploy the Integration Manager, please refer to the [installation guide](integration-manager/installation.md)
 . The guide provides step-by-step instructions for setting up and configuring the service in your environment.
 
-
-## Infrastucture requirements
-
-### Platform
-
-| Component        | CPU         | RAM          | Disk type                         | Disk space      |
-| :--------------- | :---------- | :----------- | :-------------------------------- | :-------------- |
-| XTM Composer    | 1 core     | 128MB        | -                 | -               |
