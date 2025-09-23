@@ -42,7 +42,7 @@ The **RSA private key** can be stored in the following ways:
 - **Environment variable**: Provided via `MANAGER__CREDENTIALS_KEY`.
 - **Format**: **PKCS#8 PEM** (4096-bit RSA recommended).
 - **Access control**: Relies on **OS-level file permissions** and **environment variable security**.
-- **Key rotation**: No automated rotation policy exists; it is managed by the **platform team**.
+- **Key rotation**: No automated rotation policy by default, this should be implemented by the platform  administrators
 
 ### **4. Private Key Handling and Network Security**
 
