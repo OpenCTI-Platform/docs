@@ -191,57 +191,7 @@ opencti:
 
 ## Troubleshooting
 
-### Connection Issues
-
-If XTM Composer cannot connect to OpenCTI:
-
-1. **Verify URL and Token**:
-   ```bash
-   curl -H "Authorization: Bearer YOUR_TOKEN" https://opencti.example.com/graphql
-   ```
-
-2. **Check Network Connectivity**:
-   ```bash
-   ping opencti.example.com
-   nc -zv opencti.example.com 443
-   ```
-
-3. **SSL Certificate Issues**:
-   Set `unsecured_certificate: true` for self-signed certificates (not recommended for production)
-
-### Authentication Failures
-
-1. **Verify RSA Key**:
-   ```bash
-   openssl rsa -in private_key_4096.pem -check
-   ```
-
-2. **Check File Permissions**:
-   ```bash
-   chmod 600 private_key_4096.pem
-   ```
-
-3. **Verify Key Path**:
-   Ensure the path in configuration matches the actual key location
-
-### Orchestration Issues
-
-**Kubernetes**: Verify cluster access:
-```bash
-kubectl cluster-info
-kubectl auth can-i create deployments
-```
-
-**Docker**: Check socket permissions:
-```bash
-docker info
-ls -la /var/run/docker.sock
-```
-
-**Portainer**: Test API access:
-```bash
-curl -H "X-API-Key: YOUR_KEY" https://portainer.example.com/api/endpoints
-```
+For common issues and their solutions, see the [Troubleshooting Guide](troubleshooting.md).
 
 ## Next Steps
 

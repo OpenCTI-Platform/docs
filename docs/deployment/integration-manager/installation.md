@@ -4,10 +4,15 @@
 
 ### Runtime Requirements
 
-- **Container Runtime**: One of the following:
-  - Docker v20.10 or higher
-  - Kubernetes v1.24 or higher
-  - Portainer v2.0 or higher (for Docker management)
+#### Production Environment
+- **Kubernetes**: v1.24 or higher
+- **Namespace**: Dedicated namespace for XTM Composer
+- **RBAC**: Role-based access control for pod management
+
+#### Development Environment  
+- **Docker**: v20.10 or higher
+- **Portainer**: v2.0 or higher (recommended for container management)
+- **Docker Compose**: v2.0 or higher (optional)
 
 ### Security Requirements
 
@@ -16,36 +21,15 @@
   - Connectivity to OpenCTI/OpenBAS instances
   - Access to container orchestration API
 - **Permissions**: 
-  - Container management permissions
-  - Socket access for Docker mode
+  - Production: Kubernetes service account with appropriate RBAC
+  - Development: Docker socket access or Portainer API access
 
 ## Installation Methods
 
 Create a configuration file based on your environment or add extra environment variables in the following steps.
-See [Configuration Reference](configuration.md) for more information on required configuration. 
+See [Configuration Reference](configuration.md) for more information on required configuration.
 
-### Docker Installation
-
-```bash
-# Pull the latest image
-docker pull filigran/xtm-composer:latest
-
-# Create configuration directory
-mkdir -p /opt/xtm-composer/config
-
-# Generate RSA private key
-openssl genrsa -out /opt/xtm-composer/private_key_4096.pem 4096
-
-# Run container
-docker run -d \
-  --name xtm-composer \
-  -v /opt/xtm-composer/config:/config \
-  -v /opt/xtm-composer/private_key_4096.pem:/keys/private_key.pem \
-  -e COMPOSER_ENV=production \
-  filigran/xtm-composer:latest
-```
-
-### Kubernetes Installation
+## Production Environment (Kubernetes)
 
 Note: The Kubernetes installation method described here assumes that OpenCTI is already deployed on a Kubernetes cluster.
 
@@ -153,19 +137,157 @@ spec:
 EOF
 ```
 
+## Development Environment (Docker/Portainer)
+
+### Docker Installation with CLI
+
+```bash
+# Pull the latest image
+docker pull filigran/xtm-composer:latest
+
+# Create configuration directory
+mkdir -p /opt/xtm-composer/config
+
+# Generate RSA private key
+openssl genrsa -out /opt/xtm-composer/private_key_4096.pem 4096
+
+# Run container
+docker run -d \
+  --name xtm-composer \
+  -v /opt/xtm-composer/config:/config \
+  -v /opt/xtm-composer/private_key_4096.pem:/keys/private_key.pem \
+  -e COMPOSER_ENV=development \
+  filigran/xtm-composer:latest
+```
+
+### Portainer Installation
+
+#### Method 1: Deploy via Portainer UI
+
+1. **Access Portainer Dashboard**:
+   - Navigate to your Portainer instance
+   - Select your Docker environment
+
+2. **Create a Stack**:
+   - Go to Stacks → Add Stack
+   - Name: `xtm-composer`
+   - Use the following docker-compose configuration:
+
+```yaml
+version: '3.8'
+
+services:
+  xtm-composer:
+    image: filigran/xtm-composer:latest
+    container_name: xtm-composer
+    environment:
+      - COMPOSER_ENV=development
+      - MANAGER__ID=dev-manager
+      - MANAGER__CREDENTIALS_KEY_FILEPATH=/keys/private_key.pem
+    volumes:
+      - xtm-composer-config:/config
+      - xtm-composer-keys:/keys
+    restart: unless-stopped
+    networks:
+      - opencti_default
+
+volumes:
+  xtm-composer-config:
+    driver: local
+  xtm-composer-keys:
+    driver: local
+
+networks:
+  opencti_default:
+    external: true
+```
+
+3. **Configure Volumes**:
+   - After deployment, access the container console via Portainer
+   - Generate the RSA key:
+     ```bash
+     openssl genrsa -out /keys/private_key.pem 4096
+     ```
+   - Copy your configuration files to `/config`
+
+#### Method 2: Deploy via Docker Compose
+
+**Option A: Using the preconfigured OpenCTI Docker stack (Recommended)**
+
+The [OpenCTI Docker repository](https://github.com/OpenCTI-Platform/docker) provides a complete `docker-compose.yml` that already includes:
+- XTM Composer service pre-configured
+- Automatic RSA key generation service
+- Full OpenCTI stack integration
+
+```bash
+# Clone the repository
+git clone https://github.com/OpenCTI-Platform/docker.git
+cd docker
+
+# Configure your environment
+cp .env.sample .env
+# Edit .env file with your settings
+
+# Deploy the complete stack with XTM Composer
+docker-compose up -d
+```
+
+**Option B: Standalone deployment**
+
+If you prefer a standalone XTM Composer installation, create a `docker-compose.yml` file:
+
+```yaml
+version: '3.8'
+
+services:
+  xtm-composer:
+    image: filigran/xtm-composer:latest
+    container_name: xtm-composer
+    environment:
+      - COMPOSER_ENV=development
+      - MANAGER__ID=dev-manager
+      - MANAGER__CREDENTIALS_KEY_FILEPATH=/keys/private_key.pem
+    volumes:
+      - ./config:/config
+      - ./keys:/keys
+    restart: unless-stopped
+    ports:
+      - "8080:8080"  # If web interface is available
+
+volumes:
+  xtm-composer-config:
+  xtm-composer-keys:
+```
+
+Deploy with:
+```bash
+# Generate RSA key first
+mkdir -p keys
+openssl genrsa -out keys/private_key.pem 4096
+
+# Deploy the stack
+docker-compose up -d
+```
+
+## Alternative Installation Methods
+
 ### Binary Installation
+
+For advanced users who need custom builds or want to contribute to development.
 
 #### Prerequisites
 
-Install Rust (1.70.0 or higher):
-```bash
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-source $HOME/.cargo/env
-```
+- **Rust**: 1.70.0 or higher
+- **Git**: For cloning the repository
+- **OpenSSL**: For generating RSA keys
 
 #### Build from Source
 
 ```bash
+# Install Rust if not already installed
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source $HOME/.cargo/env
+
 # Clone repository
 git clone https://github.com/OpenCTI-Platform/xtm-composer.git
 cd xtm-composer
@@ -175,26 +297,16 @@ cargo build --release
 
 # Generate RSA key
 openssl genrsa -out ./private_key_4096.pem 4096
+
+# Run the binary
+./target/release/xtm-composer
 ```
 
-## Post-Installation
+## Troubleshooting
 
-### Verify Installation
+For common issues and their solutions, see the [Troubleshooting Guide](troubleshooting.md).
 
-Check logs to ensure XTM Composer is running:
-
-**Docker:**
-```bash
-docker logs xtm-composer
-```
-
-**Kubernetes:**
-```bash
-kubectl logs -n xtm-composer deployment/xtm-composer
-```
-
-
-### Next Steps
+## Next Steps
 
 1. Configure XTM Composer - See [Configuration Reference](configuration.md)
 2. Connect to OpenCTI/OpenBAS - See [Quick Start](quick-start.md)
