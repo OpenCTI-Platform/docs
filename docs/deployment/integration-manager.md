@@ -5,9 +5,16 @@
 The OpenCTI Integration Manager is a deployment tool that simplifies the management and deployment of connectors within the platform. It supports two deployment methods:
 
 - An intuitive web interface for direct UI-based deployment.
+![demo-feature](assets/integration-manager/overview-feature.gif)
+
 - A container-based method for self-hosted deployments requiring infrastructure control.
 
-![demo-feature](assets/integration-manager/overview-feature.gif)
+    - [Architecture Design](integration-manager/architecture.md) - Detailed technical architecure documentation
+    - [Installation Guide](integration-manager/installation.md) - System requirements and installation methods
+    - [Quick Start](integration-manager/quick-start.md) - Get up and running quickly
+    - [Configuration Reference](integration-manager/configuration.md) - Complete configuration documentation
+    - [Development Guide](integration-manager/development.md) - Setup for development and contribution
+
 
 ## How to use in OpenCTI
 
@@ -89,9 +96,4 @@ The OpenCTI Integration Manager is a deployment tool that simplifies the managem
 
 - For security reasons, API keys/tokens are never displayed in the UI after being saved.
 
-
-## Deploying the Integration Manager
-
-To deploy the Integration Manager, please refer to the [installation guide](integration-manager/installation.md)
-. The guide provides step-by-step instructions for setting up and configuring the service in your environment.
 
