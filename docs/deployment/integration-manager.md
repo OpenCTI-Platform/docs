@@ -9,9 +9,9 @@ The OpenCTI Integration Manager is a deployment tool that simplifies the managem
 
 - A container-based method for self-hosted deployments requiring infrastructure control.
 
+    - [Quick Start](integration-manager/quick-start.md) - Get up and running quickly
     - [Architecture Design](integration-manager/architecture.md) - Detailed technical architecure documentation
     - [Installation Guide](integration-manager/installation.md) - System requirements and installation methods
-    - [Quick Start](integration-manager/quick-start.md) - Get up and running quickly
     - [Configuration Reference](integration-manager/configuration.md) - Complete configuration documentation
     - [Development Guide](../development/integration-manager.md) - Setup for development and contribution
 
