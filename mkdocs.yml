@@ -122,9 +122,9 @@ nav:
       - Integrations: deployment/integrations.md
       - Manager:
         - Overview: deployment/integration-manager.md
+        - Quick start: deployment/integration-manager/quick-start.md
         - Architecture: deployment/integration-manager/architecture.md
         - Installation guide: deployment/integration-manager/installation.md
-        - Quick start: deployment/integration-manager/quick-start.md
         - Configuration: deployment/integration-manager/configuration.md
       - Other resources: deployment/resources.md
     - Advanced:

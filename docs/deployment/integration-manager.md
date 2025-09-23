@@ -80,7 +80,7 @@ The OpenCTI Integration Manager is a deployment tool that simplifies the managem
 - Different connector types are identified by their icons:
     - ![managed](assets/integration-manager/managed-connector.png): managed connector by the Integration manager
     - ![managed](assets/integration-manager/built-in-connector.png): built-in connector feed
-    - ![managed](assets/integration-manager/docker-connector.png): built-in connector feed: built-in connector deployed
+    - ![managed](assets/integration-manager/docker-connector.png): built-in connector deployed
 
 - Connector statuses:
     - Managed connectors: *Started* or *Stopped*.
