@@ -46,7 +46,7 @@ The **RSA private key** can be stored in the following ways:
 
 ### **4. Private Key Handling and Network Security**
 
-- The **RSA private key** is **loaded exclusively into the XTM Composer’s runtime** and used **solely for decrypting sensitive values**.
+- The **RSA private key** is **loaded exclusively into the XTM Composer’s runtime** and used **solely for decrypting sensitive values such as API keys**.
 - **Only the RSA public key** is transmitted over the network during **API calls**, ensuring the private key remains isolated.
 
 ## Access Control and Security
