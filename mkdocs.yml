@@ -120,6 +120,7 @@ nav:
     - Ecosystem:
       - Connectors: deployment/connectors.md
       - Integrations: deployment/integrations.md
+      - Manager: deployment/integration-manager.md
       - Other resources: deployment/resources.md
     - Advanced:
       - Platform managers: deployment/managers.md
