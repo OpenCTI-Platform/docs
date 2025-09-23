@@ -13,7 +13,7 @@ The OpenCTI Integration Manager is a deployment tool that simplifies the managem
     - [Installation Guide](integration-manager/installation.md) - System requirements and installation methods
     - [Quick Start](integration-manager/quick-start.md) - Get up and running quickly
     - [Configuration Reference](integration-manager/configuration.md) - Complete configuration documentation
-    - [Development Guide](integration-manager/development.md) - Setup for development and contribution
+    - [Development Guide](../development/integration-manager.md) - Setup for development and contribution
 
 
 ## How to use in OpenCTI
@@ -25,12 +25,12 @@ The OpenCTI Integration Manager is a deployment tool that simplifies the managem
     - the connector’s detail view,
     - or the **Settings** page.
 
-<img src="assets/integration-manager/ee-required.png" />
+![EE required](assets/integration-manager/ee-required.png)
 
 
 - The **Integration Manager** must be installed and operational to deploy connectors.
 
-<img src="assets/integration-manager/composer-required.png" />
+![composer required](assets/integration-manager/composer-required.png)
 
 ## Browsing the connector catalog
 
@@ -78,9 +78,9 @@ The OpenCTI Integration Manager is a deployment tool that simplifies the managem
 ## Managing the connectors
 
 - Different connector types are identified by their icons:
-    - <img src="assets/integration-manager/managed-connector.png" height="20"/>: managed connector by the Integration manager
-    - <img src="assets/integration-manager/built-in-connector.png" height="20"/>: built-in connector feed
-    - <img src="assets/integration-manager/docker-connector.png" height="20"/>: built-in connector deployed
+    - ![managed](assets/integration-manager/managed-connector.png): managed connector by the Integration manager
+    - ![managed](assets/integration-manager/built-in-connector.png): built-in connector feed
+    - ![managed](assets/integration-manager/docker-connector.png): built-in connector feed: built-in connector deployed
 
 - Connector statuses:
     - Managed connectors: *Started* or *Stopped*.

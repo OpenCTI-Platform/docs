@@ -259,6 +259,7 @@ nav:
     - Platform: development/platform.md
     - Python library: development/python.md
     - Connectors: development/connectors.md
+    - Integration Manager: development/integration-manager.md
     - Playground: development/api-usage.md
 
 
