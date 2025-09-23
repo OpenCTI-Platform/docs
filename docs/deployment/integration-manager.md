@@ -7,7 +7,7 @@ The OpenCTI Integration Manager is a deployment tool that simplifies the managem
 - An intuitive web interface for direct UI-based deployment.
 - A container-based method for self-hosted deployments requiring infrastructure control.
 
-![demo-feature](assets/composer.gif)
+![demo-feature](assets/integration-manager/overview-feature.gif)
 
 ## How to use in OpenCTI
 
@@ -18,12 +18,12 @@ The OpenCTI Integration Manager is a deployment tool that simplifies the managem
     - the connector’s detail view,
     - or the **Settings** page.
 
-    Add photo
+<img src="assets/integration-manager/ee-required.png" />
 
 
 - The **Integration Manager** must be installed and operational to deploy connectors.
 
-    Add photo
+<img src="assets/integration-manager/composer-required.png" />
 
 ## Browsing the connector catalog
 
@@ -54,8 +54,15 @@ The OpenCTI Integration Manager is a deployment tool that simplifies the managem
 
     - **Additional options**: connector-specific configuration.
 
-3. Click **Deploy**. Once the connector is created, you will be redirected to the connector instance view.
-⚠️ Newly created connectors are not started automatically. You can still update their configuration via the **Update** action.
+<img src="assets/integration-manager/connector-form-sample.png">
+
+3. Click **Create**. Once the connector is created, you will be redirected to the connector instance view.
+
+!!! note "Connector created"
+
+    Newly created connectors are not started automatically. 
+    You can still update their configuration via the **Update** action.
+    
 
 5. When ready, click **Start** to run the connector.
 
@@ -64,9 +71,9 @@ The OpenCTI Integration Manager is a deployment tool that simplifies the managem
 ## Managing the connectors
 
 - Different connector types are identified by their icons:
-    - <img src="assets/managed-connector.png" height="20"/>: managed connector by the Integration manager
-    - <img src="assets/built-in-connector.png" height="20"/>: built-in connector feed
-    - <img src="assets/docker-connector.png" height="20"/>: built-in connector deployed
+    - <img src="assets/integration-manager/managed-connector.png" height="20"/>: managed connector by the Integration manager
+    - <img src="assets/integration-manager/built-in-connector.png" height="20"/>: built-in connector feed
+    - <img src="assets/integration-manager/docker-connector.png" height="20"/>: built-in connector deployed
 
 - Connector statuses:
     - Managed connectors: *Started* or *Stopped*.
