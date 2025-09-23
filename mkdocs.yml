@@ -120,7 +120,12 @@ nav:
     - Ecosystem:
       - Connectors: deployment/connectors.md
       - Integrations: deployment/integrations.md
-      - Manager: deployment/integration-manager.md
+      - Manager:
+        - Overview: deployment/integration-manager.md
+        - Architecture: deployment/integration-manager/architecture.md
+        - Installation guide: deployment/integration-manager/installation.md
+        - Quick start: deployment/integration-manager/quick-start.md
+        - Configuration: deployment/integration-manager/configuration.md
       - Other resources: deployment/resources.md
     - Advanced:
       - Platform managers: deployment/managers.md
