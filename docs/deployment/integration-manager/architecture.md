@@ -42,6 +42,22 @@ XTM Composer is a micro-orchestration tool that manages connectors/collectors/in
    - Supports environment-specific configurations
    - Handles credentials and encryption keys
 
+### Terminology
+
+XTM Composer orchestrates different types of containerized components depending on the platform:
+
+- **OpenCTI**: Deploys **Connectors** as containers (import, export, stream)
+- **OpenAEV**: Deploys **Collectors** and **Injectors** as containers
+
+Each component is deployed and managed as a container:
+
+| Platform | Component Types       | Deployed As |
+|----------|----------------------|-------------|
+| OpenCTI  | Connectors           | Container   |
+| OpenAEV  | Collectors/Injectors | Container   |
+
+This abstraction allows the composer to use the same orchestration logic regardless of the platform-specific terminology.
+
 ### Execution Flow
 
 1. **Initialization**
@@ -62,17 +78,18 @@ XTM Composer is a micro-orchestration tool that manages connectors/collectors/in
 
 ## Pull Mechanism
 
-### Configuration Retrieval
+### Configuration Retrieval (Connectors/Collectors/Injectors)
 
-The composer periodically pulls connector configurations from the platform:
+The composer periodically pulls container configurations from the platform:
 
 ```rust
 // Executed every 30 seconds by default
 async fn orchestrate() {
-    // 1. Fetch all connector configurations from platform
-    let connectors = api.connectors().await;
+    // 1. Fetch all container configurations from platform
+    // (connectors for OpenCTI, collectors/injectors for OpenAEV)
+    let connectors = api.connectors().await; // Generic method name
     
-    // 2. For each connector configuration
+    // 2. For each container configuration
     for connector in connectors {
         // 3. Check if container exists in orchestrator
         let container = orchestrator.get(connector).await;
@@ -86,9 +103,9 @@ async fn orchestrate() {
 }
 ```
 
-### Connector Configuration Structure
+### Container Configuration Structure
 
-Each connector configuration contains:
+Each container configuration (running a connector/collector/injector) contains:
 - **ID**: Unique identifier
 - **Name**: Human-readable name
 - **Image**: Docker image to deploy
@@ -101,7 +118,7 @@ Each connector configuration contains:
 The composer maintains two-way synchronization:
 
 1. **Platform → Composer** (Pull)
-   - Fetch latest connector definitions
+   - Fetch latest component definitions (connectors/collectors/injectors)
    - Retrieve requested status changes
    - Get configuration updates
 
@@ -118,7 +135,8 @@ The update mechanism handles several scenarios:
 
 #### 1. Deployment (Missing Container)
 ```rust
-// Container doesn't exist but is defined in platform
+// Container doesn't exist but component is defined in platform
+// (connector for OpenCTI, collector/injector for OpenAEV)
 async fn orchestrate_missing(connector) {
     orchestrator.deploy(connector).await;
     api.patch_status(connector.id, ConnectorStatus::Stopped).await;
@@ -161,6 +179,7 @@ if requested_hash != current_hash {
 The composer automatically removes orphaned containers:
 ```rust
 // Remove containers not defined in platform
+// (connectors for OpenCTI, collectors/injectors for OpenAEV)
 for container in orchestrator.list().await {
     if !platform_connectors.contains(container.id) {
         orchestrator.remove(container).await;
