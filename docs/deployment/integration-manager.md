@@ -61,7 +61,7 @@ The OpenCTI Integration Manager is a deployment tool that simplifies the managem
 
     - **Additional options**: connector-specific configuration.
 
-<img src="assets/integration-manager/connector-form-sample.png">
+![connector form sample](assets/integration-manager/connector-form-sample.png)
 
 3. Click **Create**. Once the connector is created, you will be redirected to the connector instance view.
 
