@@ -49,6 +49,10 @@ The OpenCTI Integration Manager is a deployment tool that simplifies the managem
 
 ## Deploying a connector
 
+!!! info "Multiple instances support"
+
+    You can deploy multiple instances of the same connector with different names. This allows you to configure different data sources or settings for the same connector type (e.g., multiple MISP instances, different API endpoints, etc.).
+
 1. Click the **Deploy** button on a connector card. A form will appear with required configuration fields.
 
 2. Fill in the required options (you can also expand **Advanced Options** to configure additional settings):
@@ -56,6 +60,14 @@ The OpenCTI Integration Manager is a deployment tool that simplifies the managem
     - **Instance name**: must be unique.
 
     - **Service account**: create a new one or use an existing one.
+
+!!! warning "Name uniqueness validation"
+
+    OpenCTI enforces strict name uniqueness to prevent conflicts:
+    
+    - **Instance names**: No two connector instances can share the same name
+    - **Service accounts**: The system also verifies that service account names don't conflict with existing users or instances
+    - **Validation error**: If a duplicate name is detected, a blocking error will prevent deployment until a unique name is provided
 
     - **Confidence level**: set the desired confidence level for the service account.
 
