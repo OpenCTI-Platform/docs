@@ -1,14 +1,14 @@
-# Configuration Reference
+# Configuration reference
 
 XTM Composer uses a layered configuration system with support for YAML files and environment variables. Environment variables override file-based configuration.
 
-## Configuration Priority
+## Configuration priority
 
 1. Environment variables (highest priority)
 2. Environment-specific config file (e.g., `production.yaml`)
 3. Default config file (`default.yaml`)
 
-## Environment Variable Format
+## Environment variable format
 
 All environment variables use double underscores (`__`) to separate nested configuration levels.
 
@@ -75,7 +75,7 @@ Example: `manager.logger.level` becomes `MANAGER__LOGGER__LEVEL`
 
 ### Orchestration
 
-#### General Settings
+#### General settings
 
 | Parameter                                        | Environment variable                                | Default value | Description                                                        |
 |:-------------------------------------------------|:----------------------------------------------------|:--------------|:-------------------------------------------------------------------|
@@ -113,13 +113,13 @@ Example: `manager.logger.level` becomes `MANAGER__LOGGER__LEVEL`
 | `{opencti\|openbas}`:daemon:portainer:stack            | `{OPENCTI\|OPENBAS}`__DAEMON__PORTAINER__STACK              |                                  | Portainer stack name for deployment                  |
 | `{opencti\|openbas}`:daemon:portainer:network_mode     | `{OPENCTI\|OPENBAS}`__DAEMON__PORTAINER__NETWORK_MODE       |                                  | Network mode for Portainer-managed containers        |
 
-## Environment Configuration
+## Environment configuration
 
 | Parameter | Environment variable | Default value | Description                                                                    |
 |:----------|:---------------------|:--------------|:-------------------------------------------------------------------------------|
 | -         | COMPOSER_ENV         | production    | Specifies which configuration file to load (e.g., `development`, `production`) |
 
-## Complete Configuration Example
+## Complete configuration example
 
 ```yaml
 # config/production.yaml
@@ -151,7 +151,7 @@ openbas:
   enable: false  # Coming Soon
 ```
 
-## Security Best Practices
+## Security best practices
 
 1. **Never commit credentials**: Use environment variables or secure secret management
 2. **Use file-based keys**: Prefer `credentials_key_filepath` over embedding keys

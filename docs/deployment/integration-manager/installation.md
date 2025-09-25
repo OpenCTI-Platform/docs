@@ -1,20 +1,20 @@
-# Installation Guide
+# Installation guide
 
-## System Requirements
+## System requirements
 
-### Runtime Requirements
+### Runtime requirements
 
-#### Production Environment
+#### Production environment
 - **Kubernetes**: v1.24 or higher
 - **Namespace**: Dedicated namespace for XTM Composer
 - **RBAC**: Role-based access control for pod management
 
-#### Development Environment  
+#### Development environment  
 - **Docker**: v20.10 or higher
 - **Portainer**: v2.0 or higher (recommended for container management)
 - **Docker Compose**: v2.0 or higher (optional)
 
-### Security Requirements
+### Security requirements
 
 - **RSA Private Key**: 4096-bit RSA private key for authentication
 - **Network Access**: 
@@ -24,12 +24,12 @@
   - Production: Kubernetes service account with appropriate RBAC
   - Development: Docker socket access or Portainer API access
 
-## Installation Methods
+## Installation methods
 
 Create a configuration file based on your environment or add extra environment variables in the following steps.
 See [Configuration Reference](configuration.md) for more information on required configuration.
 
-## Production Environment (Kubernetes)
+## Production environment (Kubernetes)
 
 Note: The Kubernetes installation method described here assumes that OpenCTI is already deployed on a Kubernetes cluster.
 
@@ -137,9 +137,9 @@ spec:
 EOF
 ```
 
-## Development Environment (Docker/Portainer)
+## Development environment (Docker/Portainer)
 
-### Docker Installation with CLI
+### Docker installation with CLI
 
 ```bash
 # Pull the latest image
@@ -160,7 +160,7 @@ docker run -d \
   filigran/xtm-composer:latest
 ```
 
-### Portainer Installation
+### Portainer installation
 
 #### Method 1: Deploy via Portainer UI
 
@@ -269,9 +269,9 @@ openssl genrsa -out keys/private_key.pem 4096
 docker-compose up -d
 ```
 
-## Alternative Installation Methods
+## Alternative installation methods
 
-### Binary Installation
+### Binary installation
 
 For advanced users who need custom builds or want to contribute to development.
 
@@ -281,7 +281,7 @@ For advanced users who need custom builds or want to contribute to development.
 - **Git**: For cloning the repository
 - **OpenSSL**: For generating RSA keys
 
-#### Build from Source
+#### Build from source
 
 ```bash
 # Install Rust if not already installed
@@ -306,7 +306,7 @@ openssl genrsa -out ./private_key_4096.pem 4096
 
 For common issues and their solutions, see the [Troubleshooting Guide](troubleshooting.md).
 
-## Next Steps
+## Next steps
 
 1. Configure XTM Composer - See [Configuration Reference](configuration.md)
 2. Connect to OpenCTI/OpenBAS - See [Quick Start](quick-start.md)

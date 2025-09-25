@@ -1,16 +1,16 @@
-# Troubleshooting Guide
+# Troubleshooting guide
 
 This guide provides solutions to common issues you may encounter while installing, configuring, and running XTM Composer.
 
-## Installation Issues
+## Installation issues
 
-### Post-Installation Verification
+### Post-installation verification
 
 After installing XTM Composer, verify the installation is successful by checking these components based on your environment.
 
-#### Development Environment
+#### Development environment
 
-##### Docker Verification
+##### Docker verification
 ```bash
 # Check container status
 docker ps | grep xtm-composer
@@ -22,15 +22,15 @@ docker logs xtm-composer
 docker exec xtm-composer curl -s http://localhost:8080/health
 ```
 
-##### Portainer Verification
+##### Portainer verification
 1. Access Portainer dashboard
 2. Navigate to Containers or Stacks
 3. Check XTM Composer status (should show as "running")
 4. Click on the container to view logs and statistics
 
-#### Production Environment
+#### Production environment
 
-##### Kubernetes Verification
+##### Kubernetes verification
 ```bash
 # Check pod status
 kubectl get pods -n xtm-composer
@@ -45,7 +45,7 @@ kubectl logs -n xtm-composer deployment/xtm-composer
 kubectl auth can-i --list --as=system:serviceaccount:xtm-composer:xtm-composer -n xtm-composer
 ```
 
-#### Common Verification Steps
+#### Common verification steps
 
 Regardless of environment, verify:
 
@@ -54,11 +54,11 @@ Regardless of environment, verify:
 3. **Network**: Test connectivity to OpenCTI/OpenBAS instances
 4. **Logs**: Check for any error messages or warnings
 
-## Connection Issues
+## Connection issues
 
 If XTM Composer cannot connect to OpenCTI:
 
-### 1. Verify URL and Token
+### 1. Verify URL and token
 
 Test the connection directly using curl:
 ```bash
@@ -70,7 +70,7 @@ If this fails, check:
 - The token is valid
 - No proxy or firewall is blocking the connection
 
-### 2. Check Network Connectivity
+### 2. Check network connectivity
 
 Verify basic network connectivity:
 ```bash
@@ -86,7 +86,7 @@ If connectivity fails:
 - Verify firewall rules
 - Ensure the service is running on the expected port
 
-### 3. SSL Certificate Issues
+### 3. SSL certificate issues
 
 For self-signed certificates, you can temporarily set `unsecured_certificate: true` in your configuration:
 
@@ -99,9 +99,9 @@ opencti:
 - Add the certificate to your trusted store
 - Use a valid certificate from a trusted CA
 
-## Authentication Failures
+## Authentication failures
 
-### 1. Verify RSA Key
+### 1. Verify RSA key
 
 Check that your RSA key is valid:
 ```bash
@@ -118,7 +118,7 @@ If the key is invalid:
 - Ensure it's in PKCS#8 PEM format
 - Verify the key size is 4096 bits
 
-### 2. Check File Permissions
+### 2. Check file permissions
 
 Ensure proper permissions on the private key file:
 ```bash
@@ -128,7 +128,7 @@ ls -la private_key_4096.pem
 
 The file should be readable only by the owner.
 
-### 3. Verify Key Path
+### 3. Verify key path
 
 Confirm the path in your configuration matches the actual key location:
 
@@ -142,11 +142,11 @@ For Docker deployments, ensure the volume mount is correct:
 docker run -v /local/path/key.pem:/keys/private_key.pem ...
 ```
 
-## Orchestration Issues
+## Orchestration issues
 
-### Kubernetes Issues
+### Kubernetes issues
 
-#### Verify Cluster Access
+#### Verify cluster access
 ```bash
 # Check cluster connectivity
 kubectl cluster-info
@@ -160,7 +160,7 @@ If access is denied:
 - Verify service account permissions
 - Ensure the kubeconfig is properly configured
 
-#### Common Kubernetes Errors
+#### Common Kubernetes errors
 
 **"pods is forbidden"**: The service account lacks necessary permissions
 - Solution: Apply the correct RBAC configuration (see Installation Guide)
@@ -168,9 +168,9 @@ If access is denied:
 **"no such host"**: Kubernetes API server cannot be reached
 - Solution: Check the cluster endpoint configuration
 
-### Docker Issues
+### Docker issues
 
-#### Check Socket Permissions
+#### Check socket permissions
 ```bash
 # Verify Docker is accessible
 docker info
@@ -183,7 +183,7 @@ If permission denied:
 - Add user to docker group: `sudo usermod -aG docker $USER`
 - For container access, mount the socket: `-v /var/run/docker.sock:/var/run/docker.sock`
 
-#### Common Docker Errors
+#### Common Docker errors
 
 **"Cannot connect to Docker daemon"**: Docker socket not accessible
 - Solution: Ensure Docker is running and socket is properly mounted
@@ -191,9 +191,9 @@ If permission denied:
 **"Network not found"**: Specified network doesn't exist
 - Solution: Create the network or update configuration
 
-### Portainer Issues
+### Portainer issues
 
-#### Test API Access
+#### Test API access
 ```bash
 curl -H "X-API-Key: YOUR_KEY" https://portainer.example.com/api/endpoints
 ```
@@ -203,13 +203,13 @@ If this fails:
 - Check the Portainer URL and port
 - Ensure the environment ID is correct
 
-## Runtime Issues
+## Runtime issues
 
-### Container Health Monitoring
+### Container health monitoring
 
 XTM Composer monitors container health and can detect various runtime issues:
 
-#### Reboot Loop Detection
+#### Reboot loop detection
 
 If a container restarts more than 3 times within 5 minutes, XTM Composer detects a reboot loop. Check:
 
@@ -226,7 +226,7 @@ If a container restarts more than 3 times within 5 minutes, XTM Composer detects
 3. **Resource Limits**: Check if the container has sufficient resources
 4. **Image Availability**: Ensure the Docker image exists and is accessible
 
-### Log Collection Issues
+### Log collection issues
 
 XTM Composer collects logs every `logs_schedule` interval. If logs are missing:
 
@@ -247,9 +247,9 @@ XTM Composer collects logs every `logs_schedule` interval. If logs are missing:
 
 3. Ensure the orchestrator has permissions to read logs
 
-## Configuration Issues
+## Configuration issues
 
-### Environment Variable Problems
+### Environment variable problems
 
 If configuration via environment variables isn't working:
 
@@ -266,7 +266,7 @@ If configuration via environment variables isn't working:
 
 3. **Priority Issues**: Remember environment variables override file configuration
 
-### Configuration File Not Loading
+### Configuration file not loading
 
 If your configuration file isn't being loaded:
 
@@ -278,9 +278,9 @@ If your configuration file isn't being loaded:
 2. **Verify File Location**: Configuration files should be in `/config` directory
 3. **Check YAML Syntax**: Validate your YAML file for syntax errors
 
-## Logging and Debugging
+## Logging and debugging
 
-### Enable Debug Logging
+### Enable debug logging
 
 For detailed troubleshooting, enable debug logging:
 
@@ -297,7 +297,7 @@ Or via environment variable:
 export MANAGER__LOGGER__LEVEL=debug
 ```
 
-### View Logs
+### View logs
 
 Check logs to identify issues:
 
@@ -312,7 +312,7 @@ kubectl logs -f deployment/xtm-composer -n xtm-composer
 tail -f /var/log/xtm-composer/composer.log
 ```
 
-### Common Log Messages
+### Common log messages
 
 **"Successfully connected to OpenCTI"**: Connection established successfully
 
@@ -324,7 +324,7 @@ tail -f /var/log/xtm-composer/composer.log
 
 **"Reboot loop detected"**: Container is continuously restarting
 
-## Getting Help
+## Getting help
 
 If you continue to experience issues:
 

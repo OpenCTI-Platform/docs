@@ -1,4 +1,4 @@
-# Quick Start Guide
+# Quick start guide
 
 This guide will help you get XTM Composer up and running quickly with OpenCTI.
 
@@ -10,7 +10,7 @@ Before starting, ensure you have:
 - OpenCTI API token
 - RSA private key (4096-bit)
 
-## Step 1: Generate RSA Private Key
+## Step 1: Generate RSA private key
 
 Generate a 4096-bit RSA private key for authentication:
 
@@ -18,7 +18,7 @@ Generate a 4096-bit RSA private key for authentication:
 openssl genrsa -out private_key_4096.pem 4096
 ```
 
-## Step 2: Basic Configuration
+## Step 2: Basic configuration
 
 Create a configuration file based on your environment.
 
@@ -56,7 +56,7 @@ export OPENCTI__TOKEN="your-opencti-api-token"
 export OPENCTI__DAEMON__SELECTOR="kubernetes"
 ```
 
-## Step 3: Choose Your Orchestration Platform
+## Step 3: Choose your orchestration platform
 
 ### For Kubernetes
 
@@ -115,7 +115,7 @@ docker run -d \
 COMPOSER_ENV=production ./xtm-composer
 ```
 
-## Step 5: Verify Connection
+## Step 5: Verify connection
 
 Check the logs to verify XTM Composer is connected to OpenCTI:
 
@@ -142,9 +142,9 @@ INFO  Manager registered with ID: my-manager-001
 3. You should see your XTM Composer manager listed
 4. Connectors managed by XTM Composer will show the manager ID
 
-## Common Configuration Examples
+## Common configuration examples
 
-### Development Environment
+### Development environment
 
 ```yaml
 manager:
@@ -165,7 +165,7 @@ opencti:
     selector: docker
 ```
 
-### Production with High Availability
+### Production with high availability
 
 ```yaml
 manager:
@@ -193,7 +193,7 @@ opencti:
 
 For common issues and their solutions, see the [Troubleshooting Guide](troubleshooting.md).
 
-## Next Steps
+## Next steps
 
 - Review the complete [Configuration Reference](configuration.md)
 - Set up monitoring and alerting

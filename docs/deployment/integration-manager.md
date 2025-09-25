@@ -9,13 +9,13 @@ The OpenCTI Integration Manager is a deployment tool that simplifies the managem
 
 - A container-based method for self-hosted deployments requiring infrastructure control.
 
-    - [Quick Start](integration-manager/quick-start.md) - Get up and running quickly
-    - [Architecture Design](integration-manager/architecture.md) - Detailed technical architecure documentation
-    - [Installation Guide](integration-manager/installation.md) - System requirements and installation methods
-    - [Configuration Reference](integration-manager/configuration.md) - Complete configuration documentation
-    - [Security Deep Dive](integration-manager/security.md) - Database, encryption, and access control documentation
-    - [Development Guide](../development/integration-manager.md) - Setup for development and contribution
-    - [Troubleshooting Guide](integration-manager/troubleshooting.md) - Solutions to common issues
+    - [Quick start](integration-manager/quick-start.md) - Get up and running quickly
+    - [Architecture design](integration-manager/architecture.md) - Detailed technical architecure documentation
+    - [Installation guide](integration-manager/installation.md) - System requirements and installation methods
+    - [Configuration reference](integration-manager/configuration.md) - Complete configuration documentation
+    - [Security deep dive](integration-manager/security.md) - Database, encryption, and access control documentation
+    - [Development guide](../development/integration-manager.md) - Setup for development and contribution
+    - [Troubleshooting guide](integration-manager/troubleshooting.md) - Solutions to common issues
 
 
 ## How to use in OpenCTI
@@ -69,9 +69,12 @@ The OpenCTI Integration Manager is a deployment tool that simplifies the managem
     
     - **Instance names**: Two connector instances can't share the same name
     - **Service accounts**: The system also verifies that service account names don't conflict with existing users or instances
+
     - **Validation error**: If a duplicate name is detected, a blocking error will prevent deployment until a unique name is provided
     - **Confidence level**: set the desired confidence level for the service account.
-    - **API key**.
+
+    - **API key** (encrypted and securely stored).
+
     - **Additional options**: connector-specific configuration.
 
 ![connector form sample](assets/integration-manager/connector-form-sample.png)

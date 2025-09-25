@@ -1,12 +1,12 @@
-# XTM Composer Architecture
+# XTM Composer architecture
 
 ## Overview
 
 XTM Composer is a micro-orchestration tool that manages connectors/collectors/injectors for Filigran platforms (OpenCTI and OpenAEV). Written in Rust for performance and reliability, it acts as a bridge between the platforms and container orchestration systems.
 
-## Global Mechanism
+## Global mechanism
 
-### Core Architecture Flow
+### Core architecture flow
 
 ```
 ┌─────────────┐     REST/GraphQL     ┌──────────────┐
@@ -20,7 +20,7 @@ XTM Composer is a micro-orchestration tool that manages connectors/collectors/in
 └─────────────┘
 ```
 
-### Main Components
+### Main components
 
 1. **Engine Module** (`src/engine/`)
    - Manages lifecycle of orchestration and health monitoring
@@ -58,7 +58,7 @@ Each component is deployed and managed as a container:
 
 This abstraction allows the composer to use the same orchestration logic regardless of the platform-specific terminology.
 
-### Execution Flow
+### Execution flow
 
 1. **Initialization**
    - Load configuration from `config/default.yaml` and environment
@@ -76,9 +76,9 @@ This abstraction allows the composer to use the same orchestration logic regardl
    - Reconcile desired vs actual state
    - Apply necessary changes
 
-## Pull Mechanism
+## Pull mechanism
 
-### Configuration Retrieval (Connectors/Collectors/Injectors)
+### Configuration retrieval (Connectors/Collectors/Injectors)
 
 The composer periodically pulls container configurations from the platform:
 
@@ -103,7 +103,7 @@ async fn orchestrate() {
 }
 ```
 
-### Container Configuration Structure
+### Container configuration structure
 
 Each container configuration (running a connector/collector/injector) contains:
 - **ID**: Unique identifier
@@ -113,7 +113,7 @@ Each container configuration (running a connector/collector/injector) contains:
 - **Status**: Current and requested states
 - **Configuration**: Key-value pairs (potentially encrypted)
 
-### State Synchronization
+### State synchronization
 
 The composer maintains two-way synchronization:
 
@@ -127,9 +127,9 @@ The composer maintains two-way synchronization:
    - Send container logs
    - Update health metrics
 
-## Update Mechanism
+## Update mechanism
 
-### Container Lifecycle Management
+### Container lifecycle management
 
 The update mechanism handles several scenarios:
 
@@ -174,7 +174,7 @@ if requested_hash != current_hash {
 - Sends logs to platform for centralized monitoring
 - Maintains log history for debugging
 
-### Cleanup Process
+### Cleanup process
 
 The composer automatically removes orphaned containers:
 ```rust
@@ -187,9 +187,9 @@ for container in orchestrator.list().await {
 }
 ```
 
-## Configuration Encryption
+## Configuration encryption
 
-### Hybrid Encryption Scheme
+### Hybrid encryption scheme
 
 XTM Composer uses RSA/AES hybrid encryption for sensitive configuration:
 
@@ -207,14 +207,14 @@ Platform                    Composer
                     7. Use plaintext configuration
 ```
 
-### Encryption Format
+### Encryption format
 
 Encrypted values are Base64-encoded with structure:
 ```
 [1 byte: Version][512 bytes: RSA-encrypted AES key+IV][N bytes: AES-encrypted data]
 ```
 
-### Key Management
+### Key management
 
 1. **RSA Private Key**
    - Loaded at startup from file or environment variable
@@ -227,14 +227,14 @@ Encrypted values are Base64-encoded with structure:
    - Provides authenticated encryption
 
 
-### Security Properties
+### Security properties
 
 - **Confidentiality**: Sensitive data encrypted at rest and in transit
 - **Key Isolation**: Each configuration value has unique AES key
 - **Forward Secrecy**: Compromised AES key doesn't affect other values
 - **Authentication**: GCM mode provides data integrity
 
-## Performance Considerations
+## Performance considerations
 
 1. **Async/Await**: All I/O operations are asynchronous
 2. **Periodic Execution**: Configurable intervals prevent API flooding
@@ -242,7 +242,7 @@ Encrypted values are Base64-encoded with structure:
 4. **Resource Efficiency**: Rust's zero-cost abstractions minimize overhead
 5. **Error Recovery**: Graceful handling of failures with retry logic
 
-## Fault Tolerance
+## Fault tolerance
 
 - **Health Checks**: Regular ping to platform ensures connectivity
 - **Version Detection**: Re-registers on platform upgrade

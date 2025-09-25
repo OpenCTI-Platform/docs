@@ -1,8 +1,8 @@
-# **Security Deep Dive**
+# Security deep dive
 
-## Database and Storage Architecture
+## Database and storage architecture
 
-### **1. Database Type for Connector Configurations and Secrets**
+### 1. Database type for connector configurations and secrets
 
 XTM Composer **does not rely on a traditional database**. Instead, it employs a **pull-based architecture** where:
 
@@ -10,7 +10,7 @@ XTM Composer **does not rely on a traditional database**. Instead, it employs a 
 - XTM Composer periodically retrieves these configurations via **GraphQL API calls**.
 - The system functions as a **stateless orchestrator**, persisting no connector data locally.
 
-### **2. Multi-Tenancy and Database Isolation**
+### 2. Multi-tenancy and database isolation
 
 Since XTM Composer lacks its own database:
 
@@ -18,9 +18,9 @@ Since XTM Composer lacks its own database:
 - Each XTM Composer instance is configured with a **dedicated platform URL and authentication token**.
 - In multi-tenant environments, **separate OpenCTI instances per tenant** are typically deployed, each paired with its own XTM Composer.
 
-## Encryption Implementation
+## Encryption implementation
 
-### **1. Hardware-Backed Encryption Keys (HSM/TPM)**
+### 1. Hardware-backed encryption keys (HSM/TPM)
 
 The **RSA private key** used for decryption:
 
@@ -28,13 +28,13 @@ The **RSA private key** used for decryption:
 - Is loaded from either a **file path** or an **environment variable**.
 - Relies on a **software-based RSA implementation** (`rsa` crate v0.9.8).
 
-### **2. AES-256 Encryption Mode**
+### 2. AES-256 encryption mode
 
 XTM Composer implements **AES-256-GCM (Galois/Counter Mode)**:
 
 - "This mode provides **authenticated encryption**, ensuring both **confidentiality and integrity** for stored secrets.
 
-### **3. Private Key Storage and Security**
+### 3. Private key storage and security
 
 The **RSA private key** can be stored in the following ways:
 
@@ -44,14 +44,14 @@ The **RSA private key** can be stored in the following ways:
 - **Access control**: Relies on **OS-level file permissions** and **environment variable security**.
 - **Key rotation**: No automated rotation policy by default, this should be implemented by the platform  administrators
 
-### **4. Private Key Handling and Network Security**
+### 4. Private key handling and network security
 
 - The **RSA private key** is **loaded exclusively into the XTM Composer’s runtime** and used **solely for decrypting sensitive values such as API keys**.
 - **Only the RSA public key** is transmitted over the network during **API calls**, ensuring the private key remains isolated.
 
-## Access Control and Security
+## Access control and security
 
-### **1. Database Access Restrictions**
+### 1. Database access restrictions
 
 Since configurations are stored in **OpenCTI/OpenAVE**:
 
@@ -60,7 +60,7 @@ Since configurations are stored in **OpenCTI/OpenAVE**:
 - Access control is enforced at the **API level**, not the database level.
 - Each composer instance uses a **unique authentication token**.
 
-### **2. Access Auditing and Monitoring**
+### 2. Access auditing and monitoring
 
 The current implementation includes:
 
@@ -68,7 +68,7 @@ The current implementation includes:
 - **Log collection**: Periodic aggregation and reporting of **container logs**.
 - **Audit trail**: Primarily maintained in **OpenCTI/OpenAVE platform logs**, not within XTM Composer.
 
-### **3. Database Backup Policy**
+### 3. Database backup policy
 
 Since XTM Composer is **stateless**:
 
@@ -76,7 +76,7 @@ Since XTM Composer is **stateless**:
 - Backup requirements apply to the **OpenCTI/OpenAVE platform database**.
 - Configuration recovery involves **restoring the platform database**.
 
-## Security Architecture Summary
+## Security architecture summary
 
 The **hybrid encryption scheme** operates as follows:
 
@@ -94,7 +94,7 @@ The **hybrid encryption scheme** operates as follows:
     ```
     
 
-## **Production Deployment Recommendations**
+## Production deployment recommendations
 
 1. **Key Management**: Integrate with a **Key Management System (KMS)** or **HSM** for the RSA private key.
 2. **Secret Storage**: Ensure the RSA private key file has **restrictive permissions (600)** and is stored on **encrypted storage**.
