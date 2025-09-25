@@ -107,4 +107,4 @@ The OpenCTI Integration Manager is a deployment tool that simplifies the managem
 
 - Updating the configuration of a managed connector is possible. Changes will take effect after a short delay.
 
-- For security reasons, API keys/tokens are never displayed in the UI after being saved.
+- For security reasons, API keys/tokens are encrypted when saved and never displayed in the UI afterward.
