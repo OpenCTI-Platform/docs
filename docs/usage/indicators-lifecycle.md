@@ -42,11 +42,12 @@ Right next to the indicator score, there is a button `Lifecycle` which enables t
 ## How the decay behave on indicator updates
 
 The decay rule is a mathematical computation based on:
+
 - valid from
 - indicator score
 - being revoked or not
 
-An update can occurs either on an actual update, or if an indicator is already existing in the platform in that case it's called an upsert.
+There is two ways to update an indicator: either through an update, or ingesting an indicator that already exists in the platform upsert, [more information on deduplication page](../deduplication).
 
 ### Upating score
 
@@ -54,14 +55,35 @@ Updating score restarts a decay lifecycle computation with the decay rule that i
 
 ### Updating the revoke state
 
-- Updating an indicator and **moving revoked to true**: means that the decay manager will ignore the indicator. The score is automatically updated to be au maximum the revoke score of the decay rule that applies, or zero if no decay rules applies.
+- Updating an indicator and **moving revoked to true**: means that the decay manager will ignore the indicator. The score is automatically updated to be at least at the revoke score of the decay rule that applies, or zero if no decay rules applies.
+
+> Example: My indicator has a revocation score at 20, while its score is currently at 80. When revoking to TRUE, the score of the indicator will be at 20.
 
 - Updating an indicator and **moving revoked to false**: means that the indicator must be valid given the decay lifecycle. If there is no score update along with the revoke update, the score is automatically updated to be the score at indicator creation, or if there is no decay rule 50. The valid until is then computed with this new score value.
+
+> Examples:
+> 
+> Update with REVOKE = FALSE: My indicator is currently revoked, with a score of 20. My IOC is under a decay rule. It has been created with a score of 90. When switching revoked to FALSE, the new IOC score is 90
+>
+> Update with REVOKE = FALSE AND Providing a new score: My indicator is currently revoked, with a score of 20. My IOC is under a decay rule. It has been created with a score of 90. When switching revoked to FALSE and giving a score of 80 in a single operation, the new IOC score is 80.
+>
+> Update an IOC without decay rule: My indicator is currently revoked, with a score of 20. My IOC is not under a decay rule. It has been created with a score of 90. When switching revoked to FALSE, the new IOC score is 50.
 
 ### Managing concurency updates from distinct sources
 
 In some case, several sources have different values for one given indicator and keep erasing each other score. As all decay data is computed everytime a score is change, there is a circuit breaker:
+
 - if a source has already done an update with same score in the indicator life, the update is ignored.
+
+> Example:
+>
+> Source A updates an indicator's score with score = 40.
+>
+> Source B updates an indicator's score with score = 35.
+>
+> Source A updates once more the same indicator's score with score = 40. This last update won't be permitted.
+>
+> If Source A would have updated any value different from 40, it would have been accepted.
 
 ## Conclusion
 
