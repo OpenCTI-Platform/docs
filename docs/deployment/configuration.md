@@ -173,6 +173,8 @@ Here are the configuration keys, for both containers (environment variables) and
 | redis:hostnames            | REDIS__HOSTNAMES            |               | Hostnames definition for Redis cluster or sentinel mode: a list of host:port objects. |
 | redis:port                 | REDIS__PORT                 | 6379          | Port of the Redis Server                                                              |
 | redis:sentinel_master_name | REDIS__SENTINEL_MASTER_NAME |               | Name of your Redis Sentinel Master (mandatory in sentinel mode)                       |
+| redis:sentinel_username    | REDIS__SENTINEL_USERNAME    |               | Username to authenticate on Redis Sentinel                                            |
+| redis:sentinel_password    | REDIS__SENTINEL_PASSWORD    |               | Password to authenticate on Redis Sentinel                                            |
 | redis:use_ssl              | REDIS__USE_SSL              | `false`       | Is the Redis Server has TLS enabled                                                   |
 | redis:username             | REDIS__USERNAME             |               | Username of the Redis Server                                                          |
 | redis:password             | REDIS__PASSWORD             |               | Password of the Redis Server                                                          |
@@ -186,9 +188,11 @@ Here are the configuration keys, for both containers (environment variables) and
 |:--------------------------------------------|:----------------------------------|:--------------|:--------------------------------------------|
 | rabbitmq:hostname                           | RABBITMQ__HOSTNAME                | localhost     | Hostname of the RabbitMQ server             |
 | rabbitmq:port                               | RABBITMQ__PORT                    | 5672          | Port of the RabbitMQ server                 |
+| rabbitmq:hostname_management                | RABBITMQ__HOSTNAME_MANAGEMENT     |               | Hostname of the RabbitMQ Management Plugin  |
 | rabbitmq:port_management                    | RABBITMQ__PORT_MANAGEMENT         | 15672         | Port of the RabbitMQ Management Plugin      |
 | rabbitmq:username                           | RABBITMQ__USERNAME                | guest         | RabbitMQ user                               |
 | rabbitmq:password                           | RABBITMQ__PASSWORD                | guest         | RabbitMQ password                           |
+| rabbitmq:vhost                              | RABBITMQ__VHOST                   | "/"           | RabbitMQ virtual host                       |
 | rabbitmq:queue_type                         | RABBITMQ__QUEUE_TYPE              | "classic"     | RabbitMQ Queue Type ("classic" or "quorum") |
 | -                                           | -                                 | -             | -                                           |
 | rabbitmq:use_ssl                            | RABBITMQ__USE_SSL                 | `false`       | Use TLS connection                          |

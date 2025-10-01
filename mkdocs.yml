@@ -120,6 +120,14 @@ nav:
     - Ecosystem:
       - Connectors: deployment/connectors.md
       - Integrations: deployment/integrations.md
+      - Manager:
+        - Overview: deployment/integration-manager.md
+        - Quick start: deployment/integration-manager/quick-start.md
+        - Architecture: deployment/integration-manager/architecture.md
+        - Installation guide: deployment/integration-manager/installation.md
+        - Configuration: deployment/integration-manager/configuration.md
+        - Migration guide: deployment/integration-manager/migration.md
+        - Troubleshooting guide: deployment/integration-manager/troubleshooting.md
       - Other resources: deployment/resources.md
     - Advanced:
       - Platform managers: deployment/managers.md
@@ -216,12 +224,15 @@ nav:
           - Organization segregation: administration/organization-segregation.md
           - Authorized members: administration/authorized-members.md
           - Request access: administration/request-access.md
+        - Dissemination list: administration/dissemination-list.md
+        - Email templates: administration/email-templates.md
       - Customization:
         - Entity types: administration/entities.md
         - Rules engine: administration/reasoning.md
         - Notifiers:
           - Custom notifiers: administration/notifiers.md
           - Notifier samples: administration/notifier-samples.md
+          - Tips to create notifiers: administration/tips-to-create-a-custom-notifier.md
         - Retention policies: administration/retentions.md
         - Decay rules: administration/decay-rules.md
         - Exclusion lists: administration/exclusion-lists.md
@@ -233,6 +244,7 @@ nav:
         - Activity triggers: administration/audit/triggers.md
       - File indexing:  administration/file-indexing.md
       - Support package:  administration/support-package.md
+      - XTM Hub: administration/hub.md # Warning: page is linked in XTM Hub documentation
   - Reference:
     - Data:
       - Data model: reference/data-model.md
@@ -254,6 +266,7 @@ nav:
     - Platform: development/platform.md
     - Python library: development/python.md
     - Connectors: development/connectors.md
+    - Integration Manager: development/integration-manager.md
     - Playground: development/api-usage.md
 
 
