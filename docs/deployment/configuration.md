@@ -454,6 +454,12 @@ Can be configured manually using the configuration file `config.yml` or through 
 |:-------------------------------|:-------------------------------|:--------------|:-----------------------------------------------------------|
 | worker:log_level               | WORKER_LOG_LEVEL               | info          | The log level (error, warning, info or debug)              |
 
+#### Technical
+
+| Parameter               | Environment variable            | Default value | Description                                                                                                                                                              |
+|:------------------------|:--------------------------------|:--------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| worker:targeted_connector_types | WORKER_TARGETED_CONNECTOR_TYPES | None          | If not configured, or configured with 'ANY', all connectors will be targeted. Otherwise, only target connector types will be processed |
+
 #### Telemetry
 
 | Parameter                          | Environment variable               | Default value | Description                               |
