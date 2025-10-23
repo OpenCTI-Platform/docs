@@ -79,6 +79,31 @@ If you would like to use LDAP groups to automatically associate LDAP groups and 
 }
 ```
 
+### Base URL Configuration (Important for all SSO strategies)
+
+When configuring any SSO authentication provider (SAML, OpenID, Auth0, etc.), the application must know its external base URL to properly generate callback and redirect URLs.
+
+You need to set the `base_url` parameter to your actual OpenCTI URL, either via environment variable or configuration file.
+
+Option 1 - Environment variable
+
+```yaml
+APP__BASE_URL=<your OpenCTI url>
+```
+
+Option 2 - Configuration file
+
+```json
+{
+  "app": {
+    "base_url": "<your OpenCTI url>/"
+  }
+}
+```
+> ⚠️ Make sure the URL ends with a / and matches the domain exposed to your users.
+
+This configuration impacts all SSO strategies (SAML, OpenID, Auth0, etc.) as it defines the redirect target used after successful authentication.
+
 ### SAML (button)
 
 This strategy can be used to authenticate your user with your company SAML and is based on [Passport - SAML](http://www.passportjs.org/packages/passport-saml).
