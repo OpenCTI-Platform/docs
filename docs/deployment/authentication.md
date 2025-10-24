@@ -102,7 +102,6 @@ Option 2 - Configuration file
 ```
 > ⚠️ Make sure the URL ends with a / and matches the domain exposed to your users.
 
-This configuration impacts all SSO strategies (SAML, OpenID, Auth0, etc.) as it defines the redirect target used after successful authentication.
 
 ### SAML (button)
 
