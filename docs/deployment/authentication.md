@@ -81,7 +81,7 @@ If you would like to use LDAP groups to automatically associate LDAP groups and 
 
 ### Base URL Configuration (Important for all SSO strategies)
 
-When configuring any SSO authentication provider (SAML, OpenID, Auth0, etc.), the application must know its external base URL to properly generate callback and redirect URLs.
+When configuring any SSO authentication provider (SAML, OpenID, Auth0, etc.), the application may need to know the external base URL to fallback on it as default on some use cases.
 
 You need to set the `base_url` parameter to your actual OpenCTI URL, either via environment variable or configuration file.
 
