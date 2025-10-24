@@ -193,7 +193,7 @@ To modify the theme colors and logos, developers need to work with the following
 **Key Color Constants to Modify:**
 Refer to the color constants defined at the top of `ThemeDark.ts`
 (e.g., `THEME_DARK_DEFAULT_BACKGROUND`, `THEME_DARK_DEFAULT_PRIMARY`, etc.).
-You can update these values to adjust your custom theme colors.
+You can update these values to adjust theme colors.
 ```
 
 **Color Customization Steps:**
