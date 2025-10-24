@@ -190,11 +190,10 @@ To modify the theme colors and logos, developers need to work with the following
 **Key Color Constants to Modify:**
 ```typescript
 // Lines 14-19 in ThemeDark.ts
-export const THEME_DARK_DEFAULT_BACKGROUND = '#111322';
-const THEME_DARK_DEFAULT_PRIMARY = '#871719';
-const THEME_DARK_DEFAULT_ACCENT = '#111322';
-const THEME_DARK_DEFAULT_PAPER = '#111322';
-const THEME_DARK_DEFAULT_NAV = '#111322';
+**Key Color Constants to Modify:**
+Refer to the color constants defined at the top of `ThemeDark.ts`
+(e.g., `THEME_DARK_DEFAULT_BACKGROUND`, `THEME_DARK_DEFAULT_PRIMARY`, etc.).
+You can update these values to adjust your custom theme colors.
 ```
 
 **Color Customization Steps:**
