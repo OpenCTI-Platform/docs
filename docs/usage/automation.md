@@ -247,10 +247,14 @@ When the primary entity you listen to is an incident & then use the "Container W
 Will share every entity in the received STIX 2.1 bundle with Organizations you configured. Your platform needs to have declared a platform main organization in Settings/Parameters.
 You can decice to share only the main triggering element, or the whole bundle thanks to the toogle.
 
-#### Share with organizations
+Compared to other components, this component **makes direct call to the database**: this means that the query will be applied before the "send to ingestion" step. As a result, if, **wthin the same playbook**, you attempt to create a new entity (via the wrap in container step) and share the entity, the playbook will fail. Indeed, the entity will not yet be created, since it won't be sent to ingestion yet. You need to share the entity in another playbook to achieve this use case.
+
+#### Unshare with organizations
 
 Will unshare every entity in the received STIX 2.1 bundle with Organizations you configured. Your platform needs to have declared a platform main organization in Settings/Parameters.
 You can decice to unshare only the main triggering element, or the whole bundle thanks to the toogle.
+
+Compared to other components, this component **makes direct call to the database**: this means that the query will be applied before the "send to ingestion" step. As a result, if, **wthin the same playbook**, you attempt to create a new entity (via the wrap in container step) and unshare the entity, the playbook will fail. Indeed, the entity will not yet be created, since it won't be sent to ingestion yet. You need to unshare the entity in another playbook to achieve this use case.
 
 #### Manage Access Restriction
 
@@ -258,6 +262,7 @@ Will apply authorize members on the bundle within the playbook. It is only compa
 You can decide to only apply restriction on the triggering element or the whole bundle by enabling the toggle.
 
 ##### Specificities of the component
+Compared to other components, this component **makes direct call to the database**: this means that the query will be applied before the "send to ingestion" step. As a result, if, **wthin the same playbook**, you attempt to create a new entity (via the wrap in container step) and apply authorize members, the playbook will fail. Indeed, the entity will not yet be created, since it won't be sent to ingestion yet. You need to apply the authorize members in another playbook to achieve this use case.
 
 **This component supports dynamic variables**
 
@@ -273,6 +278,7 @@ You can decide to only apply restriction on the triggering element or the whole 
 **The component also support static fields, used for authorize members: users, groups & organizations.**
 
 #### Remove Access Restriction
+Compared to other components, this component **makes direct call to the database**: this means that the query will be applied before the "send to ingestion" step. As a result, if, **wthin the same playbook**, you attempt to create a new entity (via the wrap in container step) and remove default authorize members, the playbook will fail. Indeed, the entity will not yet be created, since it won't be sent to ingestion yet. You need to remove the authorize members in another playbook to achieve this use case.
 
 Will remove authorize members on the bundle within the playbook. It is only compatible with entities supporting authorize members (Containers, Drafts).
 You can decide to only remove restriction on the triggering element or the whole bundle by enabling the toggle.
