@@ -133,6 +133,11 @@ With such event source, the playbook will query knowledge on a hourly / daily / 
 
 If you check the option "Only last modified entities after the last run', then the playbook will exclude from each run the entities that have not changed since last run.
 
+##### Specificities of the component
+
+**Include all entities in a signel bundle**: this options allows you to add all entities found in a single bundle. This is useful if you want for instance to send a single email containing multiple entities at once.
+
+
 ![Querying last incidents](assets/playbook_query_regular.png)
 
 ### Available for manual enrollment / trigger
@@ -194,7 +199,8 @@ The best approach is to use a first playbook that will **flag your data, by appl
 **Step will fail if an observable triggered by the enrichment is not found**
 If the playbook stops from time to time at this step, it might be because the observable (or entity) is not found in the third-party system in charge of enriching the observable (or entity).
 
-### Manipulate knowledge
+
+#### Manipulate knowledge
 
 Will add, replace, or remove compatible attributes of the entities contained in the received STIX 2.1 bundle and send out the modified bundle.
 
@@ -238,6 +244,53 @@ When the primary entity you listen to is an incident & then use the "Container W
 ### Share with organizations
 
 Will share every entity in the received STIX 2.1 bundle with Organizations you configured. Your platform needs to have declared a platform main organization in Settings/Parameters.
+You can decice to share only the main triggering element, or the whole bundle thanks to the toogle.
+
+#### Share with organizations
+
+Will unshare every entity in the received STIX 2.1 bundle with Organizations you configured. Your platform needs to have declared a platform main organization in Settings/Parameters.
+You can decice to unshare only the main triggering element, or the whole bundle thanks to the toogle.
+
+#### Manage Access Restriction
+
+Will apply authorize members on the bundle within the playbook. It is only compatible with entities supporting authorize members (Containers, Drafts).
+You can decide to only apply restriction on the triggering element or the whole bundle by enabling the toggle.
+
+##### Specificities of the component
+
+**This component supports dynamic variables**
+
+- Dynamic from the main enity triggering the playbook: Will apply the authorize members on the coresponding user of the field you chose, based on the triggering entity only. You can chose among:
+   - Author (organisation): If your author is an organisation, you will be able to apply authorize members directly on the organisation in author.
+   - Creator: Will apply the authorize members on all users in Creator field.
+   - Assignee: Will apply the authorize members on all users in Asignee field.
+   - Participant: Will apply the authorize members on all users in Participants field.
+
+ - Dynamic from the object in the bundle of the playbook: will apply the authorize members on all the corresponding users of all the entities contained in your bundle and not only the triggering entity. 
+    - Organization: all users belonging to the organizations in your bundle will be added as authorize members.
+  
+**The component also support static fields, used for authorize members: users, groups & organizations.**
+
+#### Remove Access Restriction
+
+Will remove authorize members on the bundle within the playbook. It is only compatible with entities supporting authorize members (Containers, Drafts).
+You can decide to only remove restriction on the triggering element or the whole bundle by enabling the toggle.
+
+##### Specificities of the component
+
+**This component supports dynamic variables**
+
+- Dynamic from the main enity triggering the playbook: Will remove the authorize members on the coresponding user of the field you chose, based on the triggering entity only. You can chose among:
+   - Author (organisation): If your author is an organisation, you will be able to remove the organization from the authorize members.
+   - Creator: Will remove all users in creator field from the authorize members.
+   - Assignee: Will remove all users in assignee field from the authorize members.
+   - Participant: Will remove all users in participant field from the authorize members.
+
+ - Dynamic from the object in the bundle of the playbook: will remove the authorize members on all the corresponding users of all the entities contained in your bundle and not only the triggering entity. 
+    - Organization: all users belonging to the organizations in your bundle will be remove from authorize members.
+  
+**The component also support static fields, used for authorize members: users, groups & organizations.**
+
 
 ### Apply predefined rule
 
@@ -263,6 +316,25 @@ For instance, the following operation will not work within a playbook: listen to
 ### Send to notifier
 
 Will generate a Notification each time a STIX 2.1 bundle is received. Note that Notifier ends a branch but does not save any changes. Best practice is to create a branch next to the notifier using the button on the bottom right of the Notifier Component and add the send for ingestion in the same output branch.
+
+#### Send email from template
+
+Will send an email using the template that you can set in Parameters/security (used for users) to users. You can chose the template you want. 
+T
+
+##### Specificities of the component
+
+**This component supports dynamic variables**
+
+- Dynamic from the main enity triggering the playbook as Target: will send the email using the selected template to the coresponding user of the field you chose, based on the triggering entity only. You can chose among:
+   - Creator: Will send an email using an Email Template to corresponding user.
+   - Assignee: Will send an email using an Email Template to corresponding user.
+   - Participant: Will send an email using an Email Template to corresponding user.
+
+ - Dynamic from the object in the bundle of the playbook as Target: will send the email using the selected template to the coresponding user of the entities contained in your bundle and not only the triggering entity. 
+    - Organization: all users of all organizations contained in your bundle will receive an email.
+  
+**The component also support static fields, used for authorize members: users, groups & organizations.**
 
 ### Promote observable to indicator
 
