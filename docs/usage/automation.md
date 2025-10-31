@@ -67,22 +67,20 @@ You can import a playbook in OpenCTI coming either from your own platform or ano
     Imported playbooks may contain data that does not exist in your platform. For instance, the initial playbook could have listened on a specific label & applied a specific marking that does not exist in your platform. Therefore, when you import a playbook, always check all the boxes/steps to ensure your playbook will run smoothly.
 
 **Applicable steps & data to verify:**
-- Listen knowledge events/ Manual enrollment / Query knowledge on regular basis / Match knowledge / Reduce knowledge / Manipulate knowledge
-   - Verify if any of the following data is correctly defined in your playbook, otherwise create it in your platform
-      - Taxonomies: any not existing taxonomy will be shown as deleted (Labels, vocabularies...) 
-      - Specific instances (entity/observable): If your playbook was listening on a specific instance, verify that the instance exists in your platform
-      - Marking: verify that the marking you're listening to exists in your platform
-      - Author: verify that the identities in your platform exist
-      - Creators: verify that you have existing users in your platform
-- Enrich through connector
-   - Verify if any of the following data is correctly define in your playbook, otherwise create it in your platform
-      - Connector exists in your platform   
-- Container wrapper
-   - Verify if any of the following data is correctly define in your playbook, otherwise create it in your platform
-      - Task template exists in your platform.
-- Send to notifier
-   - Verify that the notifier exists in your platform
-   - Verify that the target exsits in your platform
+
+| Playbook Step                                                                                                                          | Data to verify                         | What to look for                                                                              | Remediation |
+|:---------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------|:----------------------------------------------------------------------------------------------|:------------|
+|  Listen knowledge events, Manual enrollment, Query knowledge on regular basis, Match knowledge, Reduce knowledge, Manipulate knowledge | Taxonomies                             | Any taxonomy not existing in your platform will be shown as deleted (Labels, vocabularies...) | create it   |
+|  Listen knowledge events, Manual enrollment, Query knowledge on regular basis, Match knowledge, Reduce knowledge, Manipulate knowledge | Specific instances (entity/observable) | Verify that the instance exists in your platform                                              | create it   |
+|  Listen knowledge events, Manual enrollment, Query knowledge on regular basis, Match knowledge, Reduce knowledge, Manipulate knowledge | Author                                 | verify that the identity in your platform exists                                              | create it   |
+|  Listen knowledge events, Manual enrollment, Query knowledge on regular basis, Match knowledge, Reduce knowledge, Manipulate knowledge | Creator                                | verify that you have existing users in your platform                                          | create it   |
+|  Enrich through connector                                                                                                              | Connector                              |  Connector exists in your platform                                                            | create it   |
+|  Container wrapper                                                                                                                     | Task template                          |  Task template exists in your platform                                                        | create it   |
+|  Send to notifier                                                                                                                      | Notifier                               |  Notifer exists in your platform                                                              | create it   |
+|  ESend to notifier                                                                                                                     | Target                                 |  Target exists in your platform                                                               | create it   |
+
+
+
 
 ### Listen knowledge events
 With this event source, the playbook will be triggered on any knowledge event (create, update or delete) that matches the selected filters.
@@ -190,6 +188,7 @@ You can decide whether you want to create a container each time this step is tri
 
 **Specific situation: wrap an incident into a case**
 When the primary entity you listen to is an incident & then use the "Container Wrapper" step to create a case out of your incident, by default, your case will reuse some of the attributes of your incident: 
+
 - Author
 - Labels
 - Assignee
@@ -219,6 +218,7 @@ Will apply a complex automation built-in rule. This kind of rule might impact pe
 For instance, the following operation will not work within a playbook: listen to a report creation, add everything within a bundle, then apply another rule to resolve neighbor relations and entities (add in bundle) of all entities & observables of the container. As a result, your playbook will stop there.
 
 **Routes:**
+
 - Unmodified: because of the above reason, if none of your entities or observables contained in your STIX bundle have been impacted by the rule, then the STIX bundle will follow will follow the **unmodified** route.
 - Out: if at least one of the entity or observable of your STIX bundle has been successfully impacted by the rule, then the STIX bundle will follow the **Out** route.
 
@@ -237,6 +237,7 @@ You can also add all indicators and relationships generated by this component in
 ##### Specifities of the component
 
 **Routes:**
+
 - Unmodified: if none of your observables have triggered an indicator creation, then the STIX bundle will follow the **unmodified** route.
 - Out: if at least one of your observables of your STIX bundle has triggered an indicator creation, then the STIX bundle will follow the **Out** route.
 
@@ -251,6 +252,7 @@ You can also add all observables and relationships generated by this component i
 ##### Specifities of the component
 
 **Routes:**
+
 - Unmodified: if none of your indicators have triggered an observable creation, then the STIX bundle will follow the **unmodified** route.
 - Out: if at least one of your indicators of your STIX bundle has triggered an observable creation, then the STIX bundle will follow the **Out** route.
 
@@ -265,14 +267,18 @@ Will filter out any entities in the current stage that do not match the filter c
 
 If the result of the reduce knowledge ends up not matching the initial entity triggering yur playbook, then the reduce step will fail. As an example: 
 With a first step listening on: entity type = IPV4 OR Report AND label = test. And a step that reduces knowledge based on Entity type = IPV4. You will get the following results: 
+
 - Test 1: edit a report that does not contain IPV4
-   - Result: the playbook took the route "unmatched" (since no IP in the bundle, because triggering entity is the Report) 
+   - Result: the playbook took the route "unmatched" (since no IP in the bundle, because triggering entity is the Report)
+ 
 - Test 2: edit a report that contains an IPV4
    - Result: the playbook took the route "unmatched" (since the entity triggering the playbook is the Report and not the IPV4)
+
 - Test 3: edit an IPV4
    - Result: the playbook took the route "out" (since only the triggering entity is the IPV4)
 
  **Routes:**
+ 
 - Unmatched: if the bundle does not match the reduce condition, then the stix bundle will follow the **unmatch** route. In this case, the playbook will act as the route "umatch" of the "match" component.
 - Out: if your bundle is effectively reduced, then the stix bundle will follow the **Out** route.
 
@@ -283,6 +289,7 @@ It will allow you to continue only if some specific conditions are met.
 ##### Specificities of the component
 
 **Routes:**
+
 - No-match: if none of the entity/observable contained in the bundle passes the matching condition, then the STIX bundle will follow the **no-match** route.
 - Out: if at least one of the entity/observable contained in the bundle passes the matching condition, then the STIX bundle will follow the **out** route.
 
