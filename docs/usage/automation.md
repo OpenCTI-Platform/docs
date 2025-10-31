@@ -138,7 +138,7 @@ If you check the option "Only last modified entities after the last run', then t
 **Include all entities in a signel bundle**: this options allows you to add all entities found in a single bundle. This is useful if you want for instance to send a single email containing multiple entities at once.
 
 
-![Querying last incidents](assets/playbook_query_regular.png)
+![Querying last incidents](assets/Playbook_query_knowledge.png)
 
 ### Available for manual enrollment / trigger
 
@@ -170,8 +170,9 @@ Do not forget to start your Playbook when ready, with the Start option of the bu
 
 ## Components of playbooks
 
-![List of current components](assets/playbook_components.png)
+![List of current components(1/2)](assets/playbook_list_of_components.png)
 
+![List of current components(2/2)](assets/playbook_list_of_components2.png)
 ### Log data in standard output
 
 Will write the received STIX 2.1 bundle in platform logs with configurable log level and then send out the STIX 2.1 bundle unmodified.
