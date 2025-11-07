@@ -14,52 +14,51 @@ Roles are used in the platform to grant the given groups with some **capabilitie
 
 ### List of capabilities
 
-| Capability                                              | Description                                                                             |
-|:--------------------------------------------------------|:----------------------------------------------------------------------------------------|
-| `Allow modification of sensitive configuration`         | Ability to perform changes on elements under Danger Zone.                               |
-| `Bypass all capabilities`                               | Just bypass everything including data segregation and enforcements.                     |
-| `Access knowledge`                                      | Access in read-only to all the knowledge in the platform.                               |
-| &nbsp;&nbsp;`Access to collaborative creation`          | Create notes and opinions (and modify its own) on entities and relations.               |
-| &nbsp;&nbsp;`Can use web interface export functions`    | Ability to download widgets/graphs... as images/PDF.                                    |
-| &nbsp;&nbsp;`Create / Update knowledge`                 | Create and update existing entities and relationships.                                  |
-| &nbsp;&nbsp;&nbsp;&nbsp;`Restrict organization access`  | Share entities and relationships with other organizations.                              |
-| &nbsp;&nbsp;&nbsp;&nbsp;`Delete knowledge`              | Delete entities and relationships (and merge data).                                     |
-| &nbsp;&nbsp;&nbsp;&nbsp;`Manage authorized members`     | Restrict the access to an entity to a user, group or organization.                      |
-| &nbsp;&nbsp;&nbsp;&nbsp;`Bypass enforced reference`     | If external references enforced in a type of entity, be able to bypass the enforcement. |
-| &nbsp;&nbsp;&nbsp;&nbsp;`Bypass mandatory fields`       | Bypass any custom fields marked as mandatory in entity customization.                   |
-| &nbsp;&nbsp;`Upload knowledge files`                    | Upload files in the `Data` and `Content` section of entities.                           |
-| &nbsp;&nbsp;`Import knowledge`                          | Trigger the ingestion of an uploaded file.                                              |
-| &nbsp;&nbsp;`Download knowledge export`                 | Download the exports generated in the entities (in the `Data` section).                 |
-| &nbsp;&nbsp;&nbsp;&nbsp;`Generate knowledge export`     | Trigger the export of the knowledge of an entity.                                       |
-| &nbsp;&nbsp;`Ask for knowledge enrichment`              | Trigger an enrichment for a given entity.                                               |
-| &nbsp;&nbsp;`Disseminate files by email`                | Ability to send a PDF/HTML generated as a Fintel to a dissemination list.               |
-| `Access dashboards`                                     | Access to existing custom dashboards.                                                   |
-| &nbsp;&nbsp;`Create / Update dashboards`                | Create and update custom dashboards.                                                    |
-| &nbsp;&nbsp;&nbsp;&nbsp;`Delete dashboards`             | Delete existing custom dashboards.                                                      |
-| &nbsp;&nbsp;&nbsp;&nbsp;`Manage public dashboards`      | Manage public dashboards.                                                               |
-| `Access investigations`                                 | Access to existing investigations.                                                      |
-| &nbsp;&nbsp;`Create / Update investigations`            | Create and update investigations.                                                       |
-| &nbsp;&nbsp;&nbsp;&nbsp;`Delete investigations`         | Delete existing investigations.                                                         |
-| `Access connectors`                                     | Read information in the `Data > Connectors` section.                                    |
-| &nbsp;&nbsp;`Manage connector state`                    | Reset the connector state to restart ingestion from the beginning.                      |
-| `Connectors API usage: register, ping, export push ...` | Connectors specific permissions for register, ping, push export files, etc.             |
-| `Access data sharing`                                   | Access and consume data such as TAXII collections, CSV feeds and live streams.          |
-| &nbsp;&nbsp;`Manage data sharing`                       | Share data such as TAXII collections, CSV feeds and live streams or custom dashboards.  |
-| `Access ingestion`                                      | Access (read only) remote OCTI streams, TAXII feeds, RSS feeds, CSV feeds.              |
-| &nbsp;&nbsp;`Manage ingestion`                          | Create, update, delete any remote OCTI streams, TAXII feeds, RSS feeds, CSV feeds.      |
-| `Manage data mappers`                                   | Create, update and delete CSV & JSON mappers.                                           |
-| `Use Playbooks`                                         | Use Playbooks (enroll an entity in a playbook).                                                                         |
-| &nbsp;&nbsp;`Manage Playbooks`                          | Manage Playbooks.                                                                       |
-| `Access to admin functionalities`                       | Parent capability allowing users to only view the settings.                             |
-| &nbsp;&nbsp;`Access administration parameters`          | Access and manage overall parameters of the platform in `Settings > Parameters`.        |
-| &nbsp;&nbsp;`Manage credentials`                        | Access and manage roles, groups, users, organizations and security policies.            |
-| &nbsp;&nbsp;`Manage marking definitions`                | Update and delete marking definitions.                                                  |
-| &nbsp;&nbsp;`Manage customization`                      | Customize entity types, rules, notifiers retention policies and decays rules.           |
-| &nbsp;&nbsp;`Manage taxonomies`                         | Manage labels, kill chain phases, vocabularies, status templates, cases templates.      |
-| &nbsp;&nbsp;`Manage XTM hub`                            | Manage enrollment of the OpenCTI platform into XTMHub.                                  |
-| &nbsp;&nbsp;`Access to security activity`               | Access to activity log.                                                                 |
-| &nbsp;&nbsp;`Access to file indexing`                   | Manage file indexing.                                                                   |
-| &nbsp;&nbsp;`Access to support`                         | Generate and download support packages.                                                 |
+| Capability                                              | Description                                                                                                           |
+|:--------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------|
+| `Allow modification of sensitive configuration`         | Ability to perform changes on elements under Danger Zone.                                                             |
+| `Bypass all capabilities`                               | Just bypass everything including data segregation and enforcements.                                                   |
+| `Access knowledge`                                      | Access in read-only to all the knowledge in the platform.                                                             |
+| &nbsp;&nbsp;`Access to collaborative creation`          | Create notes and opinions (and modify its own) on entities and relations.                                             |
+| &nbsp;&nbsp;`Can use web interface export functions`    | Ability to download widgets/graphs... as images/PDF.                                                                  |
+| &nbsp;&nbsp;`Create / Update knowledge`                 | Create and update existing entities and relationships.                                                                |
+| &nbsp;&nbsp;&nbsp;&nbsp;`Restrict organization access`  | Share entities and relationships with other organizations.                                                            |
+| &nbsp;&nbsp;&nbsp;&nbsp;`Delete knowledge`              | Delete entities and relationships (and merge data).                                                                   |
+| &nbsp;&nbsp;&nbsp;&nbsp;`Manage authorized members`     | Restrict the access to an entity to a user, group or organization.                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;`Bypass enforced reference`     | If external references enforced in a type of entity, be able to bypass the enforcement.                               |
+| &nbsp;&nbsp;&nbsp;&nbsp;`Bypass mandatory fields`       | Bypass any custom fields marked as mandatory in entity customization.                                                 |
+| &nbsp;&nbsp;`Upload knowledge files`                    | Upload files in the `Data` and `Content` section of entities.                                                         |
+| &nbsp;&nbsp;`Import knowledge`                          | Trigger the ingestion of an uploaded file.                                                                            |
+| &nbsp;&nbsp;`Download knowledge export`                 | Download the exports generated in the entities (in the `Data` section).                                               |
+| &nbsp;&nbsp;&nbsp;&nbsp;`Generate knowledge export`     | Trigger the export of the knowledge of an entity.                                                                     |
+| &nbsp;&nbsp;`Ask for knowledge enrichment`              | Trigger an enrichment for a given entity.                                                                             |
+| &nbsp;&nbsp;`Disseminate files by email`                | Ability to send a PDF/HTML generated as a Fintel to a dissemination list.                                             |
+| `Access dashboards`                                     | Access to existing custom dashboards.                                                                                 |
+| &nbsp;&nbsp;`Create / Update dashboards`                | Create and update custom dashboards.                                                                                  |
+| &nbsp;&nbsp;&nbsp;&nbsp;`Delete dashboards`             | Delete existing custom dashboards.                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;`Manage public dashboards`      | Manage public dashboards.                                                                                             |
+| `Access investigations`                                 | Access to existing investigations.                                                                                    |
+| &nbsp;&nbsp;`Create / Update investigations`            | Create and update investigations.                                                                                     |
+| &nbsp;&nbsp;&nbsp;&nbsp;`Delete investigations`         | Delete existing investigations.                                                                                       |
+| `Access connectors`                                     | Read information in the `Data > Connectors` section.                                                                  |
+| &nbsp;&nbsp;`Manage connector state`                    | Reset the connector state to restart ingestion from the beginning.                                                    |
+| `Connectors API usage: register, ping, export push ...` | Connectors specific permissions for register, ping, push export files, etc.                                           |
+| `Access data sharing`                                   | Access and consume data such as TAXII collections, CSV feeds and live streams.                                        |
+| &nbsp;&nbsp;`Manage data sharing`                       | Share data such as TAXII collections, CSV feeds and live streams or custom dashboards.                                |
+| `Access ingestion`                                      | Access (read only) remote OCTI streams, TAXII feeds, RSS feeds, CSV feeds.                                            |
+| &nbsp;&nbsp;`Manage ingestion`                          | Create, update, delete any remote OCTI streams, TAXII feeds, RSS feeds, CSV feeds.                                    |
+| `Use Playbooks`                                         | Use Playbooks (enroll an entity in a playbook).                                                                       |
+| &nbsp;&nbsp;`Manage Playbooks`                          | Manage Playbooks.                                                                                                     |
+| `Access to admin functionalities`                       | Parent capability allowing users to only view the settings.                                                           |
+| &nbsp;&nbsp;`Access administration parameters`          | Access and manage overall parameters of the platform in `Settings > Parameters`.                                      |
+| &nbsp;&nbsp;`Manage credentials`                        | Access and manage roles, groups, users, organizations and security policies.                                          |
+| &nbsp;&nbsp;`Manage marking definitions`                | Update and delete marking definitions.                                                                                |
+| &nbsp;&nbsp;`Manage customization`                      | Customize entity types, rules, notifiers retention policies and decays rules.                                         |
+| &nbsp;&nbsp;`Manage taxonomies`                         | Manage labels, kill chain phases, vocabularies, status templates, cases templates.                                    |
+| &nbsp;&nbsp;`Manage XTM hub`                            | Manage enrollment of the OpenCTI platform into XTMHub.                                                                |
+| &nbsp;&nbsp;`Access to security activity`               | Access to activity log.                                                                                               |
+| &nbsp;&nbsp;`Access to file indexing`                   | Manage file indexing.                                                                                                 |
+| &nbsp;&nbsp;`Access to support`                         | Generate and download support packages.                                                                               |
 
 
 ### Manage roles
