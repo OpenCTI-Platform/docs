@@ -84,7 +84,7 @@ You can quickly add some of these unknown values in the platform: select the wan
 
 ![Bulk search results for unknown entities](assets/bulk-search-unknown.png)
 
-You are redirected to the `Import data` pop up, prefilled with a file containing the selected unknown values. You can continue the steps, create a file, add it in a draft, etc.
+You are redirected to the `Import data` pop-up, prefilled with a file containing the selected unknown values. You can continue the steps, create a file, add it in a draft, etc.
 
 ![Bulk search import of unknown entities](assets/bulk-search-unknown-import.png)
 
