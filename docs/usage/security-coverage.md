@@ -1,26 +1,45 @@
 # Security Coverage
 
-From a report, you can request an evaluation of the exposure of computer systems to the contents
-of the report. This evaluation is called a "Security Coverage".
+When considering an entity such as a report or an incident response, it is useful to evaluate whether 
+our own computer systems are well protected against the threats described therein. A Security Coverage
+models this evaluation to measure your actual exposure and validate your security posture.
 
-A Security Coverage is linked to its parent report, or can be found under **Analysis > Security Coverages**.
+A Security Coverage can be created in relation to the following entities in OpenCTI:
+
+* Campaign
+* Grouping
+* Incident
+* Incident Response
+* Intrusion Set
+* Report
+
+Security Coverages can be found under **Analysis > Security Coverages**, and are linked to their respective
+parent entity.
 
 ## Creating a Security Coverage
-When you navigate to a report in OpenCTI, notice the "Add Security Coverage" button in the upper right corner of
-the page.
+
+You can create a Security Coverage from scratch under **Analysis > Security Coverages** (in which case the form will
+prompt for selecting the parent entity), or directly from the context of a compatible entity.
+
+When you navigate to one of the compatible entities in OpenCTI, notice the "Add Security Coverage" button in the upper
+right corner of the page.
 
 ![Add Security Coverage button](assets/add-security-coverage-button.png)
 
-It prompts a panel to open to create the Security Coverage:
+It prompts a panel to open to create the Security Coverage. Notice that the Security Coverage can be carried out
+in one of two manners: Automated and Manual.
+
+An automated Security Coverage leverages another component of the XTM Suite: OpenAEV. It will be responsible for 
+automatically performing the relevant tests and feed the results back to OpenCTI with no human intervention.
+
+Conversely, a manual Security Coverage will allow for inputting the observed level of exposure directly into OpenCTI. 
 
 ![Security Coverage creation form](assets/security-coverage-creation-form-1.png)
-
-![Security Coverage creation form](assets/security-coverage-creation-form-2.png)
 
 ## Automated Security Coverage via XTM Suite (OpenAEV)
 
 As part of the XTM Suite, OpenCTI can request an automated evaluation of the exposure of computer systems
-from a report, via a connected OpenAEV instance.
+from one of the compatible entities, via a connected OpenAEV instance.
 
 !!! note "Report entities eligible for automated coverage"
 
@@ -60,6 +79,12 @@ OpenAEV selects the best tests relevant to each of the eligible entities in the 
 and runs a periodic simulation to assess the coverage. Please refer to the [OpenAEV documentation](https://docs.openaev.io/) for
 extensive details on the inner working of this process.
 
+!!! note "Periodic simulations"
+
+    OpenAEV will trigger a simulation to assess the current exposure to the related threats periodically. The period
+    is set to the value of the "Coverage validity period" parameter as specified during the creation of the Security
+    Coverage in OpenCTI.
+
 Whenever a simulation is completed, the coverage results are sent back to OpenCTI and displayed automatically
 in the Security Coverage page.
 
@@ -69,9 +94,10 @@ From the Security Coverage page, you can check the status of the Enrichment Conn
 
 ![Security Coverage enrichment menu](assets/security-coverage-enrichment-menu.png)
 
-This opens a panel where are listed the attempts at actioning OpenAEV for fulfilling the automated coverage assessment. It is possible
-to retrigger the action manually by pressing the circular arrow icon (top right in the panel), in case the previous attempt had failed
-or if it is necessary to request an updated assessment (e.g. because the contents of the linked report has changed):
+This opens a panel where are listed the attempts at actioning OpenAEV for fulfilling the automated coverage assessment.
+It is possible to retrigger the action manually by pressing the circular arrow icon (top right in the panel), in case
+the previous attempt had failed or if it is necessary to request an updated assessment (e.g. because the contents of the
+linked report has changed):
 
 ![Security Coverage enrichment retrigger](assets/security-coverage-enrichment-retrigger.png)
 
