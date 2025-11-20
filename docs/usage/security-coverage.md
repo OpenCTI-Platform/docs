@@ -13,12 +13,12 @@ A Security Coverage can be created in relation to the following entities in Open
 * Intrusion Set
 * Report
 
-Security Coverages can be found under **Analysis > Security Coverages**, and are linked to their respective
+Security Coverages can be found under **Analyses > Security Coverages**, and are linked to their respective
 parent entity.
 
 ## Creating a Security Coverage
 
-You can create a Security Coverage from scratch under **Analysis > Security Coverages** (in which case the form will
+You can create a Security Coverage from scratch under **Analyses > Security Coverages** (in which case the form will
 prompt for selecting the parent entity), or directly from the context of a compatible entity.
 
 When you navigate to one of the compatible entities in OpenCTI, notice the "Add Security Coverage" button in the upper
@@ -29,8 +29,9 @@ right corner of the page.
 It prompts a panel to open to create the Security Coverage. Notice that the Security Coverage can be carried out
 in one of two manners: Automated and Manual.
 
-An automated Security Coverage leverages another component of the XTM Suite: OpenAEV. It will be responsible for 
-automatically performing the relevant tests and feed the results back to OpenCTI with no human intervention.
+An automated Security Coverage leverages another component of the XTM Suite: [OpenAEV](https://docs.openaev.io/).
+It will be responsible for automatically performing the relevant tests and feed the results back to OpenCTI with no
+human intervention.
 
 Conversely, a manual Security Coverage will allow for inputting the observed level of exposure directly into OpenCTI. 
 
@@ -55,10 +56,10 @@ from one of the compatible entities, via a connected OpenAEV instance.
 ### Prerequisites
 In order to enable this feature, you must first ensure the following items:
 
-* An active OpenAEV instance ([please refer to the dedicated documentation](https://docs.openaev.io/))
-* That same instance be configured as an Enrichment Connector ([see the specific documentation](https://docs.openaev.io/latest/usage/xtm_suite_connector/))
+* An active OpenAEV instance, [here is the dedicated documentation](https://docs.openaev.io/)
+* That same instance must be configured as an Enrichment Connector ([see the specific documentation](https://docs.openaev.io/latest/usage/xtm_suite_connector/))
 
-When the above is completed, you should be seeing OpenAEV being listed as an Enrichment Connector:
+When the above is completed, you should see OpenAEV being listed as an Enrichment Connector in **Data > Ingestion** :
 
 ![OpenAEV Coverage connector listing](assets/openaev-coverage-connector.png)
 
@@ -103,14 +104,14 @@ linked report has changed):
 
 ## Manual Security Coverage
 
-If OpenAEV is not available for the automated Security Coverage, you can create a Security Coverage in which you will
-be able to provide the assessed results manually.
+If OpenAEV is not available for the automated Security Coverage, you can create a Security Coverage and provide the
+assessed results manually.
 
 ### Creating the manual Security Coverage
 
 In the Security Coverage creation form, choose **Manual Input** to create a manually driven Security Coverage.
 
-A manual Security Coverage requires the user to specify which metrics are going to be manually assessed, in order for
+A manual Security Coverage requires specifying which metrics are going to be manually assessed, in order for
 the creation form to be valid:
 
 ![Security Coverage manual input coverage metrics](assets/security-coverage-manual-input-coverage-metrics.png)
