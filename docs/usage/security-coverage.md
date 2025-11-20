@@ -14,12 +14,12 @@ A Security Coverage can be created in relation to the following entities in Open
 * Report
 
 Security Coverages can be found under **Analyses > Security Coverages**, and are linked to their respective
-parent entity.
+related entity.
 
 ## Creating a Security Coverage
 
 You can create a Security Coverage from scratch under **Analyses > Security Coverages** (in which case the form will
-prompt for selecting the parent entity), or directly from the context of a compatible entity.
+prompt for selecting the related entity), or directly from the context of a compatible entity.
 
 When you navigate to one of the compatible entities in OpenCTI, notice the "Add Security Coverage" button in the upper
 right corner of the page.
