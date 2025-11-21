@@ -85,10 +85,22 @@ You can import a playbook in OpenCTI coming either from your own platform or ano
    - Verify that the target exsits in your platform
 
 ### Listen knowledge events
+
 With this event source, the playbook will be triggered on any knowledge event (create, update or delete) that matches the selected filters.
 Note that you are limited to a subset of filters available for stream events that contain STIX data objects.
 
 ![Listening creation event for TLP:GREEN IPs and domain names](assets/playbook_listen.png)
+
+### Listen PIR events
+
+This event source is focused on listening to PIR events. It allows you to select the PIRs you want to monitor and choose the specific cases in which the playbook will be triggered using the corresponding toggles:
+- A new entity is flagged in a selected PIR
+- An entity is unflagged from a selected PIR
+- An entity from a selected PIR is updated
+
+![Listening PIR events](assets/listen-pir-events-in-playbook.png)
+
+With the PIR Score filter, you can choose to listen to events concerning only entities with a specific PIR score corresponding to at least one of the selected PIRs.
 
 ### Query knowledge on a regular basis
 
