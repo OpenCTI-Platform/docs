@@ -99,9 +99,26 @@ This event source is focused on listening to PIR events. It allows you to select
 - An entity is unflagged from a selected PIR
 - An entity from a selected PIR is updated
 
+> Note that if you do not select any PIR, it means that you are interested in all of them.
+
 ![Listening PIR events](assets/listen-pir-events-in-playbook.png)
 
 With the PIR Score filter, you can choose to listen to events concerning only entities with a specific PIR score corresponding to at least one of the selected PIRs.
+
+#### A new entity is flagged in a selected PIR
+
+This toggle can be used to trigger the playbook when an entity become of interest for at least one of the selected PIR.
+Or if you haven't selected any PIR, trigger the playbook any time an entity become of interest for any PIR.
+
+#### An entity is unflagged from a selected PIR
+
+This toggle can be used to trigger the playbook when an entity is no more of interest for at least one of the selected PIR.
+Or if you haven't selected any PIR, trigger the playbook any time an entity is no more of interest for any PIR.
+
+#### An entity from a selected PIR is updated
+
+It can be used to trigger the playbook when an entity of interest for at least one of the selected PIR has been updated.
+Or if you haven't selected any PIR, trigger the playbook any time an entity of interest has been updated, no matter which PIR.
 
 ### Query knowledge on a regular basis
 
