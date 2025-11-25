@@ -94,9 +94,8 @@ Note that you are limited to a subset of filters available for stream events tha
 ### Listen PIR events
 
 This event source is focused on listening to PIR events. It allows you to select the PIRs you want to monitor and choose the specific cases in which the playbook will be triggered using the corresponding toggles:
-
-- A new entity is flagged in a selected PIR
-- An entity is unflagged from a selected PIR
+- A new entity becomes part of a selected PIR
+- An entity is no longer part of a selected PIR
 - An entity from a selected PIR is updated
 
 > Note: By default, if no PIR is selected, all available PIRs will be applied.
@@ -105,20 +104,23 @@ This event source is focused on listening to PIR events. It allows you to select
 
 The PIR Score filter allows you to monitor events only for entities with a PIR score matching at least one of your selected PIRs.
 
-#### A new entity is flagged in a selected PIR
+#### A new entity is added to a selected PIR
 
 Enable this toggle to trigger the playbook when an entity becomes of interest for at least one of the selected PIRs.
-Or if you haven't selected any PIR, trigger the playbook any time an entity become of interest for any PIR.
+
+> Note: By default, if no PIR is selected, all available PIRs will be applied.
 
 #### An entity is no longer part of a selected PIR
 
 This toggle triggers the playbook when an entity is no longer part of at least one selected PIR.
-Or if you haven't selected any PIR, trigger the playbook any time an entity is no more of interest for any PIR.
+
+> Note: By default, if no PIR is selected, all available PIRs will be applied.
 
 #### An entity from a selected PIR is updated
 
 This triggers the playbook when an entity that is part of at least one selected PIR is updated.
-Or if you haven't selected any PIR, trigger the playbook any time an entity of interest has been updated, no matter which PIR.
+
+> Note: By default, if no PIR is selected, all available PIRs will be applied.
 
 ### Query knowledge on a regular basis
 
