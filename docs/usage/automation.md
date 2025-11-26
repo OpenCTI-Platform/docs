@@ -94,9 +94,11 @@ Note that you are limited to a subset of filters available for stream events tha
 ### Listen PIR events
 
 This event source is focused on listening to PIR events. It allows you to select the PIRs you want to monitor and choose the specific cases in which the playbook will be triggered using the corresponding toggles:
+
 - A new entity becomes part of a selected PIR
 - An entity is no longer part of a selected PIR
 - An entity from a selected PIR is updated
+- An entity is linked to an other entity that is part of a selected PIR
 
 > Note: By default, if no PIR is selected, all available PIRs will be applied.
 
@@ -119,6 +121,12 @@ This toggle triggers the playbook when an entity is no longer part of at least o
 #### An entity from a selected PIR is updated
 
 This triggers the playbook when an entity that is part of at least one selected PIR is updated.
+
+> Note: By default, if no PIR is selected, all available PIRs will be applied.
+
+#### An entity is linked to an other entity that is part of a selected PIR
+
+This toggle triggers the playbook when a new relationship is created between an entity and an other one that is part of at least one selected PIR.
 
 > Note: By default, if no PIR is selected, all available PIRs will be applied.
 
