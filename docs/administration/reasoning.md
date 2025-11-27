@@ -136,17 +136,17 @@ The rules engine comprises a set of predefined rules (named inference rules) tha
 
 #### Targeting propagation via location
 
-| Conditions                                                                    | Creations                         |
-|:------------------------------------------------------------------------------|:----------------------------------|
-| An Entity targets a Location B and this Location B is located at a Location C | The Entity targets the Location C |
+| Conditions                                                                 | Creations                           |
+|:---------------------------------------------------------------------------|:------------------------------------|
+| An Entity targets an Entity B and this Entity B is located at a Location C | The Entity A targets the Location C |
 
 ![Targeting_via_location](assets/targeting_via_location.png)
 
 #### Targeting propagation when located
 
-| Conditions                                                                | Creations                           |
-|:--------------------------------------------------------------------------|:------------------------------------|
-| An Entity A targets an Entity B and this target is located at Location D. | The Entity A targets the Location D |
+| Conditions                                                                  | Creations                           |
+|:----------------------------------------------------------------------------|:------------------------------------|
+| An Entity A targets an Entity B and this Entity B is located at Location D | The Entity A targets the Location D |
 
 ![Targeting_when_located](assets/targeting_when_located.png)
 
