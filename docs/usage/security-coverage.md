@@ -33,7 +33,7 @@ An automated Security Coverage leverages another component of the XTM Suite: [Op
 It will be responsible for automatically performing the relevant tests and feed the results back to OpenCTI with no
 human intervention.
 
-Conversely, a manual Security Coverage will allow for inputting the observed level of exposure directly into OpenCTI. 
+Conversely, a manual security coverage assessment can also be performed, allowing you to conduct the analysis yourself and directly enter the results into OpenCTI.
 
 ![Security Coverage creation form](assets/security-coverage-creation-form-1.png)
 
