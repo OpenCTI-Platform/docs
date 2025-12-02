@@ -66,4 +66,55 @@ Example of equivalent configuration in a JSON file:
 }
 ```
 
+
+## Certificate Separation
+
+⚠️ **Important**: Proxy certificates are separate from OpenCTI server certificates.
+
+| Purpose | Configuration Keys | Used For |
+|---------|-------------------|----------|
+| **Proxy certificates** | `https_proxy_ca`<br>`https_proxy_reject_unauthorized` | Validating HTTPS connections **through the proxy** |
+| **OpenCTI server certificates** | `app:https_cert:ca`<br>`app:https_cert:reject_unauthorized` | TLS for the OpenCTI web server itself |
+
+**Do not confuse these two configurations.**
+
+---
+
+### Troubleshooting - Connector Integration
+
+### Automatic Injection
+
+When proxy is enabled, XTM Composer automatically injects these environment variables into all managed connector containers:
+
+- `HTTP_PROXY`
+- `HTTPS_PROXY`
+- `NO_PROXY`
+- `HTTPS_CA_CERTIFICATES` (when `https_proxy_ca` is configured)
+
+### Verification
+
+Use this GraphQL query to verify proxy settings are injected:
+
+```graphql
+query Connector($id: String!) {
+  connector(id: $id) {
+    id
+    name
+    is_managed
+    manager_contract_configuration {
+      key
+      value
+    }
+  }
+}
+```
+
+Variables:
+```json
+{ "id": "your-connector-id" }
+```
+
+Look for proxy-related keys in `manager_contract_configuration`.
+
+
 See also: [Private Registry Authentication](registry-authentification.md)
