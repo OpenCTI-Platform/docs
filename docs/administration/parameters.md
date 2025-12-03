@@ -70,8 +70,6 @@ In this section, administrators can customize OpenCTI themes to match their orga
 4. Save your theme
 5. Apply it to see changes immediately across the application
 
----
-
 ## Managing themes
 
 You can create custom themes from scratch or import existing theme configurations in JSON format.
@@ -156,8 +154,6 @@ To import a pre-configured theme:
 
 3. The theme will be added to your theme list and ready to apply
 
----
-
 ### Exporting a theme
 
 To save a theme configuration for backup or sharing:
@@ -175,7 +171,7 @@ To activate a theme:
 
 1. Navigate to **Settings > Configuration > Theme customization**
 2. Click on the theme you want to use from the themes list
-3. The theme is applied immediately across the application for all users (need to refresh their page)
+3. The theme is applied immediately across the application for all users using the default theme in the user profile settings (need to refresh their page)
 
 ![Apply Theme](assets/theme-apply.png)
 
