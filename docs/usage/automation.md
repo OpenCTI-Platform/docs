@@ -75,8 +75,8 @@ You can import a playbook in OpenCTI coming either from your own platform or ano
 |  Listen knowledge events, Manual enrollment, Query knowledge on regular basis, Match knowledge, Reduce knowledge, Manipulate knowledge | Creator                                | verify that you have existing users in your platform                                          | create it   |
 |  Enrich through connector                                                                                                              | Connector                              |  Connector exists in your platform                                                            | create it   |
 |  Container wrapper                                                                                                                     | Task template                          |  Task template exists in your platform                                                        | create it   |
-|  Send to notifier                                                                                                                      | Notifier                               |  Notifer exists in your platform                                                              | create it   |
-|  ESend to notifier                                                                                                                     | Target                                 |  Target exists in your platform                                                               | create it   |
+|  Send to notifier                                                                                                                      | Notifier                               |  Notifier exists in your platform                                                              | create it   |
+|  Send to notifier                                                                                                                     | Target                                 |  Target exists in your platform                                                               | create it   |
 
 
 
@@ -135,7 +135,7 @@ If you check the option "Only last modified entities after the last run', then t
 
 ##### Specificities of the component
 
-**Include all entities in a signel bundle**: this options allows you to add all entities found in a single bundle. This is useful if you want for instance to send a single email containing multiple entities at once.
+**Include all entities in a single bundle**: this options allows you to add all entities found in a single bundle. This is useful if you want for instance to send a single email containing multiple entities at once.
 
 
 ![Querying last incidents](assets/Playbook_query_knowledge.png)
@@ -245,58 +245,62 @@ When the primary entity you listen to is an incident & then use the "Container W
 ### Share with organizations
 
 Will share every entity in the received STIX 2.1 bundle with Organizations you configured. Your platform needs to have declared a platform main organization in Settings/Parameters.
-You can decice to share only the main triggering element, or the whole bundle thanks to the toogle.
+You can decide to share only the main triggering element, or the whole bundle thanks to the toggle.
 
-Compared to other components, this component **makes direct call to the database**: this means that the query will be applied before the "send to ingestion" step. As a result, if, **wthin the same playbook**, you attempt to create a new entity (via the wrap in container step) and share the entity, the playbook will fail. Indeed, the entity will not yet be created, since it won't be sent to ingestion yet. You need to share the entity in another playbook to achieve this use case.
+Compared to other components, this component **makes direct call to the database**: this means that the query will be applied before the "send to ingestion" step. As a result, if, **within the same playbook**, you attempt to create a new entity (via the wrap in container step) and share the entity, the playbook will fail. Indeed, the entity will not yet be created, since it won't be sent to ingestion yet. You need to share the entity in another playbook to achieve this use case.
+
+More details on [organization segregation](https://docs.opencti.io/latest/administration/organization-segregation/) 
 
 #### Unshare with organizations
 
 Will unshare every entity in the received STIX 2.1 bundle with Organizations you configured. Your platform needs to have declared a platform main organization in Settings/Parameters.
-You can decice to unshare only the main triggering element, or the whole bundle thanks to the toogle.
+You can decide to share only the main triggering element, or the whole bundle thanks to the toggle.
 
-Compared to other components, this component **makes direct call to the database**: this means that the query will be applied before the "send to ingestion" step. As a result, if, **wthin the same playbook**, you attempt to create a new entity (via the wrap in container step) and unshare the entity, the playbook will fail. Indeed, the entity will not yet be created, since it won't be sent to ingestion yet. You need to unshare the entity in another playbook to achieve this use case.
+Compared to other components, this component **makes a direct call to the database**: this means that the query will be applied before the "send to ingestion" step. As a result, if, **within the same playbook**, you attempt to create a new entity (via the wrap in container step) and unshare the entity, the playbook will fail. Indeed, the entity will not yet be created, since it won't be sent to ingestion yet. You need to unshare the entity in another playbook to achieve this use case.
 
 #### Manage Access Restriction
 
-Will apply authorize members on the bundle within the playbook. It is only compatible with entities supporting authorize members (Containers, Drafts).
-You can decide to only apply restriction on the triggering element or the whole bundle by enabling the toggle.
+Will apply authorized members on the bundle within the playbook. It is only compatible with entities supportsing authorized members (Containers, Drafts, Organization).
+You can decide to only apply restrictions on the triggering element or the whole bundle by enabling the toggle.
+
+More details on [Authorize members](https://docs.opencti.io/latest/administration/authorized-members/?h=me)
 
 ##### Specificities of the component
-Compared to other components, this component **makes direct call to the database**: this means that the query will be applied before the "send to ingestion" step. As a result, if, **wthin the same playbook**, you attempt to create a new entity (via the wrap in container step) and apply authorize members, the playbook will fail. Indeed, the entity will not yet be created, since it won't be sent to ingestion yet. You need to apply the authorize members in another playbook to achieve this use case.
+Compared to other components, this component **makes direct call to the database**: this means that the query will be applied before the "send to ingestion" step. As a result, if, **within the same playbook**, you attempt to create a new entity (via the wrap in container step) and apply authorized members, the playbook will fail. Indeed, the entity will not yet be created, since it won't be sent to ingestion yet. You need to apply the authorized members in another playbook to achieve this use case.
 
-**This component supports dynamic variables**
+**This component supportss dynamic variables**
 
-- Dynamic from the main enity triggering the playbook: Will apply the authorize members on the coresponding user of the field you chose, based on the triggering entity only. You can chose among:
-   - Author (organisation): If your author is an organisation, you will be able to apply authorize members directly on the organisation in author.
-   - Creator: Will apply the authorize members on all users in Creator field.
-   - Assignee: Will apply the authorize members on all users in Asignee field.
-   - Participant: Will apply the authorize members on all users in Participants field.
+- Dynamic from the main entity triggering the playbook: Will apply the authorized members on the corresponding user of the field you choose, based on the triggering entity only. you can choose among:
+   - Author (organisation): If your author is an organisation, you will be able to apply authorized members directly on the organisation in author.
+   - Creator: Will apply the authorized members on all users in Creator field.
+   - Assignee: Will apply the authorized members on all users in Asignee field.
+   - Participant: Will apply the authorized members on all users in Participants field.
 
- - Dynamic from the object in the bundle of the playbook: will apply the authorize members on all the corresponding users of all the entities contained in your bundle and not only the triggering entity. 
-    - Organization: all users belonging to the organizations in your bundle will be added as authorize members.
+ - Dynamic from the object in the bundle of the playbook: will apply the authorized members on all the corresponding users of all the entities contained in your bundle and not only the triggering entity. 
+    - Organization: all users belonging to the organizations in your bundle will be added as authorized members.
   
-**The component also support static fields, used for authorize members: users, groups & organizations.**
+**The component also supportss static fields, used for authorized members: users, groups & organizations.**
 
 #### Remove Access Restriction
-Compared to other components, this component **makes direct call to the database**: this means that the query will be applied before the "send to ingestion" step. As a result, if, **wthin the same playbook**, you attempt to create a new entity (via the wrap in container step) and remove default authorize members, the playbook will fail. Indeed, the entity will not yet be created, since it won't be sent to ingestion yet. You need to remove the authorize members in another playbook to achieve this use case.
+Compared to other components, this component **makes direct call to the database**: this means that the query will be applied before the "send to ingestion" step. As a result, if, **within the same playbook**, you attempt to create a new entity (via the wrap in container step) and remove default authorized members, the playbook will fail. Indeed, the entity will not yet be created, since it won't be sent to ingestion yet. You need to remove the authorized members in another playbook to achieve this use case.
 
-Will remove authorize members on the bundle within the playbook. It is only compatible with entities supporting authorize members (Containers, Drafts).
+Will remove authorized members on the bundle within the playbook. It is only compatible with entities supportsing authorized members (Containers, Drafts).
 You can decide to only remove restriction on the triggering element or the whole bundle by enabling the toggle.
 
 ##### Specificities of the component
 
-**This component supports dynamic variables**
+**This component supportss dynamic variables**
 
-- Dynamic from the main enity triggering the playbook: Will remove the authorize members on the coresponding user of the field you chose, based on the triggering entity only. You can chose among:
-   - Author (organisation): If your author is an organisation, you will be able to remove the organization from the authorize members.
-   - Creator: Will remove all users in creator field from the authorize members.
-   - Assignee: Will remove all users in assignee field from the authorize members.
-   - Participant: Will remove all users in participant field from the authorize members.
+- Dynamic from the main entity triggering the playbook: Will remove the authorized members on the corresponding user of the field you choose, based on the triggering entity only. you can choose among:
+   - Author (organisation): If your author is an organisation, you will be able to remove the organization from the authorized members.
+   - Creator: Will remove all users in creator field from the authorized members.
+   - Assignee: Will remove all users in assignee field from the authorized members.
+   - Participant: Will remove all users in participant field from the authorized members.
 
- - Dynamic from the object in the bundle of the playbook: will remove the authorize members on all the corresponding users of all the entities contained in your bundle and not only the triggering entity. 
-    - Organization: all users belonging to the organizations in your bundle will be remove from authorize members.
+ - Dynamic from the object in the bundle of the playbook: will remove the authorized members on all the corresponding users of all the entities contained in your bundle and not only the triggering entity. 
+    - Organization: all users belonging to the organizations in your bundle will be removed from authorized members.
   
-**The component also support static fields, used for authorize members: users, groups & organizations.**
+**The component also supportss static fields, used for authorized members: users, groups & organizations.**
 
 
 ### Apply predefined rule
@@ -326,22 +330,22 @@ Will generate a Notification each time a STIX 2.1 bundle is received. Note that 
 
 #### Send email from template
 
-Will send an email using the template that you can set in Parameters/security (used for users) to users. You can chose the template you want. 
-T
+Will send an email using the template that you can set in Parameters/security (used for users) to users. you can choose the template you want. 
+
 
 ##### Specificities of the component
 
-**This component supports dynamic variables**
+**This component supportss dynamic variables**
 
-- Dynamic from the main enity triggering the playbook as Target: will send the email using the selected template to the coresponding user of the field you chose, based on the triggering entity only. You can chose among:
-   - Creator: Will send an email using an Email Template to corresponding user.
-   - Assignee: Will send an email using an Email Template to corresponding user.
-   - Participant: Will send an email using an Email Template to corresponding user.
+- Dynamic from the main entity triggering the playbook as Target: will send the email using the selected template to the corresponding user of the field you choose, based on the triggering entity only. you can choose among:
+   - Creator: Will send an email using an Email Template to the corresponding user.
+   - Assignee: Will send an email using an Email Template to the corresponding user.
+   - Participant: Will send an email using an Email Template to the corresponding user.
 
- - Dynamic from the object in the bundle of the playbook as Target: will send the email using the selected template to the coresponding user of the entities contained in your bundle and not only the triggering entity. 
+ - Dynamic from the object in the bundle of the playbook as Target: will send the email using the selected template to the corresponding user of the entities contained in your bundle and not only the triggering entity. 
     - Organization: all users of all organizations contained in your bundle will receive an email.
   
-**The component also support static fields, used for authorize members: users, groups & organizations.**
+**The component also supportss static fields, used for authorized members: users, groups & organizations.**
 
 ### Promote observable to indicator
 
