@@ -14,7 +14,10 @@ Decay exclusion rules can be configured in the "Settings > Customization > Decay
 
 To create a new decay exclusion rule, click on the decay exclusion rule tab. Here you can fnd all your decay exclusion rules. You can create a new one by clicking on create. 
 
+![Decay exclusion rule screen](./assets/decay-exclusion-rule-overview.png)
+
 By **default**, a decay exclusion rule will be created as **Disabled**, unless you change this in the creation drawer.
+
 
 ### Filters available
 Decay exclusion rules offer some filters, to be allow you to be precise in the definition of indicators that should be prevented from Decaying.
@@ -32,6 +35,9 @@ Currently, you can filter on:
 !!! warning "Always add a filter with a value before enabling the decay exclusion rule"
 
     Creating a decay rule without any filter will by default match any IOC created in the platform. As a result, all IOCs will not revoke automatically.
+
+
+![Decay exclusion rule creation](./assets/decay-exclusion-rule-create.png)
 
 ## Events when decay exclusion rule are triggered
 
@@ -67,12 +73,17 @@ To be clear: assuming an IOC is under a specific Decay rule, if the update of th
 
 If your IOC is under a decay exclusion rule, you will notice that the lifecyle button next to the IOC overview differs whether yout IOC is impacted by a Decay rule or by a Decay exclusion rule.
 
+![IOC impacted by a Decay exclsuion rule](./assets/decay-exclusion-rule-ioc-impact.png)
+
+If you have the right, you can even view the rule name & be redirected to the screen of decay exclusion rule, to help you understand (and manage) which rule is impacting which IOC.
+
+![IOC impacted by a Decay exclsuion rule popup](./assets/decay-exclusion-rule-popup.png)
+
 ## How do the various exclusion rules work all together
 
 You can create mutliple decay exclusion rules: there is no notion of order, like the decay rules. Instead, you can consider each rule as a set a filter and each new rule added would correspond to have a "OR" operator between all your filters.
 As a result, you can create multiple decay exclusion rules to create complex filtering group.
 
-If you have the right, you can even view the rule name & be redirected to the screen of decay exclusion rule, to help you understand (and manage) which rule is impacting which IOC.
 
 ## How to remove the decay exclusion rule impacting an IOC
 It's currently not possible. Even if you delete the rule, the IOC would still be impacted by the decay exclusion rule. This is the exact same bahvior than the decay rule. 
