@@ -77,6 +77,9 @@ If you have the right, you can even view the rule name & be redirected to the sc
 ## How to remove the decay exclusion rule impacting an IOC
 It's currently not possible. Even if you delete the rule, the IOC would still be impacted by the decay exclusion rule. This is the exact same bahvior than the decay rule. 
 
+## Changing the filter of a decay exclusion rule 
+Changing the filter of a decay exclusion rule will not impact already impact IOC by this rule.
+This means that even if the filtes are changed and do not match the IOC anymore, the IOC will still be impacted by the exclusion rule.
 
 
 ## Main takeways:
