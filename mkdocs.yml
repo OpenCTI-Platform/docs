@@ -237,7 +237,7 @@ nav:
         - Retention policies: administration/retentions.md
         - Decay rules & Decay Exclusion rules: 
           - Decay rules: administration/decay-rules.md
-          - Decay exclusion rules:
+          - Decay exclusion rules: administration/decay-exclusion-rules.md
         - Exclusion lists: administration/exclusion-lists.md
       - Taxonomies: administration/ontologies.md
       - Activity:
