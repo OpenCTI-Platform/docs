@@ -3,8 +3,8 @@
 Decay exclusion rules are used to automatically exclude some IOCs from our Decay engine. 
 
 Multiple reasons explain the existence this feature: 
-- Some IOC, such as YARA rules, should not expire. Indeed, you always want detection rules to be enabled so that you detection system can always detect any threat.
-- Some IOCs are coming from some sources that already manage the IOCs lifecycle. Therefore, our own decay engine conflict with the source's decay.
+- Some IOCs, such as YARA rules, should not expire. Indeed, you always want detection rules to be enabled so that your detection system can always detect any threat.
+- Some IOCs are coming from some sources that already manage the IOCs lifecycle. Therefore, our own decay engine conflicts with the source's decay.
 
 Without this feature, the only way to avoid some IOCs to decay, the only solution was to disable the [decay manager](https://docs.opencti.io/latest/deployment/managers/?h=mana#indicator-decay-manager). But this would prevent any IOC for decaying, which was not a suitable solution.
 
@@ -12,7 +12,7 @@ Without this feature, the only way to avoid some IOCs to decay, the only solutio
 
 Decay exclusion rules can be configured in the "Settings > Customization > Decay rule" menu. This screen contains two tabs: decay rules & decay exclusion rules.
 
-To create a new decay exclusion rule, click on the decay exclusion rule tab. Here you can fnd all your decay exclusion rules. You can create a new one by clicking on create. 
+To create a new decay exclusion rule, click on the decay exclusion rule tab. Here you can find all your decay exclusion rules. You can create a new one by clicking on create. 
 
 ![Decay exclusion rule screen](./assets/decay-exclusion-rule-overview.png)
 
@@ -20,7 +20,7 @@ By **default**, a decay exclusion rule will be created as **Disabled**, unless y
 
 
 ### Filters available
-Decay exclusion rules offer some filters, to be allow you to be precise in the definition of indicators that should be prevented from Decaying.
+Decay exclusion rules offer some filters, to allow you to be precise in the definition of indicators that should be prevented from Decaying.
 
 Currently, you can filter on: 
 - Creator
@@ -34,7 +34,7 @@ Currently, you can filter on:
 
 !!! warning "Always add a filter with a value before enabling the decay exclusion rule"
 
-    Creating a decay rule without any filter will by default match any IOC created in the platform. As a result, all IOCs will not revoke automatically.
+    Creating a decay exclusion rule without any filter will by default match any IOC created in the platform. As a result, all IOCs will not revoke automatically.
 
 
 ![Decay exclusion rule creation](./assets/decay-exclusion-rule-create.png)
@@ -42,21 +42,23 @@ Currently, you can filter on:
 ## Events when decay exclusion rule are triggered
 
 ### Creation
-Both decay and decay exclusion rules evaluates IOCw when they are created. In other words, creating an IOC will trigger either a decay rule or an exclusion decay rule (assuming your manager is enabled). 
+Both decay and decay exclusion rules evaluate IOCs when they are created. In other words, creating an IOC will trigger either a decay rule or a decay exclusion rule (assuming your manager is enabled). 
 
 #### Decay rules & Decay exclusion rules at creation: priority
 
-Currently exclusion decay rules are taking over Decay rules: this means that if an IOC **created** matches both a Decay rule and a Decay exclusion rule, **the IOC will be under the decay exclusion rule (and will not revoke automatically)**
+Currently decay exclusion rules are taking over Decay rules: this means that if an IOC **created** matches both a Decay rule and a Decay exclusion rule, **the IOC will be under the decay exclusion rule (and will not revoke automatically)**
 
 #### IOC created as revoked=TRUE will also be impacted by Exclusion decay rules
-Sometimes, a source creates an IOC as revoked. However, the same IOC can be created or even upserted by another source and marked as revoked = FALSE. To avoid any issue, an IOC created as revoked will always be impacted by Decay exclusion rule.
+Sometimes, a source creates an IOC as revoked. 
+However, the same IOC can be created or even upserted by another source and marked as revoked = FALSE. 
 
+Regardless of the value of the revoked field, the IOC will always be evaluated against decay exclusion rules.
 
 ### Upsert
-Upserting an IOC would also trigger both decay rules & decay exclusion rules. As a result, this is where defining the **correct filters** is crucial to avoid any unwanted beahvior. 
+Upserting an IOC would also trigger both decay rules & decay exclusion rules. As a result, this is where defining the **correct filters** is crucial to avoid any unwanted behavior. 
 
 #### Decay rules & Decay exclusion rules at upsert: priority
-Currently exclusion decay rules are taking over Decay rules: this means that if an IOC **upserted** matches both a Decay rule and a Decay exclusion rule, **the IOC will be under the decay exclusion rule (and will not revoke automatically)**
+Currently decay exclusion rules are taking over Decay rules: this means that if an IOC **upserted** matches both a Decay rule and a Decay exclusion rule, **the IOC will be under the decay exclusion rule (and will not revoke automatically)**
 
 #### Example of expected behavior that can occur
 - Decay Exclusion Rule filters on creator = [c] Sekoia
@@ -81,21 +83,21 @@ If you have the right, you can even view the rule name & be redirected to the sc
 
 ## How do the various exclusion rules work all together
 
-You can create mutliple decay exclusion rules: there is no notion of order, like the decay rules. Instead, you can consider each rule as a set a filter and each new rule added would correspond to have a "OR" operator between all your filters.
+You can create multiple decay exclusion rules: there is no notion of order, like the decay rules. Instead, you can consider each rule as a set a filter and each new rule added would correspond to have a "OR" operator between all your filters.
 As a result, you can create multiple decay exclusion rules to create complex filtering group.
 
 
 ## How to remove the decay exclusion rule impacting an IOC
-It's currently not possible. Even if you delete the rule, the IOC would still be impacted by the decay exclusion rule. This is the exact same bahvior than the decay rule. 
+It's currently not possible. Even if you delete the rule, the IOC would still be impacted by the decay exclusion rule. This is the exact same behavior than the decay rule. 
 
 ## Changing the filter of a decay exclusion rule 
-Changing the filter of a decay exclusion rule will not impact already impact IOC by this rule.
-This means that even if the filtes are changed and do not match the IOC anymore, the IOC will still be impacted by the exclusion rule.
+Changing the filter of a decay exclusion rule will not affect already impacted IOC by this rule.
+This means that even if the filters of the decay exclusion rule are modified and do not match the IOC anymore, the IOC will still be impacted by the exclusion rule.
 
 
 ## Main takeways:
 - Once an IOC is impacted by a decay exclusion rule, it is not possible to change this.
-- Therefore, it's important to properly define your filters
-- Do not create a decay exclusion rule without filters: it will impact all your IOC
+- Therefore, it's important to properly define your filters.
+- Do not create a decay exclusion rule without filters: it will impact all your IOCs.
 - Decay exclusion rules have a higher priority than exclusion rules. 
 
